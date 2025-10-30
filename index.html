@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trip Again Travel & Tours: Luxury travel experiences with custom tours, Umrah packages, and tech-driven booking tools. Rediscover your world.">
+    <meta name="keywords" content="travel agency, luxury travel, custom tours, Umrah, Hajj, corporate travel">
+    <title>Trip Again Travel & Tours - Luxury Travel Experiences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+    /* ===== GLOBAL STYLES & VARIABLES ===== */
+    :root {
+        --primary-black: #000000;
+        --vibrant-red: #ff3b3b;
+        --pure-white: #ffffff;
+        --charcoal: #1a1a1a;
+        --light-gray: #f8f9fa;
+        --text-dark: #333333;
+        --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.7;
+        color: var(--text-dark);
+        background: var(--pure-white);
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* ===== ACCESSIBILITY ===== */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    /* Focus styles */
+    .cta-button:focus,
+    .nav-menu a:focus,
+    .mobile-toggle:focus,
+    .carousel-btn:focus,
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        outline: 3px solid var(--vibrant-red);
+        outline-offset: 2px;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
+
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: var(--vibrant-red);
+    }
+
+    .section-subtitle {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 3rem;
+        max-width: 600px;
+    }
+
+    /* ===== HEADER & NAVIGATION ===== */
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        transition: var(--transition);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .header.scrolled {
+        background: rgba(0, 0, 0, 0.75);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 2rem;
+    }
+
+    .logo {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--pure-white);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: 'Montez', cursive;
+        z-index: 1001;
+    }
+
+    .logo i {
+        color: var(--vibrant-red);
+    }
+
+    /* Desktop Navigation */
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+    }
+
+    .nav-menu a {
+        color: var(--pure-white);
+        text-decoration: none;
+        font-weight: 500;
+        transition: var(--transition);
+        position: relative;
+    }
+
+    .nav-menu a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--vibrant-red);
+        transition: var(--transition);
+    }
+
+    .nav-menu a:hover::after {
+        width: 100%;
+    }
+
+    .nav-menu a:hover {
+        color: var(--vibrant-red);
+    }
+
+    /* Mobile Toggle Button */
+    .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--pure-white);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1001;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        transition: var(--transition);
+    }
+
+    .mobile-toggle:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* ===== BUTTONS ===== */
+    .cta-button {
+        display: inline-block;
+        background: var(--vibrant-red);
+        color: var(--pure-white);
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: var(--transition);
+        border: 2px solid var(--vibrant-red);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.5s;
+    }
+
+    .cta-button:hover::before {
+        left: 100%;
+    }
+
+    .cta-button:hover {
+        background: transparent;
+        color: var(--vibrant-red);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(255, 59, 59, 0.3);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        overflow: hidden;
+    }
+
+    .hero-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .mobile-video {
+        display: none;
+    }
+
+    .desktop-video {
+        display: block;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+        z-index: -1;
+    }
+
+    .hero-content {
+        text-align: center;
+        color: var(--pure-white);
+        max-width: 800px;
+        padding: 0 20px;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero-headline {
+        font-size: 4.5rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeUp 1s ease 0.5s forwards;
+        font-family: 'Montez', cursive;
+        text-shadow: rgba(53, 52, 52, 0.603) 12px 12px 14px;
+        line-height: 1.1;
+    }
+
+    .hero-subheadline {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeUp 1s ease 0.8s forwards;
+        line-height: 1.4;
+    }
+
+    .hero-cta {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeUp 1s ease 1.1s forwards;
+    }
+
+    @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+        padding: 100px 0;
+        background: var(--pure-white);
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .about-text h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .about-features {
+        margin-top: 2rem;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .feature i {
+        color: var(--vibrant-red);
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    .about-image {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: var(--transition);
+    }
+
+    .about-image:hover img {
+        transform: scale(1.05);
+    }
+
+    /* ===== SERVICES SECTION ===== */
+    .services {
+        padding: 100px 0;
+        background: var(--light-gray);
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .service-card {
+        background: var(--pure-white);
+        padding: 2.5rem 2rem;
+        border-radius: 15px;
+        text-align: center;
+        transition: var(--transition);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 0;
+        background: var(--vibrant-red);
+        transition: var(--transition);
+    }
+
+    .service-card:hover::before {
+        height: 100%;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+
+    .service-icon {
+        font-size: 3rem;
+        color: var(--vibrant-red);
+        margin-bottom: 1.5rem;
+    }
+
+    .service-card h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    /* ===== TESTIMONIALS SECTION ===== */
+    .testimonials {
+        padding: 100px 0;
+        background: var(--pure-white);
+    }
+
+    .testimonial-carousel {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .testimonial {
+        text-align: center;
+        padding: 3rem 2rem;
+        display: none;
+    }
+
+    .testimonial.active {
+        display: block;
+        animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .testimonial-content {
+        background: var(--light-gray);
+        padding: 2.5rem;
+        border-radius: 15px;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-content::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid var(--light-gray);
+    }
+
+    .testimonial-text {
+        font-size: 1.2rem;
+        font-style: italic;
+        margin-bottom: 1rem;
+    }
+
+    .testimonial-author {
+        font-weight: 600;
+        color: var(--charcoal);
+    }
+
+    .carousel-controls {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .carousel-btn {
+        background: var(--charcoal);
+        color: var(--pure-white);
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carousel-btn:hover {
+        background: var(--vibrant-red);
+        transform: scale(1.1);
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary-black) 100%);
+        color: var(--pure-white);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.05"><polygon fill="white" points="0,1000 1000,0 1000,1000"/></svg>');
+        background-size: cover;
+    }
+
+    .cta-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .cta-section h2 {
+        color: var(--pure-white);
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-section h2::after {
+        background: var(--vibrant-red);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .cta-section p {
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact {
+        padding: 100px 0;
+        background: var(--light-gray);
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    .contact-form {
+        background: var(--pure-white);
+        padding: 2.5rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        transition: var(--transition);
+        background: var(--pure-white);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        outline: none;
+        border-color: var(--vibrant-red);
+        box-shadow: 0 0 0 3px rgba(255, 59, 59, 0.1);
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-method {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--vibrant-red);
+        color: var(--pure-white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .contact-details h3 {
+        margin-bottom: 0.5rem;
+    }
+
+    .map-container {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* ===== BLOG SECTION ===== */
+    .blog {
+        padding: 100px 0;
+        background: var(--pure-white);
+    }
+
+    .blog-posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    .blog-card {
+        background: var(--pure-white);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        transition: var(--transition);
+    }
+
+    .blog-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+
+    .blog-image {
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+    }
+
+    .blog-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+    }
+
+    .blog-card:hover .blog-image img {
+        transform: scale(1.1);
+    }
+
+    .blog-content {
+        padding: 1.5rem;
+    }
+
+    .blog-content h3 {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .blog-meta {
+        display: flex;
+        justify-content: space-between;
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .read-more {
+        color: var(--vibrant-red);
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: var(--transition);
+    }
+
+    .read-more:hover {
+        gap: 10px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+        background: var(--primary-black);
+        color: var(--pure-white);
+        padding: 60px 0 30px;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montez', cursive;
+}
+
+.footer-logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+    .footer-logo i {
+        color: var(--vibrant-red);
+    }
+
+    .footer-about {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-heading {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .footer-heading::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: var(--vibrant-red);
+    }
+
+    .footer-links {
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+        color: #ccc;
+        text-decoration: none;
+        transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+        color: var(--vibrant-red);
+        padding-left: 5px;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255,255,255,0.1);
+        color: var(--pure-white);
+        border-radius: 50%;
+        text-decoration: none;
+        transition: var(--transition);
+    }
+
+    .social-link:hover {
+        transform: translateY(-3px);
+    }
+
+    /* Facebook */
+    .social-link:nth-child(1):hover {
+        background: #1877F2; /* Facebook blue */
+    }
+
+    /* Twitter */
+    .social-link:nth-child(2):hover {
+        background: #1DA1F2; /* Twitter blue */
+    }
+
+    /* Instagram */
+    .social-link:nth-child(3):hover {
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Instagram gradient */
+    }
+
+    /* LinkedIn */
+    .social-link:nth-child(4):hover {
+        background: #0077B5; /* LinkedIn blue */
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        color: #999;
+    }
+
+    /* ===== UTILITIES ===== */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        background: var(--vibrant-red);
+        z-index: 1001;
+        transition: width 0.3s ease;
+    }
+
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--vibrant-red);
+        color: var(--pure-white);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        z-index: 999;
+    }
+
+    .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .back-to-top:hover {
+        transform: translateY(-5px);
+    }
+
+    /* ===== MOBILE RESPONSIVE STYLES ===== */
+    @media (max-width: 768px) {
+        /* Navigation */
+        .nav {
+            padding: 1rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+        }
+        
+        .nav-cta {
+            display: none;
+        }
+        
+        .mobile-toggle {
+            display: flex;
+        }
+        
+        /* Mobile Menu */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.98);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 80px;
+            transition: all 0.4s ease-in-out;
+            z-index: 999;
+            gap: 0;
+        }
+        
+        .nav-menu.active {
+            left: 0;
+        }
+        
+        .nav-menu a {
+            font-size: 1.2rem;
+            padding: 1.2rem 2rem;
+            width: 80%;
+            text-align: center;
+            margin: 0.5rem 0;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .nav-menu a::after {
+            display: none;
+        }
+        
+        .nav-menu a:hover {
+            background: rgba(255, 59, 59, 0.3);
+            transform: translateX(8px);
+        }
+
+        /* Hero Section */
+        .mobile-video {
+            display: block;
+        }
+        
+        .desktop-video {
+            display: none;
+        }
+        
+        .hero-headline {
+            font-size: 2.5rem;
+        }
+        
+        .hero-subheadline {
+            font-size: 1.1rem;
+        }
+        
+        .hero-content {
+            padding: 0 15px;
+        }
+
+        /* General Layout */
+        .about-content,
+        .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .services-grid,
+        .blog-posts {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        /* Typography */
+        h2 {
+            font-size: 2.2rem;
+        }
+        
+        /* Spacing */
+        .about, .services, .testimonials, .cta-section, .contact, .blog {
+            padding: 60px 0;
+        }
+        
+        .container {
+            padding: 0 15px;
+        }
+
+        /* Components */
+        .service-card,
+        .contact-form {
+            padding: 2rem 1.5rem;
+        }
+        
+        .testimonial {
+            padding: 2rem 1rem;
+        }
+        
+        .testimonial-content {
+            padding: 1.5rem;
+        }
+        
+        .cta-button {
+            padding: 0.9rem 1.8rem;
+            font-size: 0.95rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-headline {
+            font-size: 2rem;
+        }
+        
+        .hero-subheadline {
+            font-size: 1rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+        }
+        
+        .nav {
+            padding: 0.8rem;
+        }
+        
+        .nav-menu a {
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="#" class="logo" aria-label="Trip Again Home">
+                Trip Again
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#contact" class="cta-button nav-cta">Book Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">    
+        <div class="video-container">
+            <video class="hero-video desktop-video" autoplay muted loop playsinline preload="auto" aria-label="Background video showing luxury travel destinations">
+                <source src="hero-video.mp4" type="video/mp4">
+            </video>
+            <video class="hero-video mobile-video" autoplay muted loop playsinline preload="auto" aria-label="Background video for mobile view">
+                <source src="mobile-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-headline">Not all those who wander are lost.</h1>
+                <p class="hero-subheadline">Luxury travel experiences designed around you.</p>
+                <a href="#contact" class="cta-button hero-cta">Book Your Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>At Trip Again Travel & Tours, we believe every journey is a story waiting to be told. With a passion for discovery and a commitment to authenticity, we craft tailored travel experiences for individuals and groups alike.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Premium Quality</h4>
+                                <p>Luxury experiences with attention to every detail</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-globe-americas"></i>
+                            <div>
+                                <h4>Global Network</h4>
+                                <p>Partnerships with top providers worldwide</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-user-check"></i>
+                            <div>
+                                <h4>Personalized Service</h4>
+                                <p>Tailored itineraries for your unique preferences</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Luxury Travel Experience">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="fade-in">Our Services</h2>
+            <p class="section-subtitle fade-in">Comprehensive travel solutions tailored to your needs</p>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-passport"></i>
+                    </div>
+                    <h3>Visas & Assistance</h3>
+                    <p>Don't let documentation delay your dreams. We provide dedicated assistance and expert guidance to secure your visa and launch your journey.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <h3>Flight & Hotel Booking</h3>
+                    <p>Seamlessly book flights and accommodations worldwide. Find the best rates and personalized itineraries, all in one place.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-suitcase-rolling"></i>
+                    </div>
+                    <h3>Tourism Activities</h3>
+                    <p>Unlock the magic of your destination. We secure exclusive tours and top-rated activities in the UAE and vibrant Far East regions.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3>Umrah & Ziyarat</h3>
+                    <p>Spiritual journeys with expert guidance, comfortable accommodations, and comprehensive support.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Custom Tours & Holidays</h3>
+                    <p>Your perfect trip, handcrafted. From exotic getaways to bespoke family holidays, we design unique itineraries around your exact desires.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Corporate Travel Management</h3>
+                    <p>Effortless business travel, simplified. From policy enforcement to bespoke itineraries, we optimize your company's journeys for maximum productivity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="fade-in">Client Stories</h2>
+            <p class="section-subtitle fade-in">What our travelers say about their experiences</p>
+            <div class="testimonial-carousel">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Trip Again made our family vacation unforgettable. Their attention to detail and personalized service exceeded all expectations. The custom tour was flawless from start to finish!"</p>
+                        <p class="testimonial-author">- Sarah J., Individual Traveler</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Professional corporate travel management saved us time and money. Their efficient solutions and 24/7 support made business travel seamless for our entire team."</p>
+                        <p class="testimonial-author">- John D., Business Client</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"The Umrah package was spiritually enriching and exceptionally well-organized. Every detail was thoughtfully arranged, allowing us to focus completely on our spiritual journey."</p>
+                        <p class="testimonial-author">- Aisha K., Pilgrim</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="fade-in">Start Your Next Journey with Us</h2>
+                <p class="fade-in">Let us craft your perfect travel experience. Get a personalized quote and begin your adventure today.</p>
+                <a href="#contact" class="cta-button fade-in">Get a Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="fade-in">Contact & Booking</h2>
+            <p class="section-subtitle fade-in">Ready to plan your next adventure? Get in touch with our travel experts.</p>
+            <div class="contact-grid">
+                <form class="contact-form fade-in" aria-label="Contact form">
+                    <div class="form-group">
+                        <label for="name" class="sr-only">Your Name</label>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Your Email</label>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination" class="sr-only">Destination of Interest</label>
+                        <input type="text" id="destination" placeholder="Destination of Interest" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service-type" class="sr-only">Select Service Type</label>
+                        <select id="service-type" required>
+                            <option value="">Select Service Type</option>
+                            <option value="flight">Flight & Hotel Booking</option>
+                            <option value="umrah">Umrah & Hajj Packages</option>
+                            <option value="tour">Custom Tours & Holidays</option>
+                            <option value="corporate">Corporate Travel</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="sr-only">Your Message</label>
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Inquiry</button>
+                </form>
+                <div class="contact-info fade-in">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p><a href="tel:+1234567890">+92 333 3473348</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p><a href="https://wa.me/+923333473348">+92 333 3473348</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:tripagain.dxb@gmail.com">tripagain.dxb@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.428986381639!2d67.06585727533322!3d24.88602977791454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f05ac96b64d%3A0xe72cd04333e603db!2sTrip%20Again%20Travel%20%26%20Tours!5e0!3m2!1sen!2s!4v1702745600000!5m2!1sen!2s" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="fade-in">Travel Tips & Guides</h2>
+            <p class="section-subtitle fade-in">Insights and inspiration for your next adventure</p>
+            <div class="blog-posts">
+                <article class="blog-card fade-in">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Mountain travel tip">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> June 15, 2023</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3>Top 10 Mountain Destinations for 2023</h3>
+                        <p>Discover breathtaking peaks and hidden trails in our curated list of must-visit mountain destinations...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card fade-in">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="City skyline guide">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> May 28, 2023</span>
+                            <span><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h3>Urban Adventures: Exploring World Capitals</h3>
+                        <p>From hidden gems to iconic landmarks, explore vibrant city skylines and cultural hotspots around the globe...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card fade-in">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Beach destination">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> April 12, 2023</span>
+                            <span><i class="far fa-clock"></i> 4 min read</span>
+                        </div>
+                        <h3>Seaside Escapes: Finding Your Perfect Beach</h3>
+                        <p>Whether you seek adventure or relaxation, discover the world's most stunning coastal destinations for your next getaway...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Trip Again Travel & Tours" class="footer-logo-img">
+                        Trip Again
+                    </div>
+                    <p class="footer-about">Luxury travel experiences designed around you. Rediscover your world with Trip Again Travel & Tours.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15zomm3b1E/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Flight & Hotel</a></li>
+                        <li><a href="#">Umrah & Hajj</a></li>
+                        <li><a href="#">Custom Tours</a></li>
+                        <li><a href="#">Corporate Travel</a></li>
+                        <li><a href="#">Tourism Activities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Office # 2, Ground Floor, Hamza Center, PECHS Block 2, Near Liberty Traffic Signal, Tariq Road, Karachi Pakistan.</li>
+                        <li><i class="fas fa-phone"></i> +92 333 3473348</li>
+                        <li><i class="fas fa-envelope"></i> tripagain.dxb@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 12PM-10PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2021 All Rights reserved by Trip Again Pvt Ltd. Powered by passion & technology — designed by GroTech Solutions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Mobile Menu Functionality
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    mobileToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        const isExpanded = navMenu.classList.contains('active');
+        mobileToggle.setAttribute('aria-expanded', isExpanded);
+        mobileToggle.innerHTML = isExpanded 
+            ? '<i class="fas fa-times"></i>' 
+            : '<i class="fas fa-bars"></i>';
+        document.body.style.overflow = isExpanded ? 'hidden' : '';
+    });
+
+    // Close menu when clicking links
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Scroll progress bar
+    const progressBar = document.getElementById('progressBar');
+    window.addEventListener('scroll', () => {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight - windowHeight;
+        const scrollPosition = window.scrollY;
+        const progress = (scrollPosition / documentHeight) * 100;
+        progressBar.style.width = `${progress}%`;
+    });
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Testimonial carousel
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    function showTestimonial(index) {
+        testimonials.forEach((t, i) => {
+            t.classList.toggle('active', i === index);
+        });
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    });
+
+    // Auto-play carousel
+    setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    }, 6000);
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(element => {
+        observer.observe(element);
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Form submission
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your inquiry! We will get back to you soon.');
+        this.reset();
+    });
+
+    // Video autoplay handling
+    document.addEventListener('DOMContentLoaded', function() {
+        const heroVideo = document.querySelector('.hero-video');
+        heroVideo.play().catch(e => {
+            console.log('Autoplay blocked:', e);
+        });
+    });
+    </script>
+</body>
+</html>
