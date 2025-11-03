@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="logo.png">
     <style>
-    /* ===== GLOBAL STYLES & VARIABLES ===== */
+    /* ===== CSS VARIABLES ===== */
     :root {
         --primary-black: #000000;
         --vibrant-red: #ff3b3b;
@@ -26,6 +26,7 @@
         --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
+    /* ===== RESET & BASE STYLES ===== */
     * {
         margin: 0;
         padding: 0;
@@ -44,12 +45,6 @@
         overflow-x: hidden;
     }
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
     /* ===== ACCESSIBILITY ===== */
     .sr-only {
         position: absolute;
@@ -63,16 +58,280 @@
         border: 0;
     }
 
-    /* Focus styles */
+    /* Enhanced focus styles */
     .cta-button:focus,
+    .cta-button:focus-visible,
     .nav-menu a:focus,
+    .nav-menu a:focus-visible,
     .mobile-toggle:focus,
+    .mobile-toggle:focus-visible,
     .carousel-btn:focus,
+    .carousel-btn:focus-visible,
     .form-group input:focus,
+    .form-group input:focus-visible,
     .form-group textarea:focus,
-    .form-group select:focus {
+    .form-group textarea:focus-visible,
+    .form-group select:focus,
+    .form-group select:focus-visible,
+    .skip-button:focus,
+    .skip-button:focus-visible,
+    .back-to-top:focus,
+    .back-to-top:focus-visible,
+    .social-link:focus,
+    .social-link:focus-visible,
+    .read-more:focus,
+    .read-more:focus-visible,
+    .floating-whatsapp:focus,
+    .floating-whatsapp:focus-visible {
         outline: 3px solid var(--vibrant-red);
         outline-offset: 2px;
+    }
+
+    /* ===== LOADING PAGE STYLES ===== */
+    .loading-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 9999;
+        background: #000000;
+        will-change: transform, opacity;
+    }
+
+    .loading-container.fade-out {
+        opacity: 0;
+        transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+    }
+
+    /* Video Background for Loading */
+    .video-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .hero-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .mobile-video {
+        display: none;
+    }
+
+    .desktop-video {
+        display: block;
+    }
+
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+        z-index: 1;
+    }
+
+    /* Loading Content */
+    .main-loading-content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        width: 100%;
+        max-width: 800px;
+        padding: 0 20px;
+    }
+
+    .logo-container {
+        margin-bottom: 3rem;
+        opacity: 0;
+    }
+
+    .loading-logo {
+        font-family: 'Montez', cursive;
+        font-size: 5rem;
+        color: #ffffff;
+        text-shadow: 0 0 30px rgba(255, 59, 59, 0.8);
+        margin-bottom: 1rem;
+    }
+
+    .loading-tagline {
+        font-size: 1.3rem;
+        color: #cccccc;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+
+    .animation-container {
+        position: relative;
+        height: 200px;
+        margin: 2rem 0;
+        opacity: 0;
+    }
+
+    .plane-track {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(255, 59, 59, 0.5), transparent);
+    }
+
+    .plane {
+        position: absolute;
+        top: 50%;
+        left: -50px;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: #ff3b3b;
+        filter: drop-shadow(0 0 15px rgba(255, 59, 59, 0.8));
+        z-index: 2;
+    }
+
+    .location-pin {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ff3b3b;
+        font-size: 1.5rem;
+        opacity: 0;
+        filter: drop-shadow(0 0 10px rgba(255, 59, 59, 0.6));
+        z-index: 1;
+    }
+
+    .pin-1 { left: 20%; }
+    .pin-2 { left: 40%; }
+    .pin-3 { left: 60%; }
+    .pin-4 { left: 80%; }
+
+    .loading-section {
+        opacity: 0;
+    }
+
+    .loading-bar-container {
+        width: 100%;
+        max-width: 400px;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 2rem auto;
+        position: relative;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .loading-bar {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #ff3b3b, #ff6b6b);
+        border-radius: 10px;
+        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 0 20px rgba(255, 59, 59, 0.6);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .loading-bar::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(400%); }
+    }
+
+    .loading-percentage {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 1rem 0;
+        text-shadow: 0 0 15px rgba(255, 59, 59, 0.7);
+    }
+
+    .loading-message {
+        font-size: 1.1rem;
+        color: #ff6b6b;
+        height: 30px;
+        margin: 1rem 0;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .skip-button {
+        background: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        opacity: 0;
+        font-weight: 500;
+    }
+
+    .skip-button:hover {
+        background: rgba(255, 59, 59, 0.4);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 59, 59, 0.3);
+    }
+
+    .celebration {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 0;
+        z-index: 20;
+    }
+
+    .confetti {
+        position: absolute;
+        width: 8px;
+        height: 16px;
+        opacity: 0;
+        will-change: transform, opacity;
+    }
+
+    /* ===== MAIN WEBSITE STYLES ===== */
+    .main-website {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .main-website.loaded {
+        opacity: 1;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        overflow-x: hidden;
     }
 
     /* ===== TYPOGRAPHY ===== */
@@ -109,16 +368,17 @@
         position: fixed;
         top: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.25);
-        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.00);
+        backdrop-filter: blur(00px);
         z-index: 1000;
         transition: var(--transition);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.0);
     }
 
     .header.scrolled {
-        background: rgba(0, 0, 0, 0.75);
+        background: rgba(0, 0, 0, 0.50);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
     }
 
     .nav {
@@ -200,6 +460,30 @@
         background: rgba(255, 255, 255, 0.1);
     }
 
+    /* Mobile Close Button */
+    .mobile-close {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: var(--pure-white);
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 1002;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        transition: var(--transition);
+    }
+
+    .mobile-close:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
     /* ===== BUTTONS ===== */
     .cta-button {
         display: inline-block;
@@ -238,6 +522,41 @@
         box-shadow: 0 10px 25px rgba(255, 59, 59, 0.3);
     }
 
+    /* ===== FLOATING WHATSAPP BUTTON ===== */
+    .floating-whatsapp {
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        width: 60px;
+        height: 60px;
+        background: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ff3b3b;
+        font-size: 2rem;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(255, 59, 59, 0.3);
+        z-index: 1000;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 2px solid #f0f0f0;
+    }
+
+    .floating-whatsapp.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .floating-whatsapp:hover {
+        transform: scale(1.1);
+        background: #25D366;
+        color: #ffffff;
+        box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+    }
+
     /* ===== HERO SECTION ===== */
     .hero {
         position: relative;
@@ -258,7 +577,7 @@
         overflow: hidden;
     }
 
-    .hero-video {
+    .hero-video-main {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -268,11 +587,11 @@
         left: 0;
     }
 
-    .mobile-video {
+    .mobile-video-main {
         display: none;
     }
 
-    .desktop-video {
+    .desktop-video-main {
         display: block;
     }
 
@@ -295,6 +614,7 @@
         z-index: 1;
         width: 100%;
         margin: 0 auto;
+        overflow: hidden;
     }
 
     .hero-headline {
@@ -307,6 +627,7 @@
         font-family: 'Montez', cursive;
         text-shadow: rgba(53, 52, 52, 0.603) 12px 12px 14px;
         line-height: 1.1;
+        will-change: transform, opacity;
     }
 
     .hero-subheadline {
@@ -316,12 +637,14 @@
         transform: translateY(30px);
         animation: fadeUp 1s ease 0.8s forwards;
         line-height: 1.4;
+        will-change: transform, opacity;
     }
 
     .hero-cta {
         opacity: 0;
         transform: translateY(30px);
         animation: fadeUp 1s ease 1.1s forwards;
+        will-change: transform, opacity;
     }
 
     @keyframes fadeUp {
@@ -392,6 +715,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
+        align-items: stretch; /* This forces all grid items to stretch to same height */
     }
 
     .service-card {
@@ -403,6 +727,9 @@
         box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         position: relative;
         overflow: hidden;
+        height: 100%; /* This is the key - makes all cards fill their container */
+        display: flex;
+        flex-direction: column;
     }
 
     .service-card::before {
@@ -434,6 +761,25 @@
     .service-card h3 {
         margin-bottom: 1rem;
         font-size: 1.5rem;
+    }
+
+    /* Make the paragraph take up remaining space to push content evenly */
+    .service-card p {
+        flex-grow: 1; /* This makes the paragraph expand to fill available space */
+    }
+
+    /* Keep your existing link styles but ensure they don't affect height */
+    .service-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition: var(--transition);
+        height: 100%; /* Make link take full grid cell height */
+    }
+
+    .service-card-link:hover .service-card {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     }
 
     /* ===== TESTIMONIALS SECTION ===== */
@@ -719,6 +1065,7 @@
 
     .read-more:hover {
         gap: 10px;
+        transform: translateY(-2px);
     }
 
     /* ===== FOOTER ===== */
@@ -735,21 +1082,21 @@
         margin-bottom: 3rem;
     }
 
-.footer-logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Montez', cursive;
-}
+    .footer-logo {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: 'Montez', cursive;
+    }
 
-.footer-logo-img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
+    .footer-logo-img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
 
     .footer-logo i {
         color: var(--vibrant-red);
@@ -793,6 +1140,7 @@
     .footer-links a:hover {
         color: var(--vibrant-red);
         padding-left: 5px;
+        transform: translateY(-2px);
     }
 
     .social-links {
@@ -820,22 +1168,22 @@
 
     /* Facebook */
     .social-link:nth-child(1):hover {
-        background: #1877F2; /* Facebook blue */
+        background: #1877F2;
     }
 
     /* Twitter */
     .social-link:nth-child(2):hover {
-        background: #1DA1F2; /* Twitter blue */
+        background: #1DA1F2;
     }
 
     /* Instagram */
     .social-link:nth-child(3):hover {
-        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Instagram gradient */
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     }
 
     /* LinkedIn */
     .social-link:nth-child(4):hover {
-        background: #0077B5; /* LinkedIn blue */
+        background: #0077B5;
     }
 
     .footer-bottom {
@@ -850,6 +1198,7 @@
         opacity: 0;
         transform: translateY(30px);
         transition: opacity 0.8s ease, transform 0.8s ease;
+        will-change: transform, opacity;
     }
 
     .fade-in.visible {
@@ -898,8 +1247,68 @@
         transform: translateY(-5px);
     }
 
+    .form-success {
+        background: #d4edda;
+        color: #155724;
+        padding: 2rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        border: 1px solid #c3e6cb;
+        text-align: center;
+        display: none;
+    }
+
+    .form-success.show {
+        display: block;
+        animation: fadeIn 0.5s ease;
+    }
+
     /* ===== MOBILE RESPONSIVE STYLES ===== */
     @media (max-width: 768px) {
+        .loading-logo {
+            font-size: 3.5rem;
+        }
+        
+        .loading-tagline {
+            font-size: 1.1rem;
+        }
+        
+        .animation-container {
+            height: 150px;
+        }
+        
+        .plane {
+            font-size: 1.5rem;
+        }
+        
+        .location-pin {
+            font-size: 1.2rem;
+        }
+
+        .mobile-video {
+            display: block;
+        }
+        
+        .desktop-video {
+            display: none;
+        }
+
+        .mobile-video-main {
+            display: block;
+        }
+        
+        .desktop-video-main {
+            display: none;
+        }
+
+        .loading-bar-container {
+            max-width: 300px;
+        }
+
+        .loading-percentage {
+            font-size: 1.5rem;
+        }
+
         /* Navigation */
         .nav {
             padding: 1rem;
@@ -909,11 +1318,11 @@
             font-size: 1.8rem;
         }
         
-        .nav-cta {
-            display: none;
+        .mobile-toggle {
+            display: flex;
         }
         
-        .mobile-toggle {
+        .mobile-close {
             display: flex;
         }
         
@@ -924,13 +1333,13 @@
             left: -100%;
             width: 100%;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.98);
-            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
             padding-top: 80px;
-            transition: all 0.4s ease-in-out;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 999;
             gap: 0;
         }
@@ -941,13 +1350,30 @@
         
         .nav-menu a {
             font-size: 1.2rem;
-            padding: 1.2rem 2rem;
+            padding: 1.5rem 2rem;
             width: 80%;
             text-align: center;
-            margin: 0.5rem 0;
+            margin: 0.8rem 0;
             border-radius: 10px;
             background: rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-20px);
+            opacity: 0;
+            line-height: 3.9;
         }
+
+        .nav-menu.active a {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        /* Stagger the menu item animations */
+        .nav-menu.active a:nth-child(1) { transition-delay: 0.1s; }
+        .nav-menu.active a:nth-child(2) { transition-delay: 0.15s; }
+        .nav-menu.active a:nth-child(3) { transition-delay: 0.2s; }
+        .nav-menu.active a:nth-child(4) { transition-delay: 0.25s; }
+        .nav-menu.active a:nth-child(5) { transition-delay: 0.3s; }
+        .nav-menu.active a:nth-child(6) { transition-delay: 0.35s; }
         
         .nav-menu a::after {
             display: none;
@@ -958,15 +1384,26 @@
             transform: translateX(8px);
         }
 
+        /* Mobile menu backdrop */
+        body.menu-active {
+            overflow: hidden;
+        }
+
+        body.menu-active::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         /* Hero Section */
-        .mobile-video {
-            display: block;
-        }
-        
-        .desktop-video {
-            display: none;
-        }
-        
         .hero-headline {
             font-size: 2.5rem;
         }
@@ -1002,6 +1439,14 @@
             font-size: 2.2rem;
         }
         
+        .service-card h3 {
+            font-size: 1.3rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.2rem;
+        }
+        
         /* Spacing */
         .about, .services, .testimonials, .cta-section, .contact, .blog {
             padding: 60px 0;
@@ -1029,6 +1474,15 @@
             padding: 0.9rem 1.8rem;
             font-size: 0.95rem;
         }
+
+        /* Floating WhatsApp */
+        .floating-whatsapp {
+            width: 55px;
+            height: 55px;
+            font-size: 2rem;
+            left: 20px;
+            bottom: 20px;
+        }
     }
 
     @media (max-width: 480px) {
@@ -1052,506 +1506,886 @@
             padding: 1rem 1.5rem;
             font-size: 1.1rem;
         }
+
+        .loading-logo {
+            font-size: 2.5rem;
+        }
     }
-    </style>
+
+    /* Desktop size for WhatsApp */
+    @media (min-width: 769px) {
+        .floating-whatsapp {
+            width: 50px;
+            height: 50px;
+            font-size: 1.7rem;
+            left: 25px;
+            bottom: 25px;
+        }
+    }
+    @media (max-width: 768px) {
+    .nav-cta {
+        display: none !important;
+    }
+
+    @media (max-width: 768px) {
+    .header {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        border-bottom: none !important;
+    }
+    
+    .header.scrolled {
+        background: rgba(0, 0, 0, 0.5) !important;
+        backdrop-filter: blur(10px) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+}
+}
+
+</style>
 </head>
 <body>
-    <!-- Progress Bar -->
-    <div class="progress-bar" id="progressBar"></div>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- Header -->
-    <header class="header" id="header">
-        <nav class="nav" aria-label="Main navigation">
-            <a href="#" class="logo" aria-label="Trip Again Home">
-                Trip Again
-            </a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <a href="#contact" class="cta-button nav-cta">Book Now</a>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">    
-        <div class="video-container">
-            <video class="hero-video desktop-video" autoplay muted loop playsinline preload="auto" aria-label="Background video showing luxury travel destinations">
+    <!-- Loading Page -->
+    <div class="loading-container" id="loadingContainer">
+        <!-- Video Background -->
+        <div class="video-background">
+            <video class="hero-video desktop-video" autoplay muted loop playsinline preload="auto">
                 <source src="hero-video.mp4" type="video/mp4">
             </video>
-            <video class="hero-video mobile-video" autoplay muted loop playsinline preload="auto" aria-label="Background video for mobile view">
+            <video class="hero-video mobile-video" autoplay muted loop playsinline preload="auto">
                 <source src="mobile-video.mp4" type="video/mp4">
             </video>
-            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="video-overlay"></div>
         </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-headline">Not all those who wander are lost.</h1>
-                <p class="hero-subheadline">Luxury travel experiences designed around you.</p>
-                <a href="#contact" class="cta-button hero-cta">Book Your Journey</a>
+        
+        <!-- Loading Content -->
+        <div class="main-loading-content">
+            <!-- Logo -->
+            <div class="logo-container" id="logoContainer">
+                <h1 class="loading-logo">Trip Again</h1>
+                <p class="loading-tagline">Luxury Travel Experiences</p>
             </div>
+            
+            <!-- Animation Container -->
+            <div class="animation-container" id="animationContainer">
+                <div class="plane-track"></div>
+                <div class="plane" id="plane">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <div class="location-pin pin-1">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="location-pin pin-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="location-pin pin-3">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="location-pin pin-4">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+            </div>
+            
+            <!-- Loading Section -->
+            <div class="loading-section" id="loadingSection">
+                <div class="loading-message" id="loadingMessage">Preparing your journey...</div>
+                <div class="loading-bar-container">
+                    <div class="loading-bar" id="loadingBar"></div>
+                </div>
+                <div class="loading-percentage" id="percentage">0%</div>
+            </div>
+            
+            <!-- Skip Button -->
+            <button class="skip-button" id="skipButton">Skip Introduction</button>
         </div>
-    </section>
+        
+        <!-- Celebration -->
+        <div class="celebration" id="celebration"></div>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content fade-in">
-                <div class="about-text">
-                    <h2>About Us</h2>
-                    <h3>A Legacy of Commitment to Seamless Travel</h3>
-                    <br>
-                    <p>Trip Again Pvt Ltd was founded in 2010 by our CEO, an ambitious and hardworking leader dedicated to making travel genuinely easier for every client. His commitment ensures qualitative service—from individual travelers to large corporations—is delivered across all services. As a fully registered travel company with official affiliation from DTS and IATA, we provide meticulous support for visa applications, flight and hotel bookings, and complete customized tourism packages.</p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-award"></i>
-                            <div>
-                                <h4>Premium Quality</h4>
-                                <p>Luxury experiences with attention to every detail</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-globe-americas"></i>
-                            <div>
-                                <h4>Global Network</h4>
-                                <p>Partnerships with top providers worldwide</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-user-check"></i>
-                            <div>
-                                <h4>Personalized Service</h4>
-                                <p>Tailored itineraries for your unique preferences</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="ceo-picture.png" alt="Picture of the CEO of Trip Again Pvt Ltd">
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Main Website Content -->
+    <div class="main-website" id="mainWebsite">
+        <!-- Progress Bar -->
+        <div class="progress-bar" id="progressBar"></div>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="fade-in">Our Services</h2>
-            <p class="section-subtitle fade-in">Comprehensive travel solutions tailored to your needs</p>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-passport"></i>
-                    </div>
-                    <h3>Visas & Assistance</h3>
-                    <p>Don't let documentation delay your dreams. We provide dedicated assistance and expert guidance to secure your visa and launch your journey.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-plane-departure"></i>
-                    </div>
-                    <h3>Flight & Hotel Booking</h3>
-                    <p>Seamlessly book flights and accommodations worldwide. Find the best rates and personalized itineraries, all in one place.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-suitcase-rolling"></i>
-                    </div>
-                    <h3>Tourism Activities</h3>
-                    <p>Unlock the magic of your destination. We secure exclusive tours and top-rated activities in the UAE and vibrant Far East regions.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-mosque"></i>
-                    </div>
-                    <h3>Umrah & Ziyarat</h3>
-                    <p>Spiritual journeys with expert guidance, comfortable accommodations, and comprehensive support.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3>Custom Tours & Holidays</h3>
-                    <p>Your perfect trip, handcrafted. From exotic getaways to bespoke family holidays, we design unique itineraries around your exact desires.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Corporate Travel Management</h3>
-                    <p>Effortless business travel, simplified. From policy enforcement to bespoke itineraries, we optimize your company's journeys for maximum productivity.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Back to Top Button -->
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-chevron-up"></i>
+        </button>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="fade-in">Client Stories</h2>
-            <p class="section-subtitle fade-in">What our travelers say about their experiences</p>
-            <div class="testimonial-carousel">
-                <div class="testimonial active">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"Trip Again made our family vacation unforgettable. Their attention to detail and personalized service exceeded all expectations. The custom tour was flawless from start to finish!"</p>
-                        <p class="testimonial-author">- Sarah J., Individual Traveler</p>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"Professional corporate travel management saved us time and money. Their efficient solutions and 24/7 support made business travel seamless for our entire team."</p>
-                        <p class="testimonial-author">- John D., Business Client</p>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"The Umrah package was spiritually enriching and exceptionally well-organized. Every detail was thoughtfully arranged, allowing us to focus completely on our spiritual journey."</p>
-                        <p class="testimonial-author">- Aisha K., Pilgrim</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-controls">
-                <button class="carousel-btn prev">
-                    <i class="fas fa-chevron-left"></i>
+        <!-- Header -->
+        <header class="header" id="header">
+            <nav class="nav" aria-label="Main navigation">
+                <a href="#" class="logo" aria-label="Trip Again Home">
+                    Trip Again
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+                    <i class="fas fa-bars"></i>
                 </button>
-                <button class="carousel-btn next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
+                <a href="#booking" class="cta-button nav-cta">Book Now</a>
+            </nav>
+        </header>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="fade-in">Start Your Next Journey with Us</h2>
-                <p class="fade-in">Let us craft your perfect travel experience. Get a personalized quote and begin your adventure today.</p>
-                <a href="#contact" class="cta-button fade-in">Get a Free Quote</a>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">    
+            <div class="video-container">
+                <video class="hero-video-main desktop-video-main" autoplay muted loop playsinline preload="auto" aria-label="Background video showing luxury travel destinations">
+                    <source src="hero-video.mp4" type="video/mp4">
+                </video>
+                <video class="hero-video-main mobile-video-main" autoplay muted loop playsinline preload="auto" aria-label="Background video for mobile view">
+                    <source src="mobile-video.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay" aria-hidden="true"></div>
             </div>
-        </div>
-    </section>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-headline">Not all those who wander are lost.</h1>
+                    <p class="hero-subheadline">Luxury travel experiences designed around you.</p>
+                    <a href="#contact" class="cta-button hero-cta">Book Your Journey</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="fade-in">Contact & Booking</h2>
-            <p class="section-subtitle fade-in">Ready to plan your next adventure? Get in touch with our travel experts.</p>
-            <div class="contact-grid">
-                <form class="contact-form fade-in" aria-label="Contact form">
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content fade-in">
+                    <div class="about-text">
+                        <h2>About Us</h2>
+                        <h3>A Legacy of Commitment to Seamless Travel</h3>
+                        <br>
+                        <p>Trip Again Pvt Ltd was founded in 2010 by our CEO, an ambitious and hardworking leader dedicated to making travel genuinely easier for every client. His commitment ensures qualitative service—from individual travelers to large corporations—is delivered across all services. As a fully registered travel company with official affiliation from DTS and IATA, we provide meticulous support for visa applications, flight and hotel bookings, and complete customized tourism packages.</p>
+                        <div class="about-features">
+                            <div class="feature">
+                                <i class="fas fa-award"></i>
+                                <div>
+                                    <h4>Premium Quality</h4>
+                                    <p>Luxury experiences with attention to every detail</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-globe-americas"></i>
+                                <div>
+                                    <h4>Global Network</h4>
+                                    <p>Partnerships with top providers worldwide</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-user-check"></i>
+                                <div>
+                                    <h4>Personalized Service</h4>
+                                    <p>Tailored itineraries for your unique preferences</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="ceo-picture.png" alt="Picture of the CEO of Trip Again Pvt Ltd">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="fade-in">Our Services</h2>
+                <p class="section-subtitle fade-in">Comprehensive travel solutions tailored to your needs</p>
+                <div class="services-grid">
+                    <!-- Visa & Assistance Card with Link -->
+                    <a href="visa-services.html" class="service-card-link">
+                        <div class="service-card fade-in">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-passport"></i>
+                            </div>
+                            <h3>Visas & Assistance</h3>
+                            <p>Don't let documentation delay your dreams. We provide dedicated assistance and expert guidance to secure your visa and launch your journey.</p>
+                        </div>
+                    </a>
+                    <a href="flights-hotels.html" class="service-card-link">
+                        <div class="service-card fade-in">
+                            <div class="service-icon">
+                                <i class="fas fa-plane-departure"></i>
+                            </div>
+                            <h3>Flight & Hotel Booking</h3>
+                            <p>Seamlessly book flights and accommodations worldwide. Find the best rates and personalized itineraries, all in one place.</p>
+                        </div>
+                    </a>                    
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-suitcase-rolling"></i>
+                        </div>
+                        <h3>Tourism Activities</h3>
+                        <p>Unlock the magic of your destination. We secure exclusive tours and top-rated activities in the UAE and vibrant Far East regions.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-mosque"></i>
+                        </div>
+                        <h3>Umrah & Ziyarat</h3>
+                        <p>Spiritual journeys with expert guidance, comfortable accommodations, and comprehensive support.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Custom Tours & Holidays</h3>
+                        <p>Your perfect trip, handcrafted. From exotic getaways to bespoke family holidays, we design unique itineraries around your exact desires.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Corporate Travel Management</h3>
+                        <p>Effortless business travel, simplified. From policy enforcement to bespoke itineraries, we optimize your company's journeys for maximum productivity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="fade-in">Client Stories</h2>
+                <p class="section-subtitle fade-in">What our travelers say about their experiences</p>
+                <div class="testimonial-carousel">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Trip Again made our family vacation unforgettable. Their attention to detail and personalized service exceeded all expectations. The custom tour was flawless from start to finish!"</p>
+                            <p class="testimonial-author">- Sarah J., Individual Traveler</p>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Professional corporate travel management saved us time and money. Their efficient solutions and 24/7 support made business travel seamless for our entire team."</p>
+                            <p class="testimonial-author">- John D., Business Client</p>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"The Umrah package was spiritually enriching and exceptionally well-organized. Every detail was thoughtfully arranged, allowing us to focus completely on our spiritual journey."</p>
+                            <p class="testimonial-author">- Aisha K., Pilgrim</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="fade-in">Start Your Next Journey with Us</h2>
+                    <p class="fade-in">Let us craft your perfect travel experience. Get a personalized quote and begin your adventure today.</p>
+                    <a href="#contact" class="cta-button fade-in">Get a Free Quote</a>
+                </div>
+            </div>
+        </section>
+
+                <!-- Blog Section -->
+        <section id="blog" class="blog">
+            <div class="container">
+                <h2 class="fade-in">Travel Tips & Guides</h2>
+                <p class="section-subtitle fade-in">Insights and inspiration for your next adventure</p>
+                <div class="blog-posts">
+                    <article class="blog-card fade-in">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Mountain travel tip">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> June 15, 2025</span>
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h3>Top 10 Mountain Destinations for 2025</h3>
+                            <p>Discover breathtaking peaks and hidden trails in our curated list of must-visit mountain destinations...</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="blog-card fade-in">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="City skyline guide">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> May 28, 2025</span>
+                                <span><i class="far fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h3>Urban Adventures: Exploring World Capitals</h3>
+                            <p>From hidden gems to iconic landmarks, explore vibrant city skylines and cultural hotspots around the globe...</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="blog-card fade-in">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Beach destination">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> April 12, 2025</span>
+                                <span><i class="far fa-clock"></i> 4 min read</span>
+                            </div>
+                            <h3>Seaside Escapes: Finding Your Perfect Beach</h3>
+                            <p>Whether you seek adventure or relaxation, discover the world's most stunning coastal destinations for your next getaway...</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="fade-in">Contact & Booking</h2>
+                <p class="section-subtitle fade-in">Ready to plan your next adventure? Get in touch with our travel experts.</p>
+                <div class="contact-grid">
+                    <!-- NETLIFY FORM - Add these attributes -->
+                    <form class="contact-form fade-in" 
+                        name="contact" 
+                        method="POST" 
+                        netlify
+                        netlify-honeypot="bot-field"
+                        aria-label="Contact form">
+                    
+                    <!-- Hidden Netlify Form Fields -->
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="sr-only">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+
                     <div class="form-group">
                         <label for="name" class="sr-only">Your Name</label>
-                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
                         <label for="email" class="sr-only">Your Email</label>
-                        <input type="email" id="email" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
                         <label for="destination" class="sr-only">Destination of Interest</label>
-                        <input type="text" id="destination" placeholder="Destination of Interest" required>
+                        <input type="text" id="destination" name="destination" placeholder="Destination of Interest" required>
                     </div>
                     <div class="form-group">
                         <label for="service-type" class="sr-only">Select Service Type</label>
-                        <select id="service-type" required>
-                            <option value="">Select Service Type</option>
-                            <option value="flight">Flight & Hotel Booking</option>
-                            <option value="umrah">Umrah & Hajj Packages</option>
-                            <option value="tour">Custom Tours & Holidays</option>
-                            <option value="corporate">Corporate Travel</option>
-                            <option value="other">Other</option>
+                        <select id="service-type" name="service-type" required>
+                        <option value="">Select Service Type</option>
+                        <option value="flight">Flight & Hotel Booking</option>
+                        <option value="umrah">Umrah & Ziyarat</option>
+                        <option value="tour">Custom Tours & Holidays</option>
+                        <option value="corporate">Corporate Travel</option>
+                        <option value="other">Other</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="message" class="sr-only">Your Message</label>
-                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="cta-button">Send Inquiry</button>
-                </form>
-                <div class="contact-info fade-in">
-                    <div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
+                    </form>
+                    <!-- Rest of your contact info remains the same -->
+                    <div class="contact-info fade-in">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Call Us</h3>
+                                <p><a href="tel:+1234567890">+92 333 3473348</a></p>
+                            </div>
                         </div>
-                        <div class="contact-details">
-                            <h3>Call Us</h3>
-                            <p><a href="tel:+1234567890">+92 333 3473348</a></p>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>WhatsApp</h3>
+                                <p><a href="https://wa.me/+923333473348">+92 333 3473348</a></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p><a href="mailto:tripagain.dxb@gmail.com">tripagain.dxb@gmail.com</a></p>
+                            </div>
                         </div>
-                        <div class="contact-details">
-                            <h3>WhatsApp</h3>
-                            <p><a href="https://wa.me/+923333473348">+92 333 3473348</a></p>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.428986381639!2d67.06585727533322!3d24.88602977791454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f05ac96b64d%3A0xe72cd04333e603db!2sTrip%20Again%20Travel%20%26%20Tours!5e0!3m2!1sen!2s!4v1702745600000!5m2!1sen!2s" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-                    </div>
-                    <div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p><a href="mailto:tripagain.dxb@gmail.com">tripagain.dxb@gmail.com</a></p>
-                        </div>
-                    </div>
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.428986381639!2d67.06585727533322!3d24.88602977791454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f05ac96b64d%3A0xe72cd04333e603db!2sTrip%20Again%20Travel%20%26%20Tours!5e0!3m2!1sen!2s!4v1702745600000!5m2!1sen!2s" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <h2 class="fade-in">Travel Tips & Guides</h2>
-            <p class="section-subtitle fade-in">Insights and inspiration for your next adventure</p>
-            <div class="blog-posts">
-                <article class="blog-card fade-in">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Mountain travel tip">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> June 15, 2023</span>
-                            <span><i class="far fa-clock"></i> 5 min read</span>
-                        </div>
-                        <h3>Top 10 Mountain Destinations for 2023</h3>
-                        <p>Discover breathtaking peaks and hidden trails in our curated list of must-visit mountain destinations...</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                <article class="blog-card fade-in">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="City skyline guide">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> May 28, 2023</span>
-                            <span><i class="far fa-clock"></i> 7 min read</span>
-                        </div>
-                        <h3>Urban Adventures: Exploring World Capitals</h3>
-                        <p>From hidden gems to iconic landmarks, explore vibrant city skylines and cultural hotspots around the globe...</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                <article class="blog-card fade-in">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Beach destination">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> April 12, 2023</span>
-                            <span><i class="far fa-clock"></i> 4 min read</span>
-                        </div>
-                        <h3>Seaside Escapes: Finding Your Perfect Beach</h3>
-                        <p>Whether you seek adventure or relaxation, discover the world's most stunning coastal destinations for your next getaway...</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">
-                        <img src="logo.png" alt="Trip Again Travel & Tours" class="footer-logo-img">
-                        Trip Again
-                    </div>
-                    <p class="footer-about">Luxury travel experiences designed around you. Rediscover your world with Trip Again Travel & Tours.</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/15zomm3b1E/" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links-container">
-                    <h3 class="footer-heading">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links-container">
-                    <h3 class="footer-heading">Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Flight & Hotel</a></li>
-                        <li><a href="#">Umrah & Hajj</a></li>
-                        <li><a href="#">Custom Tours</a></li>
-                        <li><a href="#">Corporate Travel</a></li>
-                        <li><a href="#">Tourism Activities</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links-container">
-                    <h3 class="footer-heading">Contact Info</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Office # 2, Ground Floor, Hamza Center, PECHS Block 2, Near Liberty Traffic Signal, Tariq Road, Karachi Pakistan.</li>
-                        <li><i class="fas fa-phone"></i> +92 333 3473348</li>
-                        <li><i class="fas fa-envelope"></i> tripagain.dxb@gmail.com</li>
-                        <li><i class="fas fa-clock"></i> Mon-Sat: 12PM-10PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2021 All Rights reserved by Trip Again Pvt Ltd. Powered by passion & technology — designed by GroTech Solutions.</p>
-            </div>
-        </div>
-    </footer>
 
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <img src="logo.png" alt="Trip Again Travel & Tours" class="footer-logo-img">
+                            Trip Again
+                        </div>
+                        <p class="footer-about">Luxury travel experiences designed around you. Rediscover your world with Trip Again Travel & Tours.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/15zomm3b1E/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links-container">
+                        <h3 class="footer-heading">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-container">
+                        <h3 class="footer-heading">Services</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Flight & Hotel</a></li>
+                            <li><a href="#">Umrah & Hajj</a></li>
+                            <li><a href="#">Custom Tours</a></li>
+                            <li><a href="#">Corporate Travel</a></li>
+                            <li><a href="#">Tourism Activities</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-container">
+                        <h3 class="footer-heading">Contact Info</h3>
+                        <ul class="footer-links">
+                            <li><i class="fas fa-map-marker-alt"></i> Office # 2, Ground Floor, Hamza Center, PECHS Block 2, Near Liberty Traffic Signal, Tariq Road, Karachi Pakistan.</li>
+                            <li><i class="fas fa-phone"></i> +92 333 3473348</li>
+                            <li><i class="fas fa-envelope"></i> tripagain.dxb@gmail.com</li>
+                            <li><i class="fas fa-clock"></i> Mon-Sat: 12PM-10PM</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2021 All Rights reserved by Trip Again Pvt Ltd. Powered by passion & technology — designed by GroTech Solutions.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
-    // Mobile Menu Functionality
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navMenu = document.getElementById('navMenu');
+        // ===== LOADING PAGE FUNCTIONALITY =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elements
+            const loadingContainer = document.getElementById('loadingContainer');
+            const mainWebsite = document.getElementById('mainWebsite');
+            const logoContainer = document.getElementById('logoContainer');
+            const animationContainer = document.getElementById('animationContainer');
+            const loadingSection = document.getElementById('loadingSection');
+            const plane = document.getElementById('plane');
+            const loadingBar = document.getElementById('loadingBar');
+            const percentage = document.getElementById('percentage');
+            const loadingMessage = document.getElementById('loadingMessage');
+            const skipButton = document.getElementById('skipButton');
+            const celebration = document.getElementById('celebration');
+            const pins = document.querySelectorAll('.location-pin');
+            const videos = document.querySelectorAll('.hero-video');
+            
+            // Preload videos and handle autoplay
+            videos.forEach(video => {
+                video.play().catch(e => {
+                    console.log('Video autoplay prevented, waiting for user interaction');
+                });
+            });
 
-    mobileToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        const isExpanded = navMenu.classList.contains('active');
-        mobileToggle.setAttribute('aria-expanded', isExpanded);
-        mobileToggle.innerHTML = isExpanded 
-            ? '<i class="fas fa-times"></i>' 
-            : '<i class="fas fa-bars"></i>';
-        document.body.style.overflow = isExpanded ? 'hidden' : '';
-    });
-
-    // Close menu when clicking links
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            mobileToggle.setAttribute('aria-expanded', 'false');
-            mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-            document.body.style.overflow = '';
-        });
-    });
-
-    // Header scroll effect
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-
-    // Scroll progress bar
-    const progressBar = document.getElementById('progressBar');
-    window.addEventListener('scroll', () => {
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight - windowHeight;
-        const scrollPosition = window.scrollY;
-        const progress = (scrollPosition / documentHeight) * 100;
-        progressBar.style.width = `${progress}%`;
-    });
-
-    // Back to top button
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
-        }
-    });
-
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    // Testimonial carousel
-    let currentTestimonial = 0;
-    const testimonials = document.querySelectorAll('.testimonial');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-
-    function showTestimonial(index) {
-        testimonials.forEach((t, i) => {
-            t.classList.toggle('active', i === index);
-        });
-    }
-
-    prevBtn.addEventListener('click', () => {
-        currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-        showTestimonial(currentTestimonial);
-    });
-
-    nextBtn.addEventListener('click', () => {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(currentTestimonial);
-    });
-
-    // Auto-play carousel
-    setInterval(() => {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(currentTestimonial);
-    }, 6000);
-
-    // Scroll animations
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in').forEach(element => {
-        observer.observe(element);
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+            // Messages to cycle through
+            const messages = [
+                "Preparing your journey...",
+                "Charting destinations...",
+                "Arranging luxury experiences...",
+                "Almost ready to explore..."
+            ];
+            
+            // Animation timeline
+            const tl = gsap.timeline();
+            
+            // Initial animations (0-2s)
+            tl.to(logoContainer, {
+                duration: 1.5,
+                opacity: 1,
+                y: 0,
+                ease: "power2.out"
+            })
+            .to(animationContainer, {
+                duration: 1,
+                opacity: 1,
+                ease: "power2.out"
+            }, "-=0.5")
+            .to(loadingSection, {
+                duration: 1,
+                opacity: 1,
+                ease: "power2.out"
+            }, "-=0.3")
+            .to(skipButton, {
+                duration: 0.8,
+                opacity: 1,
+                ease: "power2.out"
+            }, "-=0.2");
+            
+            // Plane animation (2-4s)
+            tl.to(plane, {
+                duration: 2,
+                left: "100%",
+                ease: "power1.inOut",
+                onUpdate: function() {
+                    // Show pins as plane passes them
+                    const progress = this.progress();
+                    if (progress > 0.2) gsap.to(pins[0], { duration: 0.3, opacity: 1, scale: 1.2, ease: "back.out(1.7)" });
+                    if (progress > 0.4) gsap.to(pins[1], { duration: 0.3, opacity: 1, scale: 1.2, ease: "back.out(1.7)" });
+                    if (progress > 0.6) gsap.to(pins[2], { duration: 0.3, opacity: 1, scale: 1.2, ease: "back.out(1.7)" });
+                    if (progress > 0.8) gsap.to(pins[3], { duration: 0.3, opacity: 1, scale: 1.2, ease: "back.out(1.7)" });
+                }
+            });
+            
+            // Reset plane and start loading (4-6s)
+            tl.to(plane, {
+                duration: 0.5,
+                left: "-50px",
+                ease: "power2.out"
+            })
+            .to(plane, {
+                duration: 2,
+                left: "100%",
+                ease: "power1.inOut"
+            });
+            
+            // Loading progress (6-10s)
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 1;
+                
+                // Update loading bar
+                loadingBar.style.width = `${progress}%`;
+                
+                // Update percentage
+                percentage.textContent = `${progress}%`;
+                
+                // Change message at certain intervals
+                if (progress === 25) {
+                    loadingMessage.textContent = messages[1];
+                    gsap.to(loadingMessage, { duration: 0.5, opacity: 0, y: -10, onComplete: function() {
+                        loadingMessage.textContent = messages[1];
+                        gsap.to(loadingMessage, { duration: 0.5, opacity: 1, y: 0 });
+                    }});
+                } else if (progress === 50) {
+                    loadingMessage.textContent = messages[2];
+                    gsap.to(loadingMessage, { duration: 0.5, opacity: 0, y: -10, onComplete: function() {
+                        loadingMessage.textContent = messages[2];
+                        gsap.to(loadingMessage, { duration: 0.5, opacity: 1, y: 0 });
+                    }});
+                } else if (progress === 75) {
+                    loadingMessage.textContent = messages[3];
+                    gsap.to(loadingMessage, { duration: 0.5, opacity: 0, y: -10, onComplete: function() {
+                        loadingMessage.textContent = messages[3];
+                        gsap.to(loadingMessage, { duration: 0.5, opacity: 1, y: 0 });
+                    }});
+                }
+                
+                // Complete loading
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    completeLoading();
+                }
+            }, 40);
+            
+            // Complete loading with smooth transition
+            function completeLoading() {
+                // Celebration animation
+                createConfetti();
+                
+                // Smooth fade out loading page
+                gsap.to('.main-loading-content', {
+                    duration: 1,
+                    opacity: 0,
+                    y: -20,
+                    ease: "power2.inOut"
+                });
+                
+                gsap.to(loadingContainer, {
+                    duration: 1.5,
+                    opacity: 0,
+                    ease: "power2.inOut",
+                    delay: 0.5,
+                    onComplete: () => {
+                        loadingContainer.style.display = 'none';
+                        // Show main website
+                        mainWebsite.classList.add('loaded');
+                        // Start main website animations
+                        initializeMainWebsite();
+                    }
                 });
             }
-        });
-    });
+            
+            // Skip functionality
+            skipButton.addEventListener('click', skipLoading);
+            document.addEventListener('keydown', skipLoading);
+            
+            function skipLoading(e) {
+                if (e.type === 'keydown' && e.key !== ' ' && e.key !== 'Enter' && e.key !== 'Escape') {
+                    return;
+                }
+                
+                clearInterval(interval);
+                loadingBar.style.width = '100%';
+                percentage.textContent = '100%';
+                completeLoading();
+            }
+            
+            function createConfetti() {
+                const confettiCount = 80;
+                const colors = ['#ff3b3b', '#ffffff', '#ff6b6b', '#ff9999'];
+                
+                for (let i = 0; i < confettiCount; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    
+                    // Random color
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    
+                    // Random position
+                    confetti.style.left = `${Math.random() * 100}%`;
+                    confetti.style.top = `${Math.random() * 100}%`;
+                    
+                    celebration.appendChild(confetti);
+                    
+                    // Animate confetti
+                    gsap.to(confetti, {
+                        duration: 1 + Math.random() * 2,
+                        y: `+=${200 + Math.random() * 300}`,
+                        x: `+=${(Math.random() - 0.5) * 200}`,
+                        rotation: Math.random() * 360,
+                        opacity: 1,
+                        ease: "power2.out",
+                        onComplete: () => {
+                            gsap.to(confetti, {
+                                duration: 0.5,
+                                opacity: 0,
+                                ease: "power2.in"
+                            });
+                        }
+                    });
+                }
+                
+                // Show celebration container
+                gsap.to(celebration, { 
+                    duration: 0.5, 
+                    opacity: 1,
+                    ease: "power2.out" 
+                });
+            }
 
-    // Form submission
-    document.querySelector('.contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your inquiry! We will get back to you soon.');
-        this.reset();
-    });
-
-    // Video autoplay handling
-    document.addEventListener('DOMContentLoaded', function() {
-        const heroVideo = document.querySelector('.hero-video');
-        heroVideo.play().catch(e => {
-            console.log('Autoplay blocked:', e);
+            // Ensure videos are playing
+            document.addEventListener('click', function() {
+                videos.forEach(video => {
+                    if (video.paused) {
+                        video.play().catch(e => console.log('Video play failed:', e));
+                    }
+                });
+            });
         });
-    });
+
+        // ===== MAIN WEBSITE FUNCTIONALITY =====
+        function initializeMainWebsite() {
+            // Mobile Menu Functionality
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            mobileToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                const isExpanded = navMenu.classList.contains('active');
+                mobileToggle.setAttribute('aria-expanded', isExpanded);
+                mobileToggle.innerHTML = isExpanded 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+                
+                // Add/remove blur effect
+                if (isExpanded) {
+                    document.body.classList.add('menu-active');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.classList.remove('menu-active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking links
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    document.body.classList.remove('menu-active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Scroll progress bar
+            const progressBar = document.getElementById('progressBar');
+            window.addEventListener('scroll', () => {
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight - windowHeight;
+                const scrollPosition = window.scrollY;
+                const progress = (scrollPosition / documentHeight) * 100;
+                progressBar.style.width = `${progress}%`;
+            });
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Testimonial carousel
+            let currentTestimonial = 0;
+            const testimonials = document.querySelectorAll('.testimonial');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+
+            function showTestimonial(index) {
+                testimonials.forEach((t, i) => {
+                    t.classList.toggle('active', i === index);
+                });
+            }
+
+            prevBtn.addEventListener('click', () => {
+                currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+                showTestimonial(currentTestimonial);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                showTestimonial(currentTestimonial);
+            });
+
+            // Auto-play carousel
+            setInterval(() => {
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                showTestimonial(currentTestimonial);
+            }, 6000);
+
+            // Scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Form submission
+            document.querySelector('.contact-form').addEventListener('submit', function(e) {
+                setTimeout(() => {
+                    alert('Thank you! Your message has been sent. We will get back to you within 24 hours.');
+                    this.reset();
+                }, 100);
+            });
+
+            // Floating WhatsApp Button
+                setTimeout(() => {
+                    const whatsappButton = document.getElementById('whatsappButton');
+                    if (whatsappButton) {
+                        whatsappButton.classList.add('visible');
+                    }
+                }, 5000); // 5 second delay
+
+                // Ensure WhatsApp button appears after loading page transition
+                function initializeMainWebsite() {
+                    // ... your existing code ...
+                    
+                    // Add this line at the end of initializeMainWebsite function:
+                    setTimeout(() => {
+                        const whatsappButton = document.getElementById('whatsappButton');
+                        if (whatsappButton) {
+                            whatsappButton.classList.add('visible');
+                        }
+                    }, 5000);
+                }
+
+            // Video autoplay handling for main website
+            document.addEventListener('DOMContentLoaded', function() {
+                const heroVideo = document.querySelector('.hero-video-main');
+                heroVideo.play().catch(e => {
+                    console.log('Autoplay blocked:', e);
+                });
+            });
+        }
     </script>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923333473348?text=Hello%2C%20I'm%20interested%20in%20your%20travel%20services!" 
+    class="floating-whatsapp" 
+    id="whatsappButton"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+</a>
 </body>
 </html>

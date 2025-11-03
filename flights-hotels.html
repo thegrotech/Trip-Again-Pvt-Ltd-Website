@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ===== META TAGS & SEO ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Flights & Hotel Booking | Trip Again Travel & Tours</title>
+    <meta name="description" content="Book flights and hotels worldwide with Trip Again. Best rates on PIA, Emirates, Qatar Airways & 20+ airlines. 24/7 support and custom itineraries.">
+    <meta name="keywords" content="flight booking, hotel booking, PIA, Emirates, Qatar Airways, cheap flights, hotel deals, travel packages">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tripagain.com/flights-hotels.html">
+    <meta property="og:title" content="Flights & Hotel Booking - Trip Again Travel & Tours">
+    <meta property="og:description" content="Best rates on flights and hotels worldwide. 20+ airline partners, 24/7 support, and custom itineraries.">
+    <meta property="og:image" content="https://tripagain.com/images/flights-hotels-preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tripagain.com/flights-hotels.html">
+    <meta property="twitter:title" content="Flights & Hotel Booking - Trip Again">
+    <meta property="twitter:description" content="Book flights and hotels with best rates. 20+ airline partners and 24/7 support.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tripagain.com/flights-hotels.html">
+    
+    <!-- ===== SCHEMA MARKUP ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Flight and Hotel Booking",
+      "provider": {
+        "@type": "TravelAgency",
+        "name": "Trip Again Travel & Tours",
+        "description": "Professional flight and hotel booking services with best rates",
+        "url": "https://tripagain.com",
+        "telephone": "+92-333-3473348",
+        "email": "tripagain.dxb@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Office # 2, Ground Floor, Hamza Center, PECHS Block 2",
+          "addressLocality": "Karachi",
+          "addressCountry": "PK"
+        }
+      },
+      "areaServed": "PK",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Flight and Hotel Booking Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Flight Booking",
+              "description": "Domestic and international flights with 20+ airline partners"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hotel Booking",
+              "description": "All hotel categories worldwide with best rates"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- ===== STYLES & FONTS ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary-black: #000000;
+            --vibrant-red: #ff3b3b;
+            --pure-white: #ffffff;
+            --charcoal: #1a1a1a;
+            --light-gray: #f8f9fa;
+            --text-dark: #333333;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ===== RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--pure-white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.00);
+            backdrop-filter: blur(00px);
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+        }
+
+        .header.scrolled {
+            background: rgba(0, 0, 0, 0.50);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--pure-white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montez', cursive;
+            z-index: 1001;
+        }
+
+        .logo i {
+            color: var(--vibrant-red);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-menu a {
+            color: var(--pure-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--vibrant-red);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--vibrant-red);
+        }
+
+        /* ===== BUTTONS ===== */
+        .cta-button {
+            display: inline-block;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--vibrant-red);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--vibrant-red);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 59, 59, 0.3);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .flights-hero {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary-black) 100%);
+            color: var(--pure-white);
+            text-align: center;
+        }
+
+        /* Desktop Background */
+        .flights-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('hero-desktop-services.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3; /* Adjust opacity to blend with gradient */
+            z-index: 0;
+        }
+
+        /* Mobile Background */
+        @media (max-width: 768px) {
+            .flights-hero::before {
+                background-image: url('hero-mobile-services.jpg');
+                opacity: 0.5; /* Slightly higher opacity for mobile if needed */
+            }
+        }
+
+        .flights-hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .flights-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            font-family: 'Montez', cursive;
+            text-shadow: rgba(53, 52, 52, 0.603) 12px 12px 14px;
+            line-height: 1.1;
+        }
+
+        .flights-hero p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            line-height: 1.4;
+        }
+
+        /* ===== AIRLINE PARTNERS SECTION ===== */
+        .partners-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--vibrant-red);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Airline Logo Marquee */
+        .logo-marquee {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: var(--pure-white);
+            padding: 40px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .marquee-container {
+            display: flex;
+            animation: marquee 20s linear infinite;
+            animation-delay: 1s;
+            width: max-content;
+        }
+
+        .marquee-item {
+            flex: 0 0 auto;
+            margin: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .marquee-item img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: var(--transition);
+            pointer-events: none;
+        }
+
+        .marquee-item:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Ensure the entire item area is clickable/hoverable */
+        .marquee-item::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            z-index: -1; /* Place behind the content */
+        }
+
+        @media (max-width: 768px) {
+            .marquee-item img {
+                filter: grayscale(0%); /* Show colored logos directly */
+            }
+            
+            .marquee-item:hover img {
+                transform: none; /* Remove hover transform on mobile */
+            }
+        }
+
+        /* ===== ADVANTAGES SECTION ===== */
+        .advantages-section {
+            padding: 100px 0;
+            background: var(--pure-white);
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .advantage-card {
+            background: var(--light-gray);
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            border-left: 4px solid var(--vibrant-red);
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .advantage-icon {
+            font-size: 3rem;
+            color: var(--vibrant-red);
+            margin-bottom: 1.5rem;
+        }
+
+        .advantage-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* ===== FORMS SECTION ===== */
+        .forms-section {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .forms-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .form-card {
+            background: var(--pure-white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .form-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--vibrant-red);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--pure-white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--vibrant-red);
+            box-shadow: 0 0 0 3px rgba(255, 59, 59, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* ===== DESTINATIONS SECTION ===== */
+        .destinations-section {
+            padding: 100px 0;
+            background: var(--pure-white);
+        }
+
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .destination-card {
+            background: var(--pure-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .destination-image {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .destination-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .destination-card:hover .destination-image img {
+            transform: scale(1.1);
+        }
+
+        .destination-content {
+            padding: 1.5rem;
+        }
+
+        .destination-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .destination-content p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .country-cta {
+            color: var(--vibrant-red);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .country-cta:hover {
+            gap: 10px;
+        }
+
+        /* ===== OFFERS SECTION ===== */
+        .offers-section {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .offer-card {
+            background: var(--pure-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .offer-badge {
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+        }
+
+        .offer-image {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .offer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .offer-card:hover .offer-image img {
+            transform: scale(1.1);
+        }
+
+        .offer-content {
+            padding: 1.5rem;
+        }
+
+        .offer-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .offer-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--vibrant-red);
+            margin-bottom: 1rem;
+        }
+
+        .offer-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .offer-features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .offer-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--vibrant-red);
+            font-weight: bold;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montez', cursive;
+        }
+
+        .footer-logo i {
+            color: var(--vibrant-red);
+        }
+
+        .footer-about {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--vibrant-red);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--vibrant-red);
+            padding-left: 5px;
+        }
+
+        .footer-links i {
+            margin-right: 10px;
+            color: var(--vibrant-red);
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            color: var(--pure-white);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-link:nth-child(1):hover {
+            background: #1877F2;
+        }
+
+        .social-link:nth-child(2):hover {
+            background: #1DA1F2;
+        }
+
+        .social-link:nth-child(3):hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .social-link:nth-child(4):hover {
+            background: #0077B5;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 992px) {
+            .forms-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .destinations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .flights-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .flights-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .destinations-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .advantages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .flights-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .nav {
+                padding: 0.8rem;
+            }
+            
+            .form-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(255, 59, 59, 0.3);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #e60000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 59, 59, 0.4);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Trip Again Travel and Tours Home">
+                <!--<i class="fas fa-plane" aria-hidden="true"></i>-->
+                Trip Again
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="visa-services.html">Visa Services</a></li>
+                <li><a href="flights-hotels.html" aria-current="page">Flights & Hotels</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== FLIGHTS & HOTELS HERO SECTION ===== -->
+    <section class="flights-hero" itemscope itemtype="https://schema.org/Service">
+        <div class="flights-hero-content">
+            <h1 itemprop="name" style="letter-spacing: 4px;">Flights & Hotels</h1>
+            <p itemprop="description">Best rates on flights and hotels worldwide. 20+ airline partners, 24/7 support, and custom itineraries tailored for you.</p>
+            <a href="#forms" class="cta-button">Get Instant Quote</a>
+        </div>
+    </section>
+
+    <!-- ===== AIRLINE PARTNERS SECTION ===== -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Airline Partners</h2>
+                <p class="section-subtitle">We partner with 20+ leading airlines worldwide to bring you the best fares and options</p>
+            </div>
+            
+            <div class="logo-marquee">
+                <div class="marquee-container" id="marqueeContainer">
+                    <!-- Airline logos will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ADVANTAGES SECTION ===== -->
+    <section class="advantages-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Book With Us?</h2>
+                <p class="section-subtitle">Experience the difference of personalized service and expert travel planning</p>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Better Rates</h3>
+                    <p>Get exclusive deals and discounts not available on online booking platforms</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer service for emergencies and itinerary changes</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Custom Itineraries</h3>
+                    <p>Tailored travel plans designed around your preferences and schedule</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Group Discounts</h3>
+                    <p>Special rates for family trips, corporate travel, and group tours</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Emergency Assistance</h3>
+                    <p>Comprehensive support for flight changes, cancellations, and emergencies</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Local Expertise</h3>
+                    <p>Insider knowledge and recommendations for the perfect travel experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FORMS SECTION ===== -->
+    <section id="forms" class="forms-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get Your Custom Quote</h2>
+                <p class="section-subtitle">Fill out the form below and our travel experts will get back to you with the best options</p>
+            </div>
+            
+            <div class="forms-container">
+                <!-- Flight Inquiry Form -->
+                <div class="form-card">
+                    <h3>Flight Inquiry</h3>
+                    <form class="flight-form" name="flight-inquiry" method="POST" netlify netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="flight-inquiry">
+                        <p class="sr-only">
+                            <label>Don't fill this out: <input name="bot-field"></label>
+                        </p>
+                        
+                        <div class="form-group">
+                            <label for="trip-type">Trip Type</label>
+                            <select id="trip-type" name="trip-type" required>
+                                <option value="">Select Trip Type</option>
+                                <option value="one-way">One Way</option>
+                                <option value="return">Return</option>
+                                <option value="multi-city">Multi City</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="departure">Departure City</label>
+                                <input type="text" id="departure" name="departure" placeholder="e.g., Karachi" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Destination</label>
+                                <input type="text" id="destination" name="destination" placeholder="e.g., Dubai" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="departure-date">Departure Date</label>
+                                <input type="date" id="departure-date" name="departure-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="return-date">Return Date</label>
+                                <input type="date" id="return-date" name="return-date">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="passengers">Passengers</label>
+                                <select id="passengers" name="passengers" required>
+                                    <option value="1">1 Passenger</option>
+                                    <option value="2">2 Passengers</option>
+                                    <option value="3">3 Passengers</option>
+                                    <option value="4">4 Passengers</option>
+                                    <option value="5">5+ Passengers</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="class">Class</label>
+                                <select id="class" name="class" required>
+                                    <option value="economy">Economy</option>
+                                    <option value="premium-economy">Premium Economy</option>
+                                    <option value="business">Business</option>
+                                    <option value="first">First Class</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="flight-notes">Special Requests</label>
+                            <textarea id="flight-notes" name="flight-notes" placeholder="Any special requirements or preferences..." rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button" style="width: 100%;">Get Flight Quote</button>
+                    </form>
+                </div>
+                
+                <!-- Hotel Inquiry Form -->
+                <div class="form-card">
+                    <h3>Hotel Inquiry</h3>
+                    <form class="hotel-form" name="hotel-inquiry" method="POST" netlify netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="hotel-inquiry">
+                        <p class="sr-only">
+                            <label>Don't fill this out: <input name="bot-field"></label>
+                        </p>
+                        
+                        <div class="form-group">
+                            <label for="hotel-destination">Destination</label>
+                            <input type="text" id="hotel-destination" name="hotel-destination" placeholder="e.g., Dubai" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="check-in">Check-in Date</label>
+                                <input type="date" id="check-in" name="check-in" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="check-out">Check-out Date</label>
+                                <input type="date" id="check-out" name="check-out" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rooms">Rooms</label>
+                                <select id="rooms" name="rooms" required>
+                                    <option value="1">1 Room</option>
+                                    <option value="2">2 Rooms</option>
+                                    <option value="3">3 Rooms</option>
+                                    <option value="4">4+ Rooms</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Guests</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5+ Guests</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="hotel-preferences">Hotel Preferences</label>
+                            <select id="hotel-preferences" name="hotel-preferences" required>
+                                <option value="budget">Budget</option>
+                                <option value="standard">Standard</option>
+                                <option value="luxury">Luxury</option>
+                                <option value="resort">Resort</option>
+                                <option value="boutique">Boutique</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="hotel-notes">Special Requirements</label>
+                            <textarea id="hotel-notes" name="hotel-notes" placeholder="Any special requirements, amenities, or preferences..." rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button" style="width: 100%;">Get Hotel Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DESTINATIONS SECTION ===== -->
+    <section class="destinations-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Popular Destinations</h2>
+                <p class="section-subtitle">Get inspired by these trending international destinations</p>
+            </div>
+            
+            <div class="destinations-grid" id="destinationsGrid">
+                <!-- Destinations will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SPECIAL OFFERS SECTION ===== -->
+    <section class="offers-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Special Offers</h2>
+                <p class="section-subtitle">Limited time deals and promotions for your next journey</p>
+            </div>
+            
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dubai Special Offer">
+                        <div class="offer-badge">Limited Time</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Dubai Escape</h3>
+                        <div class="offer-price">From $699</div>
+                        <ul class="offer-features">
+                            <li>Return flights included</li>
+                            <li>4-star hotel for 5 nights</li>
+                            <li>Burj Khalifa tickets</li>
+                            <li>Desert safari experience</li>
+                        </ul>
+                        <a href="#forms" class="cta-button" style="width: 100%; text-align: center;">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Istanbul Special Offer">
+                        <div class="offer-badge">Popular</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Istanbul Discovery</h3>
+                        <div class="offer-price">From $549</div>
+                        <ul class="offer-features">
+                            <li>Return flights included</li>
+                            <li>3-star hotel for 4 nights</li>
+                            <li>Bosphorus cruise</li>
+                            <li>Historical sites tour</li>
+                        </ul>
+                        <a href="#forms" class="cta-button" style="width: 100%; text-align: center;">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="thailand.jpg" alt="Bangkok Special Offer">
+                        <div class="offer-badge">Best Value</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Bangkok Adventure</h3>
+                        <div class="offer-price">From $449</div>
+                        <ul class="offer-features">
+                            <li>Return flights included</li>
+                            <li>4-star hotel for 5 nights</li>
+                            <li>Temple tours included</li>
+                            <li>River cruise experience</li>
+                        </ul>
+                        <a href="#forms" class="cta-button" style="width: 100%; text-align: center;">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <!--<i class="fas fa-plane" aria-hidden="true"></i>-->
+                        Trip Again
+                    </div>
+                    <p class="footer-about">Professional flight and hotel booking services with best rates. 20+ airline partners and 24/7 support.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15zomm3b1E/" class="social-link" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Visit our Twitter page"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Visit our Instagram page"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Visit our LinkedIn page"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="visa-services.html">Visa Services</a></li>
+                        <li><a href="flights-hotels.html">Flights & Hotels</a></li>
+                        <li><a href="index.html#blog">Travel Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="flights-hotels.html">Flight Booking</a></li>
+                        <li><a href="flights-hotels.html">Hotel Booking</a></li>
+                        <li><a href="visa-services.html">Visa Services</a></li>
+                        <li><a href="index.html#services">Custom Tours</a></li>
+                        <li><a href="index.html#services">Umrah Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Office # 2, Ground Floor, Hamza Center, PECHS Block 2, Near Liberty Traffic Signal, Tariq Road, Karachi Pakistan.</li>
+                        <li><i class="fas fa-phone"></i> +92 333 3473348</li>
+                        <li><i class="fas fa-envelope"></i> tripagain.dxb@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 12PM-10PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Trip Again Travel & Tours - Professional Flight & Hotel Booking Services. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Airline partners data with actual logo URLs
+        const airlinePartners = [
+            { name: "PIA", logo: "pialogo.png" },
+            { name: "Airblue", logo: "airbluelogo.png" },
+            { name: "Airsial", logo: "airsiallogo.png" },
+            { name: "Fly Jinnah", logo: "flyjinnahlogo.png" },
+            { name: "Emirates", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/320px-Emirates_logo.svg.png" },
+            { name: "Qatar Airways", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Qatar_Airways_Logo.svg/320px-Qatar_Airways_Logo.svg.png" },
+            { name: "Etihad Airways", logo: "etihadairwayslogo.png" },
+            { name: "Saudi Airlines", logo: "saudiairlinelogo.png" },
+            { name: "Air Arabia", logo: "airarabialogo.png" },
+            { name: "Flydubai", logo: "flydubailogo.png" },
+            { name: "Oman Air", logo: "omanairlogo.png" },
+            { name: "Gulf Air", logo: "gulfairlogo.png" },
+            { name: "Jazeera Airways", logo: "jazeeraairwayslogo.png" },
+            { name: "Flyadeal", logo: "flyadeallogo.png" },
+            { name: "Flynas", logo: "flynaslogo.png" },
+            { name: "Thai Airways", logo: "thaiairwayslogo.png" },
+            { name: "Batik Air", logo: "batikairlogo.png" },
+            { name: "AirAsia", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AirAsia_New_Logo.svg/320px-AirAsia_New_Logo.svg.png" },
+            { name: "SriLankan Airlines", logo: "srilankanairlineslogo.png" },
+            { name: "Turkish Airlines", logo: "turkishairlineslogo.png" },
+            { name: "Pegasus Airlines", logo: "pegasusairlineslogo.png" }
+        ];
+
+        // Popular destinations data
+        const popularDestinations = [
+            {
+                name: "Dubai",
+                image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                description: "The city of luxury, shopping, and breathtaking architecture"
+            },
+            {
+                name: "Istanbul",
+                image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                description: "Where East meets West with rich history and culture"
+            },
+            {
+                name: "Bangkok",
+                image: "thailand.jpg",
+                description: "Vibrant street life, temples, and amazing cuisine"
+            },
+            {
+                name: "Kuala Lumpur",
+                image: "https://images.unsplash.com/photo-1596422846543-75e6d59b35e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                description: "Modern metropolis with iconic Petronas Twin Towers"
+            }
+        ];
+
+        // DOM Elements
+        const marqueeContainer = document.getElementById('marqueeContainer');
+        const destinationsGrid = document.getElementById('destinationsGrid');
+        const header = document.getElementById('header');
+
+        // Render airline partners marquee
+        function renderAirlineMarquee() {
+            // Duplicate the array to create seamless loop
+            const duplicatedAirlines = [...airlinePartners, ...airlinePartners];
+            
+            duplicatedAirlines.forEach(airline => {
+                const marqueeItem = document.createElement('div');
+                marqueeItem.className = 'marquee-item';
+                marqueeItem.innerHTML = `
+                    <img src="${airline.logo}" alt="${airline.name} logo" loading="lazy">
+                `;
+                marqueeContainer.appendChild(marqueeItem);
+            });
+        }
+
+        // Render popular destinations
+        function renderDestinations() {
+            destinationsGrid.innerHTML = '';
+            
+            popularDestinations.forEach(destination => {
+                const destinationCard = document.createElement('div');
+                destinationCard.className = 'destination-card';
+                destinationCard.innerHTML = `
+                    <div class="destination-image">
+                        <img src="${destination.image}" alt="${destination.name} travel destination" loading="lazy">
+                    </div>
+                    <div class="destination-content">
+                        <h3>${destination.name}</h3>
+                        <p>${destination.description}</p>
+                        <a href="#forms" class="country-cta">Get Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                `;
+                
+                destinationsGrid.appendChild(destinationCard);
+            });
+        }
+
+        // Form submission handlers
+        function setupFormHandlers() {
+            // Flight form submission
+            document.querySelector('.flight-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Simulate form submission
+                setTimeout(() => {
+                    alert('Thank you! Your flight inquiry has been received. We will get back to you within 2 hours with the best options.');
+                    this.reset();
+                }, 100);
+            });
+
+            // Hotel form submission
+            document.querySelector('.hotel-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Simulate form submission
+                setTimeout(() => {
+                    alert('Thank you! Your hotel inquiry has been received. We will get back to you within 2 hours with the best options.');
+                    this.reset();
+                }, 100);
+            });
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            renderAirlineMarquee();
+            renderDestinations();
+            setupFormHandlers();
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Set minimum dates for date inputs to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('departure-date').min = today;
+            document.getElementById('return-date').min = today;
+            document.getElementById('check-in').min = today;
+            document.getElementById('check-out').min = today;
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        // Smooth scroll to top
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+    </script>
+</body>
+</html>

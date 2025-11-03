@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add this in the head section after the main meta description -->
+    <meta name="description" content="Trip Again Travel & Tours: Expert visa assistance for Pakistani nationals to UAE, Saudi Arabia, Bahrain, Malaysia, Thailand, Singapore and 10+ destinations. Fast processing, competitive fees.">
+
+    <!-- Country-specific meta tags (optional but powerful for SEO) -->
+    <meta property="og:title" content="Visa Services - Trip Again Travel & Tours">
+    <meta property="og:description" content="Professional visa assistance for Pakistani passport holders to 16+ countries including UAE, Saudi Arabia, Malaysia, Thailand & more">
+    <meta property="og:url" content="https://tripagain.pk/visa-services.html">
+    <meta property="og:image" content="https://tripagain.pk/images/visa-services-og.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Visa Services - Trip Again Travel & Tours">
+    <meta name="twitter:description" content="Expert visa assistance for Pakistani nationals to popular destinations worldwide">
+    <title>Visa Services - Trip Again Travel & Tours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary-black: #000000;
+            --vibrant-red: #ff3b3b;
+            --pure-white: #ffffff;
+            --charcoal: #1a1a1a;
+            --light-gray: #f8f9fa;
+            --text-dark: #333333;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ===== RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--pure-white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.00);
+            backdrop-filter: blur(00px);
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+        }
+
+        .header.scrolled {
+            background: rgba(0, 0, 0, 0.50);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--pure-white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montez', cursive;
+            z-index: 1001;
+        }
+
+        .logo i {
+            color: var(--vibrant-red);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-menu a {
+            color: var(--pure-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--vibrant-red);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--vibrant-red);
+        }
+
+        /* ===== BUTTONS ===== */
+        .cta-button {
+            display: inline-block;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--vibrant-red);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--vibrant-red);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 59, 59, 0.3);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .visa-hero {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary-black) 100%);
+            color: var(--pure-white);
+            text-align: center;
+        }
+
+        /* Desktop Background */
+        .visa-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('hero-desktop-services.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3; /* Adjust opacity as needed */
+            z-index: 0;
+        }
+
+        /* Mobile Background */
+        @media (max-width: 768px) {
+            .visa-hero::before {
+                background-image: url('hero-mobile-services.jpg');
+                opacity: 0.5; /* Slightly higher opacity for mobile if needed */
+            }
+        }
+
+        .visa-hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .visa-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            font-family: 'Montez', cursive;
+            text-shadow: rgba(53, 52, 52, 0.603) 12px 12px 14px;
+            line-height: 1.1;
+        }
+
+        .visa-hero p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            line-height: 1.4;
+        }
+
+        /* ===== COUNTRIES GRID ===== */
+        .countries-section {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--vibrant-red);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .countries-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .country-card {
+            background: var(--pure-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .country-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .country-image {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .country-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .country-card:hover .country-image img {
+            transform: scale(1.1);
+        }
+
+        .country-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .country-content {
+            padding: 1.5rem;
+        }
+
+        .country-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .country-content p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .country-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .country-cta {
+            color: var(--vibrant-red);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .country-cta:hover {
+            gap: 10px;
+            transform: translateY(-2px);
+        }
+
+        /* ===== MODAL STYLES ===== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: var(--pure-white);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .modal-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-header-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: var(--pure-white);
+        }
+
+        .modal-header-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-header-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .modal-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--vibrant-red);
+        }
+
+        .visa-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .visa-type {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--vibrant-red);
+        }
+
+        .visa-type h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .requirements-list {
+            list-style: none;
+        }
+
+        .requirements-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .requirements-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--vibrant-red);
+            font-weight: bold;
+        }
+
+        .processing-info {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            flex: 1;
+            min-width: 200px;
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-item i {
+            font-size: 2rem;
+            color: var(--vibrant-red);
+            margin-bottom: 1rem;
+        }
+
+        .info-item h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montez', cursive;
+        }
+
+        .footer-logo i {
+            color: var(--vibrant-red);
+        }
+
+        .footer-about {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--vibrant-red);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--vibrant-red);
+            padding-left: 5px;
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            color: var(--pure-white);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-link:nth-child(1):hover {
+            background: #1877F2;
+        }
+
+        .social-link:nth-child(2):hover {
+            background: #1DA1F2;
+        }
+
+        .social-link:nth-child(3):hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .social-link:nth-child(4):hover {
+            background: #0077B5;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+        }
+
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 992px) {
+            .countries-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .visa-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .visa-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .countries-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .modal-header {
+                height: 200px;
+            }
+            
+            .modal-header-content h2 {
+                font-size: 2rem;
+            }
+            
+            .visa-types {
+                grid-template-columns: 1fr;
+            }
+            
+            .processing-info {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .visa-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .nav {
+                padding: 0.8rem;
+            }
+        }
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(255, 59, 59, 0.3);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #e60000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 59, 59, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Trip Again Home">
+                Trip Again
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Visa Hero Section -->
+    <section class="visa-hero">
+        <div class="visa-hero-content">
+            <h1>Visa Services</h1>
+            <p>Expert visa assistance for Pakistani & Other nationals to destinations worldwide</p>
+            <a href="#countries" class="cta-button">Explore Countries</a>
+        </div>
+    </section>
+
+    <!-- Countries Grid Section -->
+    <section id="countries" class="countries-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Destinations</h2>
+                <p class="section-subtitle">We provide comprehensive visa assistance for Pakistani passport holders to these popular destinations</p>
+            </div>
+            
+            <div class="countries-grid" id="countriesGrid">
+                <!-- Countries will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header" id="modalHeader">
+                <!-- Modal header content will be populated by JavaScript -->
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal body content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <!--<i class="fas fa-plane" aria-hidden="true"></i>-->
+                        Trip Again
+                    </div>
+                    <p class="footer-about">Luxury travel experiences designed around you. Rediscover your world with Trip Again Travel & Tours.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15zomm3b1E/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Flight & Hotel</a></li>
+                        <li><a href="visa-services.html">Visa Services</a></li>
+                        <li><a href="#">Umrah & Hajj</a></li>
+                        <li><a href="#">Custom Tours</a></li>
+                        <li><a href="#">Corporate Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Office # 2, Ground Floor, Hamza Center, PECHS Block 2, Near Liberty Traffic Signal, Tariq Road, Karachi Pakistan.</li>
+                        <li><i class="fas fa-phone"></i> +92 333 3473348</li>
+                        <li><i class="fas fa-envelope"></i> tripagain.dxb@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 12PM-10PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2021 All Rights reserved by Trip Again Pvt Ltd. Powered by passion & technology — designed by GroTech Solutions.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <script>
+        // Country data with all the details you provided
+        const countriesData = [
+            {
+                id: 1,
+                name: "United Arab Emirates",
+                capital: "Abu Dhabi",
+                image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                modalImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "The UAE offers diverse visa options including transit, tourist, and long-term visas.",
+                visaTypes: [
+                    { type: "48 Hours Transit Visa", duration: "48 hours" },
+                    { type: "96 Hours Transit Visa", duration: "96 hours" },
+                    { type: "30 Days Tourist Visa", duration: "30 days", entry: "Single/Multiple" },
+                    { type: "60 Days Tourist Visa", duration: "60 days", entry: "Single/Multiple" },
+                    { type: "5 Year Multiple Entry Visa", duration: "5 years", entry: "Multiple" },
+                    { type: "2 Year Freelance Visa", duration: "2 years", notes: "For graduate individuals" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details"
+                ],
+                specialNotes: "All visas are E-visas for Pakistani nationals.",
+                priority: true
+            },
+            {
+                id: 2,
+                name: "Saudi Arabia",
+                capital: "Riyadh",
+                image: "saudiarabia.jpg",
+                modalImage: "https://images.unsplash.com/photo-1540324155972-d834e2fcb8c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "Home to the holy cities of Mecca and Medina, offering spiritual and tourist visas.",
+                visaTypes: [
+                    { type: "Umrah Visa", duration: "30 days" },
+                    { type: "Umrah Visa", duration: "90 days" },
+                    { type: "Visit/Tourist Visa", duration: "30-90 days", notes: "For individuals with GCC resident visa (90+ days validity) or valid USA/EU visas with travel history" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details",
+                    "For Umrah: Vaccination certificate"
+                ],
+                specialNotes: "Umrah visas have specific seasonal availability.",
+                priority: true
+            },
+            {
+                id: 3,
+                name: "Bahrain",
+                capital: "Manama",
+                image: "bahrain.jpg",
+                modalImage: "https://images.unsplash.com/photo-1586769852836-bc069f74e9e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "A modern island nation with diverse visa options for visitors.",
+                visaTypes: [
+                    { type: "14 Days Visa", duration: "14 days", entry: "Single" },
+                    { type: "90 Days Visa", duration: "90 days", entry: "Multiple", notes: "Max 30 days stay per visit" },
+                    { type: "1 Year Visa", duration: "1 year", entry: "Multiple", notes: "Max 90 days stay per visit" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details"
+                ],
+                specialNotes: "All visas are E-visas for Pakistani nationals.",
+                priority: true
+            },
+            {
+                id: 4,
+                name: "Malaysia",
+                capital: "Kuala Lumpur",
+                image: "malaysia.jpg",
+                modalImage: "https://images.unsplash.com/photo-1596422846543-75e6d59b35e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "A Southeast Asian destination known for its diverse culture and modern infrastructure.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "30 days", entry: "Single/Multiple" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details",
+                    "Hotel booking confirmation",
+                    "Return flight ticket"
+                ],
+                specialNotes: "E-visa available for Pakistani nationals.",
+                priority: true
+            },
+            {
+                id: 5,
+                name: "Thailand",
+                capital: "Bangkok",
+                image: "https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                modalImage: "https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "Known for its tropical beaches, opulent royal palaces, and ancient ruins.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "30 days", entry: "Single/Multiple" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details",
+                    "Hotel booking confirmation",
+                    "Return flight ticket"
+                ],
+                specialNotes: "E-visa available for Pakistani nationals.",
+                priority: true
+            },
+            {
+                id: 6,
+                name: "Singapore",
+                capital: "Singapore",
+                image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                modalImage: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "A global financial hub with a tropical climate and multicultural population.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "30 days", entry: "Single" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details",
+                    "Hotel booking confirmation",
+                    "Return flight ticket"
+                ],
+                specialNotes: "E-visa available for Pakistani nationals.",
+                priority: true
+            },
+            // Additional countries
+            {
+                id: 7,
+                name: "Sri Lanka",
+                capital: "Colombo",
+                image: "srilanka.jpg",
+                modalImage: "https://images.unsplash.com/photo-1598974357801-cbca100e65d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "Known for its rich Buddhist heritage, beautiful beaches, and diverse landscapes.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "30 days", entry: "Single" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details"
+                ],
+                specialNotes: "E-visa available for Pakistani nationals.",
+                priority: false
+            },
+            {
+                id: 8,
+                name: "Vietnam",
+                capital: "Hanoi",
+                image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                modalImage: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "Famous for its beaches, rivers, Buddhist pagodas, and bustling cities.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "30 days", entry: "Single" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details"
+                ],
+                specialNotes: "E-visa available for Pakistani nationals.",
+                priority: false
+            },
+            {
+                id: 9,
+                name: "Cambodia",
+                capital: "Phnom Penh",
+                image: "cambodia.jpg",
+                modalImage: "https://images.unsplash.com/photo-1587502536575-6dfba0c82b6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "Home to the magnificent Angkor Wat temple complex and rich cultural heritage.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "30 days", entry: "Single" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details"
+                ],
+                specialNotes: "E-visa available for Pakistani nationals.",
+                priority: false
+            },
+            {
+                id: 10,
+                name: "Azerbaijan",
+                capital: "Baku",
+                image: "azerbaijan.jpg",
+                modalImage: "https://images.unsplash.com/photo-1596461404964-483dfa8c2dc1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "A country at the crossroads of Eastern Europe and Western Asia with rich cultural heritage.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "30 days", entry: "Single" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details"
+                ],
+                specialNotes: "E-visa available for Pakistani nationals.",
+                priority: false
+            },
+            {
+                id: 11,
+                name: "Hong Kong",
+                capital: "Hong Kong",
+                image: "hongkong.jpg",
+                modalImage: "https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "A vibrant metropolis known for its impressive skyline and deep natural harbor.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "30 days", entry: "Single" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details"
+                ],
+                specialNotes: "E-visa available for Pakistani nationals.",
+                priority: false
+            },
+            {
+                id: 12,
+                name: "Indonesia",
+                capital: "Jakarta",
+                image: "indonesia.jpg",
+                modalImage: "https://images.unsplash.com/photo-1539367628447-02121d16c015?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "An archipelago of thousands of volcanic islands with diverse cultures and landscapes.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "60 days", entry: "Single" },
+                    { type: "Multiple Entry Visa", duration: "1 year", entry: "Multiple" },
+                    { type: "Multiple Entry Visa", duration: "2 years", entry: "Multiple" },
+                    { type: "Multiple Entry Visa", duration: "5 years", entry: "Multiple" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details"
+                ],
+                specialNotes: "E-visa available for Pakistani nationals.",
+                priority: false
+            },
+            {
+                id: 13,
+                name: "China",
+                capital: "Beijing",
+                image: "china.jpg",
+                modalImage: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "A vast country with diverse landscapes, ancient history, and modern cities.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "30-90 days", entry: "Single/Multiple" }
+                ],
+                processingTime: "15-20 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details",
+                    "Complete invitation details",
+                    "Hotel booking confirmation",
+                    "Return flight ticket"
+                ],
+                specialNotes: "Sticker visa - passport submitted to embassy. Complete invitation details required.",
+                priority: false
+            },
+            {
+                id: 14,
+                name: "Japan",
+                capital: "Tokyo",
+                image: "japan.jpg",
+                modalImage: "https://images.unsplash.com/photo-1540959733332-57c5e47c4cac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "Known for its blend of traditional culture and modern technology.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "15-90 days", entry: "Single/Multiple" }
+                ],
+                processingTime: "15-20 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details",
+                    "Complete invitation details",
+                    "Hotel booking confirmation",
+                    "Return flight ticket",
+                    "Detailed itinerary"
+                ],
+                specialNotes: "Sticker visa - passport submitted to embassy. Complete invitation details required.",
+                priority: false
+            },
+            {
+                id: 15,
+                name: "South Korea",
+                capital: "Seoul",
+                image: "southkorea.jpg",
+                modalImage: "https://images.unsplash.com/photo-1534274867514-d5b47ef89e7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "A country known for its green, hilly countryside dotted with cherry trees and Buddhist temples.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "30-90 days", entry: "Single/Multiple" }
+                ],
+                processingTime: "15-20 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details",
+                    "Complete invitation details",
+                    "Hotel booking confirmation",
+                    "Return flight ticket"
+                ],
+                specialNotes: "Sticker visa - passport submitted to embassy. Complete invitation details required.",
+                priority: false
+            },
+            {
+                id: 16,
+                name: "Egypt",
+                capital: "Cairo",
+                image: "egypt.jpg",
+                modalImage: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                description: "Home to ancient monuments including the Pyramids of Giza and the Great Sphinx.",
+                visaTypes: [
+                    { type: "Tourist Visa", duration: "30 days", entry: "Single" }
+                ],
+                processingTime: "10-12 working days",
+                requirements: [
+                    "Passport bio data page",
+                    "Passport second page",
+                    "ID Card (front & back)",
+                    "Picture with white background",
+                    "Bank statement (account title should be of applicant)",
+                    "In case of company: NTN and company registration details",
+                    "Hotel booking confirmation",
+                    "Return flight ticket"
+                ],
+                specialNotes: "Sticker visa - passport submitted to embassy in Islamabad.",
+                priority: false
+            }
+        ];
+
+        // DOM Elements
+        const countriesGrid = document.getElementById('countriesGrid');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modal = document.getElementById('modal');
+        const modalClose = document.getElementById('modalClose');
+        const modalHeader = document.getElementById('modalHeader');
+        const modalBody = document.getElementById('modalBody');
+        const header = document.getElementById('header');
+
+        // Render countries grid
+        function renderCountriesGrid() {
+            countriesGrid.innerHTML = '';
+            
+            countriesData.forEach(country => {
+                const countryCard = document.createElement('div');
+                countryCard.className = 'country-card';
+                countryCard.innerHTML = `
+                    <div class="country-image">
+                        <img src="${country.image}" alt="${country.name}" loading="lazy">
+                        ${country.priority ? '<div class="country-badge">Popular</div>' : ''}
+                    </div>
+                    <div class="country-content">
+                        <h3>${country.name}</h3>
+                        <p>${country.description}</p>
+                        <div class="country-meta">
+                            <span><i class="fas fa-clock"></i> ${country.processingTime}</span>
+                            <span><i class="fas fa-map-marker-alt"></i> ${country.capital}</span>
+                        </div>
+                        <a href="#" class="country-cta">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                `;
+                
+                countryCard.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openModal(country);
+                });
+                
+                countriesGrid.appendChild(countryCard);
+            });
+        }
+
+        // Open modal with country details
+        function openModal(country) {
+            // Create modal header
+            modalHeader.innerHTML = `
+                <img src="${country.modalImage}" alt="${country.name}">
+                <div class="modal-header-content">
+                    <h2>${country.name}</h2>
+                    <p>${country.capital} • Visa Services for Pakistani Nationals</p>
+                </div>
+            `;
+            
+            // Create modal body
+            modalBody.innerHTML = `
+                <div class="modal-section">
+                    <h3>Visa Types</h3>
+                    <div class="visa-types">
+                        ${country.visaTypes.map(visa => `
+                            <div class="visa-type">
+                                <h4>${visa.type}</h4>
+                                <p><strong>Duration:</strong> ${visa.duration}</p>
+                                ${visa.entry ? `<p><strong>Entry:</strong> ${visa.entry}</p>` : ''}
+                                ${visa.notes ? `<p><strong>Notes:</strong> ${visa.notes}</p>` : ''}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Processing Information</h3>
+                    <div class="processing-info">
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <h4>Processing Time</h4>
+                            <p>${country.processingTime}</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <h4>Visa Fees</h4>
+                            <p>$$$ (Contact for exact pricing)</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-passport"></i>
+                            <h4>Visa Type</h4>
+                            <p>${country.specialNotes.includes('E-visa') ? 'E-Visa' : 'Sticker Visa'}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Required Documents</h3>
+                    <ul class="requirements-list">
+                        ${country.requirements.map(req => `<li>${req}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                ${country.specialNotes ? `
+                <div class="modal-section">
+                    <h3>Special Notes</h3>
+                    <p>${country.specialNotes}</p>
+                </div>
+                ` : ''}
+                
+                <div class="modal-actions">
+                    <a href="index.html#contact" class="cta-button">Apply Now</a>
+                    <button class="cta-button" style="background: transparent; color: var(--vibrant-red);" onclick="closeModal()">Close</button>
+                </div>
+            `;
+            
+            // Show modal
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Event listeners
+        modalClose.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCountriesGrid();
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Make closeModal function available globally
+        window.closeModal = closeModal;
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        // Smooth scroll to top
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+    </script>
+</body>
+</html>
