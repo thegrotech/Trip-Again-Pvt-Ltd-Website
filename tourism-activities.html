@@ -1,0 +1,2481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trip Again Travel & Tours: Discover amazing tourism activities in Dubai, Istanbul, Cappadocia, Kuala Lumpur, Singapore, Langkawi, Bangkok and more.">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Tourism Activities - Trip Again Travel & Tours">
+    <meta property="og:description" content="Explore exciting tourism activities in popular destinations worldwide with Trip Again Travel & Tours">
+    <meta property="og:url" content="https://tripagain.pk/tourism-activities.html">
+    <meta property="og:image" content="https://tripagain.pk/images/tourism-activities-og.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tourism Activities - Trip Again Travel & Tours">
+    <meta name="twitter:description" content="Discover amazing tourism activities in popular destinations worldwide">
+    
+    <title>Tourism Activities - Trip Again Travel & Tours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary-black: #000000;
+            --vibrant-red: #ff3b3b;
+            --pure-white: #ffffff;
+            --charcoal: #1a1a1a;
+            --light-gray: #f8f9fa;
+            --text-dark: #333333;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ===== RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--pure-white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.00);
+            backdrop-filter: blur(00px);
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+        }
+
+        .header.scrolled {
+            background: rgba(0, 0, 0, 0.50);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--pure-white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montez', cursive;
+            z-index: 1001;
+        }
+
+        .logo i {
+            color: var(--vibrant-red);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-menu a {
+            color: var(--pure-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--vibrant-red);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--vibrant-red);
+        }
+
+        /* ===== BUTTONS ===== */
+        .cta-button {
+            display: inline-block;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--vibrant-red);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--vibrant-red);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 59, 59, 0.3);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .tourism-hero {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary-black) 100%);
+            color: var(--pure-white);
+            text-align: center;
+        }
+
+        /* Desktop Background */
+        .tourism-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("hero-desktop-services.jpg") ;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        /* Mobile Background */
+        @media (max-width: 768px) {
+            .tourism-hero::before {
+                background-image: url("hero-mobile-services.jpg");
+                opacity: 0.5;
+            }
+        }
+
+        .tourism-hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tourism-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            font-family: 'Montez', cursive;
+            text-shadow: rgba(53, 52, 52, 0.603) 12px 12px 14px;
+            line-height: 1.1;
+        }
+
+        .tourism-hero p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            line-height: 1.4;
+        }
+
+        /* ===== FILTER SECTION ===== */
+        .filter-section {
+            padding: 2rem 0;
+            background: var(--light-gray);
+        }
+
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .filter-btn {
+            background: var(--pure-white);
+            border: 2px solid var(--vibrant-red);
+            color: var(--vibrant-red);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+        }
+
+        /* ===== ACTIVITIES SECTION ===== */
+        .activities-section {
+            padding: 60px 0 100px;
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--vibrant-red);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .country-section {
+            margin-bottom: 4rem;
+        }
+
+        .country-title {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--charcoal);
+        }
+
+        .country-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--vibrant-red);
+        }
+
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .activity-card {
+            background: var(--pure-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .activity-image {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .activity-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .activity-card:hover .activity-image img {
+            transform: scale(1.1);
+        }
+
+        .activity-country {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .activity-content {
+            padding: 1.5rem;
+        }
+
+        .activity-content h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+            color: var(--charcoal);
+        }
+
+        .activity-content p {
+            color: #666;
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .activity-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .activity-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--vibrant-red);
+            margin-bottom: 1rem;
+        }
+
+        .activity-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .book-btn {
+            flex: 1;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            border: none;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .book-btn:hover {
+            background: #e60000;
+            transform: translateY(-2px);
+        }
+
+        .details-btn {
+            background: transparent;
+            border: 2px solid var(--vibrant-red);
+            color: var(--vibrant-red);
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .details-btn:hover {
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+        }
+
+        /* ===== MODAL STYLES ===== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: var(--pure-white);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .modal-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-header-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: var(--pure-white);
+        }
+
+        .modal-header-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-header-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .modal-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--vibrant-red);
+        }
+
+        .activity-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .detail-item {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--vibrant-red);
+        }
+
+        .detail-item h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            color: var(--charcoal);
+        }
+
+        .detail-item p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .included-list {
+            list-style: none;
+        }
+
+        .included-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .included-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--vibrant-red);
+            font-weight: bold;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montez', cursive;
+        }
+
+        .footer-logo i {
+            color: var(--vibrant-red);
+        }
+
+        .footer-about {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--vibrant-red);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--vibrant-red);
+            padding-left: 5px;
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            color: var(--pure-white);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-link:nth-child(1):hover {
+            background: #1877F2;
+        }
+
+        .social-link:nth-child(2):hover {
+            background: #1DA1F2;
+        }
+
+        .social-link:nth-child(3):hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .social-link:nth-child(4):hover {
+            background: #0077B5;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(255, 59, 59, 0.3);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #e60000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 59, 59, 0.4);
+        }
+
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 992px) {
+            .activities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .tourism-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tourism-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .activities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .modal-header {
+                height: 200px;
+            }
+            
+            .modal-header-content h2 {
+                font-size: 2rem;
+            }
+            
+            .activity-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .activity-actions {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tourism-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .nav {
+                padding: 0.8rem;
+            }
+            
+            .country-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Trip Again Home">
+                Trip Again
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="visa-services.html">Visa Services</a></li>
+                <li><a href="flights-hotels.html">Flights & Hotels</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tourism Hero Section -->
+    <section class="tourism-hero">
+        <div class="tourism-hero-content">
+            <h1>Tourism Activities</h1>
+            <p>Discover amazing experiences and activities in popular destinations worldwide</p>
+            <a href="#activities" class="cta-button">Explore Activities</a>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Activities</button>
+                <button class="filter-btn" data-filter="uae">UAE</button>
+                <button class="filter-btn" data-filter="turkey">Turkey</button>
+                <button class="filter-btn" data-filter="azerbaijan">Azerbaijan</button>
+                <button class="filter-btn" data-filter="malaysia">Malaysia</button>
+                <button class="filter-btn" data-filter="singapore">Singapore</button>
+                <button class="filter-btn" data-filter="thailand">Thailand</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tourist Attractions</h2>
+                <p class="section-subtitle">Explore exciting tourism activities in these amazing destinations</p>
+            </div>
+            
+            <div id="activitiesContainer">
+                <!-- Activities will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header" id="modalHeader">
+                <!-- Modal header content will be populated by JavaScript -->
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal body content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        Trip Again
+                    </div>
+                    <p class="footer-about">Luxury travel experiences designed around you. Rediscover your world with Trip Again Travel & Tours.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15zomm3b1E/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="flights-hotels.html">Flight & Hotel</a></li>
+                        <li><a href="visa-services.html">Visa Services</a></li>
+                        <li><a href="tourism-activities.html">Tourism Activities</a></li>
+                        <li><a href="#">Umrah & Hajj</a></li>
+                        <li><a href="#">Custom Tours</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Office # 2, Ground Floor, Hamza Center, PECHS Block 2, Near Liberty Traffic Signal, Tariq Road, Karachi Pakistan.</li>
+                        <li><i class="fas fa-phone"></i> +92 333 3473348</li>
+                        <li><i class="fas fa-envelope"></i> tripagain.dxb@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 12PM-10PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2021 All Rights reserved by Trip Again Pvt Ltd. Powered by passion & technology — designed by GroTech Solutions.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+// Tourism activities data - ALL 53 ACTIVITIES
+const activitiesData = [
+    // UAE Activities (5)
+    {
+        id: 1,
+        name: "Desert Safari",
+        country: "UAE",
+        image: "https://images.unsplash.com/photo-1519996409144-56c88d35908a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1519996409144-56c88d35908a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Experience the thrill of dune bashing, camel riding, and traditional Bedouin camp with BBQ dinner and entertainment.",
+        price: "$75",
+        duration: "6 hours",
+        location: "Dubai Desert",
+        highlights: [
+            "Dune bashing in 4x4 vehicles",
+            "Camel riding experience",
+            "Traditional Bedouin camp",
+            "BBQ dinner with live entertainment",
+            "Henna painting and shisha"
+        ],
+        included: [
+            "Hotel pickup and drop-off",
+            "Professional safari guide",
+            "Dune bashing adventure",
+            "Camel riding",
+            "BBQ dinner with vegetarian options",
+            "Live Tanura and belly dance shows",
+            "Henna painting",
+            "Shisha smoking"
+        ]
+    },
+    {
+        id: 2,
+        name: "Global Village",
+        country: "UAE",
+        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Explore cultures from around the world in one amazing location with pavilions, shows, shopping, and dining.",
+        price: "$25",
+        duration: "4-5 hours",
+        location: "Dubai",
+        highlights: [
+            "Pavilions representing 90+ countries",
+            "Cultural performances and shows",
+            "Shopping from around the world",
+            "International cuisine",
+            "Carnival rides and games"
+        ],
+        included: [
+            "Entry ticket to Global Village",
+            "Access to all country pavilions",
+            "Cultural shows and performances",
+            "Shopping opportunities",
+            "Dining options"
+        ]
+    },
+    {
+        id: 3,
+        name: "Luxury Yacht Tour",
+        country: "UAE",
+        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Cruise along Dubai's coastline on a luxury yacht with stunning views of iconic landmarks.",
+        price: "$120",
+        duration: "2 hours",
+        location: "Dubai Marina",
+        highlights: [
+            "Luxury yacht experience",
+            "Views of Palm Jumeirah",
+            "Burj Al Arab photo opportunity",
+            "Atlantis The Palm views",
+            "Refreshments on board"
+        ],
+        included: [
+            "2-hour luxury yacht cruise",
+            "Professional crew",
+            "Soft drinks and water",
+            "Music system",
+            "Life jackets and safety equipment"
+        ]
+    },
+    {
+        id: 4,
+        name: "Burj Khalifa Tour",
+        country: "UAE",
+        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Visit the world's tallest building and enjoy breathtaking views from the observation deck on levels 124 and 125.",
+        price: "$45",
+        duration: "1.5 hours",
+        location: "Downtown Dubai",
+        highlights: [
+            "Access to At the Top observation deck",
+            "360-degree views of Dubai",
+            "Multimedia presentations",
+            "Telescopes for closer views",
+            "Outdoor terrace"
+        ],
+        included: [
+            "Entry ticket to Burj Khalifa",
+            "Access to levels 124 and 125",
+            "Multimedia presentations",
+            "Telescope usage",
+            "Outdoor terrace access"
+        ]
+    },
+    {
+        id: 5,
+        name: "Museum of the Future Tour",
+        country: "UAE",
+        image: "https://images.unsplash.com/photo-1580651315537-28e49a58d843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1580651315537-28e49a58d843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Explore innovative technologies and future possibilities at this architectural marvel showcasing what's next for humanity.",
+        price: "$40",
+        duration: "2 hours",
+        location: "Dubai",
+        highlights: [
+            "Futuristic architecture",
+            "Interactive exhibits",
+            "AI and robotics displays",
+            "Space exploration exhibits",
+            "Sustainability innovations"
+        ],
+        included: [
+            "Entry ticket to Museum of the Future",
+            "Access to all exhibitions",
+            "Interactive experiences",
+            "Multimedia presentations",
+            "Guided tour available"
+        ]
+    },
+
+    // Turkey Activities (6)
+    {
+        id: 6,
+        name: "Istanbul Sightseeing Cruise",
+        country: "Turkey",
+        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Daytime or sunset cruise along the Bosphorus with stunning views of Istanbul's iconic landmarks.",
+        price: "$35",
+        duration: "2 hours",
+        location: "Istanbul",
+        highlights: [
+            "Bosphorus Strait views",
+            "Dolmabahçe Palace",
+            "Rumeli Fortress",
+            "Bosphorus Bridge",
+            "Ottoman mansions"
+        ],
+        included: [
+            "Bosphorus cruise",
+            "Professional guide",
+            "Audio commentary",
+            "Refreshments available for purchase"
+        ]
+    },
+    {
+        id: 7,
+        name: "Bosphorus Dinner Cruise with Turkish Night Show",
+        country: "Turkey",
+        image: "https://images.unsplash.com/photo-1559314806-3f99d6d3f6e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1559314806-3f99d6d3f6e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Enjoy a magical evening cruise on the Bosphorus with dinner, Turkish entertainment, and stunning views of Istanbul.",
+        price: "$65",
+        duration: "3 hours",
+        location: "Istanbul",
+        highlights: [
+            "Bosphorus cruise between Europe and Asia",
+            "Traditional Turkish dinner",
+            "Live music and folk dances",
+            "Views of palaces and mosques",
+            "Romantic atmosphere"
+        ],
+        included: [
+            "3-hour Bosphorus cruise",
+            "Traditional Turkish dinner",
+            "Unlimited soft drinks",
+            "Live entertainment show",
+            "Hotel pickup and drop-off"
+        ]
+    },
+    {
+        id: 8,
+        name: "Hot Air Balloon Ride",
+        country: "Turkey",
+        image: "https://images.unsplash.com/photo-1641395833269-d4e88d335b9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1641395833269-d4e88d335b9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Float over the fairy chimneys of Cappadocia at sunrise for an unforgettable aerial experience.",
+        price: "$180",
+        duration: "1 hour",
+        location: "Cappadocia",
+        highlights: [
+            "Sunrise hot air balloon flight",
+            "Aerial views of fairy chimneys",
+            "Professional pilot and crew",
+            "Champagne celebration after flight",
+            "Flight certificate"
+        ],
+        included: [
+            "1-hour hot air balloon flight",
+            "Hotel pickup and drop-off",
+            "Professional pilot",
+            "Safety briefing",
+            "Champagne celebration",
+            "Flight certificate"
+        ]
+    },
+    {
+        id: 9,
+        name: "Turkish Night at Cave Restaurant",
+        country: "Turkey",
+        image: "https://images.unsplash.com/photo-1592225300795-18b8b5f32b5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1592225300795-18b8b5f32b5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Experience traditional Turkish cuisine and entertainment in a unique cave restaurant setting.",
+        price: "$50",
+        duration: "3 hours",
+        location: "Cappadocia",
+        highlights: [
+            "Authentic cave restaurant experience",
+            "Traditional Turkish dinner",
+            "Live folk music and dances",
+            "Belly dancing performances",
+            "Cultural immersion"
+        ],
+        included: [
+            "Traditional Turkish dinner",
+            "Unlimited soft drinks",
+            "Live entertainment show",
+            "Hotel transfer",
+            "Cultural experience"
+        ]
+    },
+    {
+        id: 10,
+        name: "Blue Mosque & Hagia Sophia Tour",
+        country: "Turkey",
+        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Explore two of Istanbul's most iconic landmarks with a guided tour of their rich history and architecture.",
+        price: "$40",
+        duration: "3 hours",
+        location: "Istanbul",
+        highlights: [
+            "Hagia Sophia - former church and mosque",
+            "Blue Mosque with its stunning blue tiles",
+            "Historical insights from expert guide",
+            "Architectural marvels",
+            "Cultural significance"
+        ],
+        included: [
+            "Professional licensed guide",
+            "Entrance fees to both monuments",
+            "Historical commentary",
+            "Small group experience"
+        ]
+    },
+    {
+        id: 11,
+        name: "Topkapi Palace Tour",
+        country: "Turkey",
+        image: "https://images.unsplash.com/photo-1592225300795-18b8b5f32b5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1592225300795-18b8b5f32b5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Discover the former Ottoman sultan's palace with its treasures, harem, and stunning architecture.",
+        price: "$35",
+        duration: "2.5 hours",
+        location: "Istanbul",
+        highlights: [
+            "Imperial Treasury with precious artifacts",
+            "Harem section with intricate designs",
+            "Council Chamber and courtyards",
+            "Sacred Relics collection",
+            "Panoramic views of Bosphorus"
+        ],
+        included: [
+            "Entrance ticket to Topkapi Palace",
+            "Professional guide",
+            "Harem section access",
+            "Historical insights"
+        ]
+    },
+
+    // Azerbaijan Activities (5)
+    {
+        id: 12,
+        name: "Pink Lake, Candy Cane Mountains & Beshbarmaq Tour",
+        country: "Azerbaijan",
+        image: "azerbaijan1.jpg",
+        modalImage: "azerbaijan1.jpg",
+        description: "Discover the stunning natural wonders of Azerbaijan including the Pink Lake and colorful Candy Cane Mountains.",
+        price: "$85",
+        duration: "8 hours",
+        location: "Absheron Peninsula",
+        highlights: [
+            "Visit to Pink Lake (Masazir Lake)",
+            "Candy Cane Mountains exploration",
+            "Beshbarmaq Mountain hike",
+            "Traditional Azerbaijani lunch",
+            "Scenic photography opportunities"
+        ],
+        included: [
+            "Professional guide",
+            "Transportation",
+            "Entrance fees",
+            "Traditional lunch",
+            "Bottled water"
+        ]
+    },
+    {
+        id: 13,
+        name: "Gobustan, Mud Volcano & Fire Mountain Tour",
+        country: "Azerbaijan",
+        image: "azerbaijan2.jpg",
+        modalImage: "azerbaijan2.jpg",
+        description: "Explore ancient rock carvings, natural mud volcanoes, and the eternal flame of Yanar Dag.",
+        price: "$75",
+        duration: "7 hours",
+        location: "Gobustan",
+        highlights: [
+            "Gobustan National Park with ancient petroglyphs",
+            "Active mud volcanoes",
+            "Yanar Dag (Burning Mountain)",
+            "Ateshgah Fire Temple",
+            "Geological wonders"
+        ],
+        included: [
+            "Professional guide",
+            "Transportation",
+            "Entrance fees to all sites",
+            "Lunch included",
+            "Bottled water"
+        ]
+    },
+    {
+        id: 14,
+        name: "Sheki, Gabala & Shamakhi Day Tour",
+        country: "Azerbaijan",
+        image: "azerbaijan3.jpg",
+        modalImage: "azerbaijan3.jpg",
+        description: "Discover the cultural and natural treasures of Azerbaijan's northwestern regions.",
+        price: "$95",
+        duration: "12 hours",
+        location: "Northwest Azerbaijan",
+        highlights: [
+            "Sheki Khan's Palace with stunning stained glass",
+            "Gabala's beautiful mountain scenery",
+            "Shamakhi's historical Juma Mosque",
+            "Traditional crafts and local markets",
+            "Scenic mountain roads"
+        ],
+        included: [
+            "Professional guide",
+            "Transportation",
+            "Entrance fees",
+            "Traditional lunch",
+            "Hotel pickup and drop-off"
+        ]
+    },
+    {
+        id: 15,
+        name: "Old City Adventure Tour",
+        country: "Azerbaijan",
+        image: "azerbaijan4.jpg",
+        modalImage: "azerbaijan4.jpg",
+        description: "Explore Baku's historic Old City (Icherisheher) with its medieval architecture and rich history.",
+        price: "$45",
+        duration: "3 hours",
+        location: "Baku",
+        highlights: [
+            "Maiden Tower - ancient defensive structure",
+            "Shirvanshahs' Palace complex",
+            "Medieval caravanserais",
+            "Traditional craft workshops",
+            "Historic mosques and bathhouses"
+        ],
+        included: [
+            "Professional guide",
+            "Walking tour of Old City",
+            "Entrance to Maiden Tower",
+            "Historical commentary"
+        ]
+    },
+    {
+        id: 16,
+        name: "Caspian Sea Boat Tour",
+        country: "Azerbaijan",
+        image: "azerbaijan5.jpg",
+        modalImage: "azerbaijan5.jpg",
+        description: "Enjoy a scenic boat tour on the Caspian Sea with stunning views of Baku's skyline.",
+        price: "$35",
+        duration: "1.5 hours",
+        location: "Baku",
+        highlights: [
+            "Caspian Sea cruise",
+            "Baku skyline views",
+            "Flame Towers photo opportunity",
+            "Boulevard views",
+            "Relaxing sea experience"
+        ],
+        included: [
+            "Boat tour on Caspian Sea",
+            "Professional captain",
+            "Safety equipment",
+            "Refreshments available"
+        ]
+    },
+
+    // Malaysia Activities (16)
+    {
+        id: 17,
+        name: "Sunway Lagoon",
+        country: "Malaysia",
+        image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Experience Malaysia's premier theme park with water rides, amusement attractions, and wildlife encounters.",
+        price: "$40",
+        duration: "Full day",
+        location: "Kuala Lumpur",
+        highlights: [
+            "88-acre theme park",
+            "Water park with artificial beach",
+            "Amusement rides and roller coasters",
+            "Wildlife park and animal shows",
+            "Extreme park for adventure activities"
+        ],
+        included: [
+            "All-day entrance ticket",
+            "Access to all park zones",
+            "Rides and attractions",
+            "Wildlife park entry",
+            "Locker rental available"
+        ]
+    },
+    {
+        id: 18,
+        name: "Orbit Revolving Restaurant",
+        country: "Malaysia",
+        image: "malaysia2.jpg",
+        modalImage: "malaysia2.jpg",
+        description: "Dine in style at KL Tower's revolving restaurant with panoramic views of Kuala Lumpur.",
+        price: "$65",
+        duration: "2 hours",
+        location: "KL Tower, Kuala Lumpur",
+        highlights: [
+            "360-degree revolving restaurant",
+            "Panoramic city views",
+            "International buffet",
+            "Special iftar during Ramadan",
+            "Romantic dining experience"
+        ],
+        included: [
+            "Buffet dinner/lunch/iftar",
+            "Non-alcoholic beverages",
+            "KL Tower observation deck access",
+            "Complimentary souvenir"
+        ]
+    },
+    {
+        id: 19,
+        name: "KL Tower Sky Deck",
+        country: "Malaysia",
+        image: "malaysia3.jpg",
+        modalImage: "malaysia3.jpg",
+        description: "Enjoy breathtaking 360-degree views of Kuala Lumpur from the KL Tower observation deck.",
+        price: "$20",
+        duration: "1 hour",
+        location: "KL Tower, Kuala Lumpur",
+        highlights: [
+            "360-degree city views",
+            "Glass sky box experience",
+            "Historical exhibits",
+            "Photo opportunities",
+            "Sunset viewing"
+        ],
+        included: [
+            "Observation deck access",
+            "Sky box experience",
+            "Historical exhibition",
+            "Free binocular usage"
+        ]
+    },
+    {
+        id: 20,
+        name: "Kuala Lumpur Hop-on Hop-off Bus",
+        country: "Malaysia",
+        image: "malaysia4.jpg",
+        modalImage: "malaysia4.jpg",
+        description: "Explore Kuala Lumpur at your own pace with this convenient hop-on hop-off bus service.",
+        price: "$15",
+        duration: "24/48 hours",
+        location: "Kuala Lumpur",
+        highlights: [
+            "Flexible city exploration",
+            "40+ stops at major attractions",
+            "Audio commentary in multiple languages",
+            "Unlimited rides during validity",
+            "Convenient and affordable"
+        ],
+        included: [
+            "24 or 48-hour bus pass",
+            "Audio guide",
+            "Route map",
+            "Free Wi-Fi on board"
+        ]
+    },
+    {
+        id: 21,
+        name: "Berjaya Times Square Theme Park",
+        country: "Malaysia",
+        image: "malaysia5.jpg",
+        modalImage: "malaysia5.jpg",
+        description: "Experience indoor theme park fun with rides, games, and entertainment in the heart of Kuala Lumpur.",
+        price: "$25",
+        duration: "4-5 hours",
+        location: "Kuala Lumpur",
+        highlights: [
+            "Indoor theme park",
+            "Thrilling roller coasters",
+            "Family-friendly rides",
+            "Arcade games",
+            "Shopping and dining options"
+        ],
+        included: [
+            "All-day theme park access",
+            "Unlimited rides",
+            "Arcade token package",
+            "Locker rental available"
+        ]
+    },
+    {
+        id: 22,
+        name: "Museum of Illusions",
+        country: "Malaysia",
+        image: "malaysia6.jpg",
+        modalImage: "malaysia6.jpg",
+        description: "Challenge your perception and have fun with mind-bending optical illusions and interactive exhibits.",
+        price: "$18",
+        duration: "1.5 hours",
+        location: "Kuala Lumpur",
+        highlights: [
+            "Optical illusion exhibits",
+            "Interactive installations",
+            "Vortex tunnel experience",
+            "Ames room",
+            "Educational and fun for all ages"
+        ],
+        included: [
+            "Museum entrance ticket",
+            "Access to all exhibits",
+            "Interactive experiences",
+            "Photo opportunities"
+        ]
+    },
+    {
+        id: 23,
+        name: "SplashMania Water Park",
+        country: "Malaysia",
+        image: "malaysia7.jpg",
+        modalImage: "malaysia7.jpg",
+        description: "Cool off and have fun at one of Malaysia's newest and most exciting water parks.",
+        price: "$30",
+        duration: "Full day",
+        location: "Gamuda Cove",
+        highlights: [
+            "Water slides and rides",
+            "Wave pool",
+            "Lazy river",
+            "Kids' play area",
+            "Cabanas and relaxation zones"
+        ],
+        included: [
+            "All-day water park access",
+            "Unlimited rides and attractions",
+            "Locker rental",
+            "Life jacket rental"
+        ]
+    },
+    {
+        id: 24,
+        name: "Zoo Negara",
+        country: "Malaysia",
+        image: "malaysia8.jpg",
+        modalImage: "malaysia8.jpg",
+        description: "Discover Malaysia's diverse wildlife at the national zoo with over 5,000 animals from 400 species.",
+        price: "$15",
+        duration: "3-4 hours",
+        location: "Kuala Lumpur",
+        highlights: [
+            "Malaysian wildlife exhibits",
+            "Animal feeding sessions",
+            "Bird show",
+            "Elephant performance",
+            "Conservation education"
+        ],
+        included: [
+            "Zoo entrance ticket",
+            "Animal shows",
+            "Exhibit access",
+            "Educational programs"
+        ]
+    },
+    {
+        id: 25,
+        name: "Aquaria KLCC",
+        country: "Malaysia",
+        image: "malaysia9.jpg",
+        modalImage: "malaysia9.jpg",
+        description: "Explore the underwater world at one of Southeast Asia's largest aquariums beneath KLCC.",
+        price: "$22",
+        duration: "2 hours",
+        location: "Kuala Lumpur Convention Centre",
+        highlights: [
+            "90-meter underwater tunnel",
+            "Marine life from around the world",
+            "Touch pool experience",
+            "Diving with sharks program",
+            "Educational exhibits"
+        ],
+        included: [
+            "Aquarium entrance ticket",
+            "Underwater tunnel access",
+            "Touch pool experience",
+            "Educational presentations"
+        ]
+    },
+    {
+        id: 26,
+        name: "KidZania",
+        country: "Malaysia",
+        image: "malaysia10.jpg",
+        modalImage: "malaysia10.jpg",
+        description: "Interactive educational entertainment center where children can role-play various professions.",
+        price: "$35",
+        duration: "4-5 hours",
+        location: "Kuala Lumpur",
+        highlights: [
+            "Role-playing activities",
+            "80+ professions to try",
+            "Educational entertainment",
+            "Safe environment for kids",
+            "Realistic city setup"
+        ],
+        included: [
+            "All-day entrance ticket",
+            "Access to all activities",
+            "KidZos currency",
+            "Parent lounge access"
+        ]
+    },
+    {
+        id: 27,
+        name: "KL Bird Park",
+        country: "Malaysia",
+        image: "malaysia11.jpg",
+        modalImage: "malaysia11.jpg",
+        description: "Walk through the world's largest free-flight walk-in aviary with over 3,000 birds.",
+        price: "$18",
+        duration: "2 hours",
+        location: "Kuala Lumpur",
+        highlights: [
+            "World's largest walk-in aviary",
+            "Bird feeding experiences",
+            "Bird shows",
+            "Hornbill feeding",
+            "Photography opportunities"
+        ],
+        included: [
+            "Bird park entrance ticket",
+            "Bird shows",
+            "Feeding experiences",
+            "Educational tours"
+        ]
+    },
+    {
+        id: 28,
+        name: "KL Butterfly Park",
+        country: "Malaysia",
+        image: "malaysia12.jpg",
+        modalImage: "malaysia12.jpg",
+        description: "Immerse yourself in a tropical garden filled with thousands of colorful butterflies.",
+        price: "$12",
+        duration: "1 hour",
+        location: "Kuala Lumpur",
+        highlights: [
+            "5,000+ live butterflies",
+            "Tropical garden setting",
+            "Butterfly lifecycle exhibition",
+            "Insect museum",
+            "Photography paradise"
+        ],
+        included: [
+            "Butterfly park entrance",
+            "Insect museum access",
+            "Educational exhibits",
+            "Guided tour available"
+        ]
+    },
+    {
+        id: 29,
+        name: "Putrajaya Sightseeing River Cruise",
+        country: "Malaysia",
+        image: "malaysia13.jpg",
+        modalImage: "malaysia13.jpg",
+        description: "Enjoy a scenic cruise through Putrajaya's beautiful lakes and admire the city's stunning architecture.",
+        price: "$20",
+        duration: "45 minutes",
+        location: "Putrajaya",
+        highlights: [
+            "Putra Mosque views",
+            "Prime Minister's office",
+            "Seri Wawasan Bridge",
+            "Beautiful lake scenery",
+            "Architectural landmarks"
+        ],
+        included: [
+            "River cruise ticket",
+            "Commentary on landmarks",
+            "Photo opportunities",
+            "Comfortable seating"
+        ]
+    },
+    {
+        id: 30,
+        name: "Sky Mirror",
+        country: "Malaysia",
+        image: "malaysia14.jpg",
+        modalImage: "malaysia14.jpg",
+        description: "Experience the magical natural phenomenon of the Sky Mirror during low tide in Kuala Selangor.",
+        price: "$45",
+        duration: "4 hours",
+        location: "Kuala Selangor",
+        highlights: [
+            "Natural mirror effect on sandbar",
+            "Stunning photography opportunities",
+            "Boat ride to sandbar",
+            "Seasonal phenomenon",
+            "Unique natural experience"
+        ],
+        included: [
+            "Boat transfer",
+            "Photography assistance",
+            "Safety equipment",
+            "Light refreshments"
+        ]
+    },
+    {
+        id: 31,
+        name: "Legoland Malaysia",
+        country: "Malaysia",
+        image: "malaysia15.jpg",
+        modalImage: "malaysia15.jpg",
+        description: "Family fun at Southeast Asia's first Legoland theme park with rides, shows, and Lego creations.",
+        price: "$50",
+        duration: "Full day",
+        location: "Johor Bahru",
+        highlights: [
+            "Lego-themed rides",
+            "Miniland with Asian landmarks",
+            "Water park",
+            "Lego building workshops",
+            "Family-friendly attractions"
+        ],
+        included: [
+            "Theme park entrance",
+            "Access to all rides",
+            "Shows and entertainment",
+            "Lego building experiences"
+        ]
+    },
+    {
+        id: 32,
+        name: "SkyWorld Genting",
+        country: "Malaysia",
+        image: "malaysia16.jpg",
+        modalImage: "malaysia16.jpg",
+        description: "Experience the thrill at Genting SkyWorlds outdoor theme park with movie-themed zones and rides.",
+        price: "$45",
+        duration: "Full day",
+        location: "Genting Highlands",
+        highlights: [
+            "Movie-themed zones",
+            "Thrilling roller coasters",
+            "Family rides",
+            "Live entertainment",
+            "Cool mountain climate"
+        ],
+        included: [
+            "Theme park entrance",
+            "Unlimited rides",
+            "Live shows",
+            "Entertainment experiences"
+        ]
+    },
+
+    // Singapore Activities (9)
+    {
+        id: 33,
+        name: "Universal Studios Singapore",
+        country: "Singapore",
+        image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Step into the world of movies at Southeast Asia's only Universal Studios theme park with thrilling rides and shows.",
+        price: "$75",
+        duration: "Full day",
+        location: "Sentosa Island",
+        highlights: [
+            "7 themed zones based on Hollywood movies",
+            "Thrilling rides and roller coasters",
+            "Live shows and entertainment",
+            "Character meet and greets",
+            "Shopping and dining options"
+        ],
+        included: [
+            "One-day admission ticket",
+            "Access to all rides and shows",
+            "Character meet and greets",
+            "Live entertainment",
+            "Shopping and dining options"
+        ]
+    },
+    {
+        id: 34,
+        name: "Wings of Time",
+        country: "Singapore",
+        image: "singapore2.jpg",
+        modalImage: "singapore2.jpg",
+        description: "Spectacular night show featuring lasers, water screens, fireworks, and dramatic effects.",
+        price: "$18",
+        duration: "25 minutes",
+        location: "Sentosa Island",
+        highlights: [
+            "Laser and water screen show",
+            "Fireworks display",
+            "Dramatic storytelling",
+            "Open-air beach setting",
+            "Multisensory experience"
+        ],
+        included: [
+            "Show admission ticket",
+            "Designated seating",
+            "Multilingual audio available",
+            "Beachfront experience"
+        ]
+    },
+    {
+        id: 35,
+        name: "S.E.A. Aquarium",
+        country: "Singapore",
+        image: "singapore3.jpg",
+        modalImage: "singapore3.jpg",
+        description: "Explore one of the world's largest aquariums with over 100,000 marine animals.",
+        price: "$35",
+        duration: "2-3 hours",
+        location: "Sentosa Island",
+        highlights: [
+            "Open ocean habitat with manta rays",
+            "Marine ecosystems from around the world",
+            "Shipwreck habitat",
+            "Jellyfish gallery",
+            "Interactive touch pool"
+        ],
+        included: [
+            "Aquarium entrance ticket",
+            "Access to all exhibits",
+            "Educational presentations",
+            "Touch pool experience"
+        ]
+    },
+    {
+        id: 36,
+        name: "Adventure Cove Waterpark",
+        country: "Singapore",
+        image: "singapore4.jpg",
+        modalImage: "singapore4.jpg",
+        description: "Thrilling water park with slides, wave pool, snorkeling with fish, and marine encounters.",
+        price: "$38",
+        duration: "Full day",
+        location: "Sentosa Island",
+        highlights: [
+            "Water slides and rides",
+            "Wave pool",
+            "Snorkeling with tropical fish",
+            "Lazy river",
+            "Marine life encounters"
+        ],
+        included: [
+            "Water park admission",
+            "Unlimited rides",
+            "Snorkeling equipment",
+            "Locker rental available"
+        ]
+    },
+    {
+        id: 37,
+        name: "Gardens by the Bay",
+        country: "Singapore",
+        image: "singapore5.jpg",
+        modalImage: "singapore5.jpg",
+        description: "Explore Singapore's award-winning garden with futuristic Supertrees and climate-controlled domes.",
+        price: "$28",
+        duration: "3 hours",
+        location: "Marina Bay",
+        highlights: [
+            "Supertree Grove and OCBC Skyway",
+            "Flower Dome - world's largest glass greenhouse",
+            "Cloud Forest with indoor waterfall",
+            "Garden Rhapsody light show",
+            "Sustainable architecture"
+        ],
+        included: [
+            "Gardens entrance ticket",
+            "Flower Dome access",
+            "Cloud Forest access",
+            "OCBC Skyway experience"
+        ]
+    },
+    {
+        id: 38,
+        name: "Madame Tussauds Singapore",
+        country: "Singapore",
+        image: "singapore6.jpg",
+        modalImage: "singapore6.jpg",
+        description: "Get up close with incredibly lifelike wax figures of celebrities, historical figures, and world leaders.",
+        price: "$32",
+        duration: "2 hours",
+        location: "Sentosa Island",
+        highlights: [
+            "Lifelike celebrity wax figures",
+            "Interactive experiences",
+            "Marvel superheroes zone",
+            "Singapore history section",
+            "Photo opportunities with figures"
+        ],
+        included: [
+            "Madame Tussauds entrance",
+            "Access to all zones",
+            "Interactive experiences",
+            "Photo opportunities"
+        ]
+    },
+    {
+        id: 39,
+        name: "River Wonders",
+        country: "Singapore",
+        image: "singapore7.jpg",
+        modalImage: "singapore7.jpg",
+        description: "Discover the world's river ecosystems and meet giant pandas in this unique river-themed wildlife park.",
+        price: "$32",
+        duration: "2-3 hours",
+        location: "Mandai",
+        highlights: [
+            "Giant panda exhibit",
+            "River ecosystems from around the world",
+            "Amazon Flooded Forest",
+            "Mekong River species",
+            "Boat ride experience"
+        ],
+        included: [
+            "River Wonders entrance",
+            "Panda exhibit access",
+            "River ecosystems exploration",
+            "Educational exhibits"
+        ]
+    },
+    {
+        id: 40,
+        name: "Night Safari",
+        country: "Singapore",
+        image: "singapore8.jpg",
+        modalImage: "singapore8.jpg",
+        description: "Experience the world's first nocturnal wildlife park with tram rides and walking trails.",
+        price: "$45",
+        duration: "2.5 hours",
+        location: "Mandai",
+        highlights: [
+            "Tram ride through 7 geographical zones",
+            "Walking trails for closer encounters",
+            "Creatures of the Night show",
+            "Nocturnal animal observations",
+            "Conservation education"
+        ],
+        included: [
+            "Night Safari entrance",
+            "Tram ride experience",
+            "Walking trail access",
+            "Animal shows"
+        ]
+    },
+    {
+        id: 41,
+        name: "Singapore Zoo",
+        country: "Singapore",
+        image: "singapore9.jpg",
+        modalImage: "singapore9.jpg",
+        description: "Explore one of the world's best rainforest zoos with open enclosures and diverse wildlife.",
+        price: "$38",
+        duration: "4-5 hours",
+        location: "Mandai",
+        highlights: [
+            "Open-concept rainforest setting",
+            "Animal feeding sessions",
+            "Rainforest Fights Back show",
+            "Fragile Forest walkthrough",
+            "Wild Africa zone"
+        ],
+        included: [
+            "Zoo entrance ticket",
+            "Animal shows",
+            "Feeding sessions",
+            "Rainforest exploration"
+        ]
+    },
+
+    // Thailand Activities (12)
+    {
+        id: 42,
+        name: "Bangkok Safari World",
+        country: "Thailand",
+        image: "thailand1.jpg",
+        modalImage: "thailand1.jpg",
+        description: "Thailand's largest safari park with drive-through safari and marine park with animal shows.",
+        price: "$30",
+        duration: "5-6 hours",
+        location: "Bangkok",
+        highlights: [
+            "Drive-through safari experience",
+            "Marine park with animal shows",
+            "Bird show",
+            "Spy war action stunt show",
+            "Animal feeding experiences"
+        ],
+        included: [
+            "Safari and marine park entrance",
+            "Animal shows",
+            "Safari bus tour",
+            "Park map and schedule"
+        ]
+    },
+    {
+        id: 43,
+        name: "Bangsaen Marine Park",
+        country: "Thailand",
+        image: "thailand2.jpg",
+        modalImage: "thailand2.jpg",
+        description: "Beautiful beach destination with water activities, seafood restaurants, and coastal scenery.",
+        price: "$25",
+        duration: "Full day",
+        location: "Chonburi Province",
+        highlights: [
+            "Beautiful sandy beach",
+            "Water sports activities",
+            "Fresh seafood dining",
+            "Coastal walkway",
+            "Island hopping available"
+        ],
+        included: [
+            "Beach access",
+            "Basic facilities",
+            "Nearby attractions",
+            "Local experiences"
+        ]
+    },
+    {
+        id: 44,
+        name: "Bangkok DreamWorld",
+        country: "Thailand",
+        image: "thailand3.jpg",
+        modalImage: "thailand3.jpg",
+        description: "Family-friendly theme park with rides, shows, and attractions for all ages.",
+        price: "$28",
+        duration: "Full day",
+        location: "Bangkok",
+        highlights: [
+            "Family rides and roller coasters",
+            "Snow Town indoor winter experience",
+            "Adventure Land",
+            "Fantasy Land",
+            "Cultural shows"
+        ],
+        included: [
+            "Theme park entrance",
+            "Unlimited rides",
+            "Snow Town access",
+            "Shows and entertainment"
+        ]
+    },
+    {
+        id: 45,
+        name: "Mahanakhon Skywalk",
+        country: "Thailand",
+        image: "thailand4.jpg",
+        modalImage: "thailand4.jpg",
+        description: "Experience Bangkok from the highest observation deck with glass floor and rooftop bar.",
+        price: "$25",
+        duration: "1.5 hours",
+        location: "Bangkok",
+        highlights: [
+            "314-meter high observation deck",
+            "Glass floor skywalk",
+            "360-degree city views",
+            "Rooftop bar",
+            "Sunset viewing"
+        ],
+        included: [
+            "Observation deck access",
+            "Glass skywalk experience",
+            "Audio guide",
+            "Photo opportunities"
+        ]
+    },
+    {
+        id: 46,
+        name: "Siam Waterpark",
+        country: "Thailand",
+        image: "thailand5.jpg",
+        modalImage: "thailand5.jpg",
+        description: "Exciting water park with slides, wave pool, and family-friendly water attractions.",
+        price: "$22",
+        duration: "Full day",
+        location: "Bangkok",
+        highlights: [
+            "Water slides and rides",
+            "Wave pool",
+            "Lazy river",
+            "Kids' play area",
+            "Beach volleyball"
+        ],
+        included: [
+            "Water park admission",
+            "Unlimited rides",
+            "Locker rental",
+            "Life jacket available"
+        ]
+    },
+    {
+        id: 47,
+        name: "Andamanda Water Park Phuket",
+        country: "Thailand",
+        image: "thailand6.jpg",
+        modalImage: "thailand6.jpg",
+        description: "Phuket's newest water park with Thai mythology theme and thrilling water attractions.",
+        price: "$35",
+        duration: "Full day",
+        location: "Phuket",
+        highlights: [
+            "Thai mythology themed attractions",
+            "Water slides and rides",
+            "Wave pool",
+            "Lazy river",
+            "Kids' zone"
+        ],
+        included: [
+            "Water park admission",
+            "Unlimited rides",
+            "Locker rental",
+            "Safety equipment"
+        ]
+    },
+    {
+        id: 48,
+        name: "Carnival Magic Show Phuket",
+        country: "Thailand",
+        image: "thailand7.jpg",
+        modalImage: "thailand7.jpg",
+        description: "Magical entertainment experience with illusions, performances, and family fun.",
+        price: "$28",
+        duration: "1.5 hours",
+        location: "Phuket",
+        highlights: [
+            "World-class magic performances",
+            "Illusion shows",
+            "Family entertainment",
+            "Interactive experiences",
+            "Professional magicians"
+        ],
+        included: [
+            "Show admission ticket",
+            "Magic performance",
+            "Theater seating",
+            "Entertainment experience"
+        ]
+    },
+    {
+        id: 49,
+        name: "Phi Phi Island Tour",
+        country: "Thailand",
+        image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        modalImage: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        description: "Explore the stunning Phi Phi Islands with their crystal-clear waters, limestone cliffs, and beautiful beaches.",
+        price: "$55",
+        duration: "8 hours",
+        location: "Phuket",
+        highlights: [
+            "Maya Bay (from The Beach movie)",
+            "Monkey Beach",
+            "Viking Cave",
+            "Snorkeling in crystal clear waters",
+            "Lunch on Phi Phi Don island"
+        ],
+        included: [
+            "Round-trip speedboat transfer",
+            "Professional guide",
+            "Snorkeling equipment",
+            "Buffet lunch",
+            "National park fees",
+            "Fruit and soft drinks"
+        ]
+    },
+    {
+        id: 50,
+        name: "James Bond Island Tour",
+        country: "Thailand",
+        image: "thailand9.jpg",
+        modalImage: "thailand9.jpg",
+        description: "Visit the iconic limestone island featured in the James Bond movie 'The Man with the Golden Gun'.",
+        price: "$45",
+        duration: "8 hours",
+        location: "Phang Nga Bay",
+        highlights: [
+            "James Bond Island (Khao Phing Kan)",
+            "Sea canoeing in mangrove caves",
+            "Floating Muslim village",
+            "Limestone karst formations",
+            "Panak Island"
+        ],
+        included: [
+            "Boat transfer",
+            "Professional guide",
+            "Sea canoe experience",
+            "Lunch included",
+            "National park fees"
+        ]
+    },
+    {
+        id: 51,
+        name: "Racha & Banana Beach Tour",
+        country: "Thailand",
+        image: "thailand10.jpg",
+        modalImage: "thailand10.jpg",
+        description: "Discover the beautiful islands of Racha and Banana Beach with snorkeling and beach relaxation.",
+        price: "$50",
+        duration: "7 hours",
+        location: "Phuket",
+        highlights: [
+            "Racha Island white sandy beaches",
+            "Banana Beach crystal clear waters",
+            "Snorkeling with tropical fish",
+            "Beach relaxation",
+            "Marine life viewing"
+        ],
+        included: [
+            "Speedboat transfer",
+            "Snorkeling equipment",
+            "Lunch and refreshments",
+            "Beach facilities",
+            "Guide services"
+        ]
+    },
+    {
+        id: 52,
+        name: "Coral Island Tour",
+        country: "Thailand",
+        image: "thailand11.jpg",
+        modalImage: "thailand11.jpg",
+        description: "Enjoy water activities and beach fun at Coral Island with its vibrant marine life.",
+        price: "$40",
+        duration: "6 hours",
+        location: "Phuket",
+        highlights: [
+            "Coral viewing and snorkeling",
+            "Water sports activities",
+            "Beach relaxation",
+            "Marine life",
+            "Island scenery"
+        ],
+        included: [
+            "Boat transfer to Coral Island",
+            "Snorkeling equipment",
+            "Lunch buffet",
+            "Beach chair",
+            "Guide services"
+        ]
+    },
+    {
+        id: 53,
+        name: "Elephant Sanctuary Tour",
+        country: "Thailand",
+        image: "thailand12.jpg",
+        modalImage: "thailand12.jpg",
+        description: "Ethical elephant experience where you can observe, feed, and bathe rescued elephants in natural surroundings.",
+        price: "$65",
+        duration: "4 hours",
+        location: "Phuket/Chiang Mai",
+        highlights: [
+            "Ethical elephant interaction",
+            "Feeding elephants",
+            "Mud bathing with elephants",
+            "River bathing experience",
+            "Educational about elephant conservation"
+        ],
+        included: [
+            "Round-trip transportation",
+            "Educational program",
+            "Elephant feeding",
+            "Bathing experience",
+            "Traditional Thai meal"
+        ]
+    }
+];
+
+        // DOM Elements
+        const activitiesContainer = document.getElementById('activitiesContainer');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modal = document.getElementById('modal');
+        const modalClose = document.getElementById('modalClose');
+        const modalHeader = document.getElementById('modalHeader');
+        const modalBody = document.getElementById('modalBody');
+        const header = document.getElementById('header');
+        const backToTopButton = document.getElementById('backToTop');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        // Group activities by country
+        const activitiesByCountry = {};
+        activitiesData.forEach(activity => {
+            if (!activitiesByCountry[activity.country]) {
+                activitiesByCountry[activity.country] = [];
+            }
+            activitiesByCountry[activity.country].push(activity);
+        });
+
+        // Render activities by country
+        function renderActivities(filter = 'all') {
+            activitiesContainer.innerHTML = '';
+            
+            Object.keys(activitiesByCountry).forEach(country => {
+                if (filter !== 'all' && filter !== country.toLowerCase()) return;
+                
+                const countrySection = document.createElement('div');
+                countrySection.className = 'country-section';
+                countrySection.innerHTML = `
+                    <h2 class="country-title">${country}</h2>
+                    <div class="activities-grid" id="grid-${country}">
+                        ${activitiesByCountry[country].map(activity => `
+                            <div class="activity-card" data-country="${activity.country.toLowerCase()}">
+                                <div class="activity-image">
+                                    <img src="${activity.image}" alt="${activity.name}" loading="lazy">
+                                    <div class="activity-country">${activity.country}</div>
+                                </div>
+                                <div class="activity-content">
+                                    <h3>${activity.name}</h3>
+                                    <p>${activity.description}</p>
+                                    <div class="activity-meta">
+                                        <span><i class="fas fa-clock"></i> ${activity.duration}</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> ${activity.location}</span>
+                                    </div>
+                                    <div class="activity-price">From ${activity.price}</div>
+                                    <div class="activity-actions">
+                                        <button class="book-btn" data-id="${activity.id}">Book Now</button>
+                                        <button class="details-btn" data-id="${activity.id}">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                
+                activitiesContainer.appendChild(countrySection);
+            });
+            
+            // Add event listeners to buttons
+            document.querySelectorAll('.details-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const activityId = e.target.getAttribute('data-id');
+                    const activity = activitiesData.find(a => a.id == activityId);
+                    openModal(activity);
+                });
+            });
+            
+            document.querySelectorAll('.book-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const activityId = e.target.getAttribute('data-id');
+                    // Redirect to contact page for booking
+                    window.location.href = 'index.html#contact';
+                });
+            });
+        }
+
+        // Open modal with activity details
+        function openModal(activity) {
+            // Create modal header
+            modalHeader.innerHTML = `
+                <img src="${activity.modalImage}" alt="${activity.name}">
+                <div class="modal-header-content">
+                    <h2>${activity.name}</h2>
+                    <p>${activity.country} • ${activity.location}</p>
+                </div>
+            `;
+            
+            // Create modal body
+            modalBody.innerHTML = `
+                <div class="modal-section">
+                    <h3>Activity Details</h3>
+                    <div class="activity-details">
+                        <div class="detail-item">
+                            <h4>Duration</h4>
+                            <p>${activity.duration}</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Location</h4>
+                            <p>${activity.location}</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Price</h4>
+                            <p>From ${activity.price}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Experience Highlights</h3>
+                    <ul class="included-list">
+                        ${activity.highlights.map(highlight => `<li>${highlight}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>What's Included</h3>
+                    <ul class="included-list">
+                        ${activity.included.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="modal-actions">
+                    <a href="index.html#contact" class="cta-button">Book Now</a>
+                    <button class="cta-button" style="background: transparent; color: var(--vibrant-red);" onclick="closeModal()">Close</button>
+                </div>
+            `;
+            
+            // Show modal
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Filter activities
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                // Filter activities
+                const filter = button.getAttribute('data-filter');
+                renderActivities(filter);
+            });
+        });
+
+        // Event listeners
+        modalClose.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Show/hide back to top button
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        // Back to top functionality
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            renderActivities();
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Make closeModal function available globally
+        window.closeModal = closeModal;
+    </script>
+</body>
+</html>
