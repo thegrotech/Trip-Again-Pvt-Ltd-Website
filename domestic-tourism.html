@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Trip Again Travel & Tours: Discover Pakistan's breathtaking destinations with our domestic tourism packages. Explore Northern Areas, cultural heritage sites, beaches, and adventure destinations.">
+    <meta name="keywords" content="domestic tourism pakistan, pakistan travel, northern areas pakistan, hunza, skardu, naran, swat, murree, pakistan tour packages, trip again domestic tours">
+
+    <!-- Country-specific meta tags -->
+    <meta property="og:title" content="Domestic Tourism Pakistan - Trip Again Travel & Tours">
+    <meta property="og:description" content="Discover the breathtaking beauty of Pakistan with our domestic tourism packages. Explore Northern Areas, cultural heritage sites, beaches, and adventure destinations.">
+    <meta property="og:url" content="https://tripagain.pk/domestic-tourism.html">
+    <meta property="og:image" content="https://tripagain.pk/images/domestic-tourism-og.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Domestic Tourism Pakistan - Trip Again Travel & Tours">
+    <meta name="twitter:description" content="Explore Pakistan's hidden gems with our domestic tourism packages. Northern Areas, cultural sites, beaches & more.">
+    <title>Domestic Tourism Pakistan - Explore Beautiful Pakistan | Trip Again Travel & Tours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary-black: #000000;
+            --vibrant-red: #e10600;
+            --pure-white: #ffffff;
+            --charcoal: #1a1a1a;
+            --light-gray: #f8f9fa;
+            --text-dark: #333333;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ===== RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--pure-white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.00);
+            backdrop-filter: blur(00px);
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+        }
+
+        .header.scrolled {
+            background: rgba(0, 0, 0, 0.50);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--pure-white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montez', cursive;
+            z-index: 1001;
+        }
+
+        .logo i {
+            color: var(--vibrant-red);
+        }
+
+        /* Desktop Navigation */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-menu a {
+            color: var(--pure-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--vibrant-red);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--vibrant-red);
+        }
+
+        /* Mobile Toggle Button */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--pure-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+
+        .mobile-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Mobile Close Button */
+        .mobile-close {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: var(--pure-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1002;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+
+        .mobile-close:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===== BUTTONS ===== */
+        .cta-button {
+            display: inline-block;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--vibrant-red);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--vibrant-red);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 59, 59, 0.3);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .domestic-hero {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary-black) 100%);
+            color: var(--pure-white);
+            text-align: center;
+        }
+
+        /* Desktop Background */
+        .domestic-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('mountainherodomestic.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        /* Mobile Background */
+        @media (max-width: 768px) {
+            .domestic-hero::before {
+                background-image: url('https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');
+                opacity: 0.5;
+            }
+        }
+
+        .domestic-hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .domestic-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            font-family: 'Montez', cursive;
+            text-shadow: rgba(53, 52, 52, 0.603) 12px 12px 14px;
+            line-height: 1.1;
+        }
+
+        .domestic-hero p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            line-height: 1.4;
+        }
+
+        /* ===== PACKAGES GRID ===== */
+        .packages-section {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--vibrant-red);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .package-card {
+            background: var(--pure-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .package-image {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .package-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .package-card:hover .package-image img {
+            transform: scale(1.1);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .package-content {
+            padding: 1.5rem;
+        }
+
+        .package-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .package-content p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .package-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .package-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--vibrant-red);
+            margin-bottom: 1rem;
+        }
+
+        .package-cta {
+            color: var(--vibrant-red);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .package-cta:hover {
+            gap: 10px;
+            transform: translateY(-2px);
+        }
+
+        /* ===== MODAL STYLES ===== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: var(--pure-white);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .modal-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-header-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: var(--pure-white);
+        }
+
+        .modal-header-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-header-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .modal-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--vibrant-red);
+        }
+
+        .package-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .feature-item {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--vibrant-red);
+        }
+
+        .feature-item h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .itinerary-list {
+            list-style: none;
+        }
+
+        .itinerary-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .itinerary-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--vibrant-red);
+            font-weight: bold;
+        }
+
+        .package-info {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            flex: 1;
+            min-width: 200px;
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-item i {
+            font-size: 2rem;
+            color: var(--vibrant-red);
+            margin-bottom: 1rem;
+        }
+
+        .info-item h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* ===== BOOKING CTA SECTION ===== */
+        .booking-cta-section {
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary-black) 100%);
+            color: var(--pure-white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .booking-cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .booking-cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .discount-badge {
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(255, 59, 59, 0.4);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montez', cursive;
+        }
+
+        .footer-logo i {
+            color: var(--vibrant-red);
+        }
+
+        .footer-about {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--vibrant-red);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--vibrant-red);
+            padding-left: 5px;
+        }
+
+        .footer-links i {
+            margin-right: 10px;
+            color: var(--vibrant-red);
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            color: var(--pure-white);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-link:nth-child(1):hover {
+            background: #1877F2;
+        }
+
+        .social-link:nth-child(2):hover {
+            background: #1DA1F2;
+        }
+
+        .social-link:nth-child(3):hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .social-link:nth-child(4):hover {
+            background: #0077B5;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+        }
+
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 992px) {
+            .packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .domestic-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .domestic-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .modal-header {
+                height: 200px;
+            }
+            
+            .modal-header-content h2 {
+                font-size: 2rem;
+            }
+            
+            .package-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .package-info {
+                flex-direction: column;
+            }
+            
+            .booking-cta-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .domestic-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .nav {
+                padding: 0.8rem;
+            }
+            
+            .booking-cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(255, 59, 59, 0.3);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #e60000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 59, 59, 0.4);
+        }
+
+        /* ===== FLOATING WHATSAPP BUTTON ===== */
+        .floating-whatsapp {
+            position: fixed;
+            left: 30px;
+            bottom: 30px;
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff3b3b;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(255, 59, 59, 0.3);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid #f0f0f0;
+        }
+
+        .floating-whatsapp.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            background: #25D366;
+            color: #ffffff;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Desktop size for WhatsApp */
+        @media (min-width: 769px) {
+            .floating-whatsapp {
+                width: 50px;
+                height: 50px;
+                font-size: 1.7rem;
+                left: 30px;
+                bottom: 30px;
+            }
+        }
+
+        /* whatsapp button focus styles */
+        .floating-whatsapp:focus,
+        .floating-whatsapp:focus-visible {
+            outline: 3px solid var(--vibrant-red);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Trip Again Travel and Tours Home">
+                Trip Again
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="visa-services.html">Visa Services</a></li>
+                <li><a href="flights-hotels.html">Flights & Hotels</a></li>
+                <li><a href="domestic-tourism.html" class="active">Domestic Tourism</a></li>
+                <li><a href="umrah-ziyarat.html">Umrah & Ziyarat</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Domestic Tourism Hero Section -->
+    <section class="domestic-hero">
+        <div class="domestic-hero-content">
+            <h1>Domestic Tourism Pakistan</h1>
+            <p>Discover Hidden Gems in Your Own Backyard</p>
+            <a href="#packages" class="cta-button">Explore Packages</a>
+        </div>
+    </section>
+
+    <!-- Packages Grid Section -->
+    <section id="packages" class="packages-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Domestic Tour Packages</h2>
+                <p class="section-subtitle">Experience the breathtaking beauty and rich culture of Pakistan with our specially curated domestic tour packages</p>
+            </div>
+            
+            <div class="packages-grid" id="packagesGrid">
+                <!-- Packages will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA Section -->
+    <section class="booking-cta-section">
+        <div class="container">
+            <div class="discount-badge">Special Domestic Discounts - Save up to 20%</div>
+            <h2>Book Your Domestic Trip Today</h2>
+            <p>Don't miss the opportunity to explore the breathtaking beauty of Pakistan. Our expert travel consultants will help you plan the perfect domestic getaway.</p>
+            <a href="index.html#contact" class="cta-button">Get Your Custom Quote</a>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header" id="modalHeader">
+                <!-- Modal header content will be populated by JavaScript -->
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal body content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        Trip Again
+                    </div>
+                    <p class="footer-about">Luxury travel experiences designed around you. Rediscover your world with Trip Again Travel & Tours.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15zomm3b1E/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="flights-hotels.html">Flight & Hotel</a></li>
+                        <li><a href="visa-services.html">Visa Services</a></li>
+                        <li><a href="domestic-tourism.html">Domestic Tourism</a></li>
+                        <li><a href="umrah-ziyarat.html">Umrah & Ziyarat</a></li>
+                        <li><a href="domestic-tourism.html">Discover Pakistan</a></li>
+                        <li><a href="#">Corporate Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Office # 2, Ground Floor, Hamza Center, PECHS Block 2, Near Liberty Traffic Signal, Tariq Road, Karachi Pakistan.</li>
+                        <li><i class="fas fa-phone"></i> +92 333 3473348</li>
+                        <li><i class="fas fa-envelope"></i> tripagain.dxb@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 12PM-10PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2021 All Rights reserved by Trip Again Pvt Ltd. Powered by passion & technology — designed by <a href="https://thegrotech.com/" target="_blank" style="font-weight: bold; color: #ff3b3b; text-decoration: none;">GroTech Solutions</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923333473348?text=Hello%2C%20I'm%20interested%20in%20your%20domestic%20tourism%20packages!" 
+    class="floating-whatsapp" 
+    id="whatsappButton"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // ===== MAIN WEBSITE FUNCTIONALITY =====
+        function initializeMainWebsite() {
+            // Mobile Menu Functionality
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            mobileToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                const isExpanded = navMenu.classList.contains('active');
+                mobileToggle.setAttribute('aria-expanded', isExpanded);
+                mobileToggle.innerHTML = isExpanded 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+                
+                // Add/remove blur effect
+                if (isExpanded) {
+                    document.body.classList.add('menu-active');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.classList.remove('menu-active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking links
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    document.body.classList.remove('menu-active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // ===== DOMESTIC TOURISM DATA =====
+        const packagesData = [
+            {
+                id: 1,
+                name: "Hunza Valley Explorer",
+                location: "Hunza, Gilgit-Baltistan",
+                image: "hunzavalley.jpg",
+                modalImage: "hunzavalley.jpg",
+                description: "Experience the majestic beauty of Hunza Valley with its stunning landscapes, ancient forts, and warm hospitality.",
+                duration: "7 Days / 6 Nights",
+                price: "From Rs. 35,000",
+                features: [
+                    "Visit Altit and Baltit Forts",
+                    "See Attabad Lake",
+                    "Explore Passu Cones",
+                    "Experience Local Culture",
+                    "Photography Opportunities"
+                ],
+                itinerary: [
+                    "Day 1: Arrival in Islamabad, travel to Hunza",
+                    "Day 2: Explore Karimabad and Altit Fort",
+                    "Day 3: Visit Baltit Fort and local markets",
+                    "Day 4: Journey to Attabad Lake",
+                    "Day 5: Explore Passu and surrounding areas",
+                    "Day 6: Cultural experiences and local cuisine",
+                    "Day 7: Departure from Hunza"
+                ],
+                bestTime: "April to October",
+                groupSize: "2-12 people",
+                difficulty: "Easy",
+                popular: true
+            },
+            {
+                id: 2,
+                name: "Skardu Adventure",
+                location: "Skardu, Gilgit-Baltistan",
+                image: "skarduvalley.jpg",
+                modalImage: "skarduvalley.jpg",
+                description: "Discover the wonders of Skardu with its breathtaking lakes, mighty mountains, and serene landscapes.",
+                duration: "8 Days / 7 Nights",
+                price: "From Rs. 42,000",
+                features: [
+                    "Visit Shangrila Resort",
+                    "Explore Upper Kachura Lake",
+                    "See Sheosar Lake",
+                    "Deosai Plains Safari",
+                    "Visit Shigar Fort"
+                ],
+                itinerary: [
+                    "Day 1: Arrival in Skardu",
+                    "Day 2: Explore Skardu town and Kachura Lakes",
+                    "Day 3: Visit Shangrila Resort and Lower Kachura",
+                    "Day 4: Journey to Sheosar Lake",
+                    "Day 5: Deosai Plains exploration",
+                    "Day 6: Visit Shigar Fort and surrounding areas",
+                    "Day 7: Free day for photography and relaxation",
+                    "Day 8: Departure from Skardu"
+                ],
+                bestTime: "May to September",
+                groupSize: "2-10 people",
+                difficulty: "Moderate",
+                popular: true
+            },
+            {
+                id: 3,
+                name: "Naran Kaghan Valley",
+                location: "Khyber Pakhtunkhwa",
+                image: "narankaghan.jpg",
+                modalImage: "narankaghan.jpg",
+                description: "Explore the picturesque valleys of Naran and Kaghan with their lush meadows, crystal lakes, and stunning waterfalls.",
+                duration: "5 Days / 4 Nights",
+                price: "From Rs. 28,000",
+                features: [
+                    "Visit Saif-ul-Mulook Lake",
+                    "Explore Lalazar Plateau",
+                    "See Ansoo Lake",
+                    "Babusar Top Experience",
+                    "Trekking Opportunities"
+                ],
+                itinerary: [
+                    "Day 1: Arrival in Islamabad, travel to Naran",
+                    "Day 2: Visit Saif-ul-Mulook Lake",
+                    "Day 3: Explore Lalazar Plateau and surrounding areas",
+                    "Day 4: Journey to Babusar Top",
+                    "Day 5: Departure from Naran"
+                ],
+                bestTime: "June to September",
+                groupSize: "2-15 people",
+                difficulty: "Easy",
+                popular: true
+            },
+            {
+                id: 4,
+                name: "Swat Valley Paradise",
+                location: "Swat, Khyber Pakhtunkhwa",
+                image: "swatvalley.jpg",
+                modalImage: "swatvalley.jpg",
+                description: "Discover the Switzerland of Pakistan with its lush green valleys, gushing rivers, and rich Buddhist heritage.",
+                duration: "6 Days / 5 Nights",
+                price: "From Rs. 32,000",
+                features: [
+                    "Explore Malam Jabba",
+                    "Visit Mahodand Lake",
+                    "See Buddhist Stupas",
+                    "Experience Local Cuisine",
+                    "River Rafting (Optional)"
+                ],
+                itinerary: [
+                    "Day 1: Arrival in Islamabad, travel to Swat",
+                    "Day 2: Explore Mingora and local markets",
+                    "Day 3: Visit Malam Jabba and surrounding areas",
+                    "Day 4: Journey to Mahodand Lake",
+                    "Day 5: Cultural experiences and Buddhist heritage sites",
+                    "Day 6: Departure from Swat"
+                ],
+                bestTime: "April to October",
+                groupSize: "2-12 people",
+                difficulty: "Easy",
+                popular: true
+            },
+            {
+                id: 5,
+                name: "Arang Kel Valley Adventure",
+                location: "Neelum Valley, Azad Kashmir",
+                image: "arangkhel.jpg",
+                modalImage: "arangkhel.jpg",
+                description: "Discover the hidden gem of Arang Kel, a picturesque village perched high in the mountains with breathtaking views of the Neelum Valley.",
+                duration: "5 Days / 4 Nights",
+                price: "From Rs. 25,000",
+                features: [
+                    "Trek to Arang Kel Village",
+                    "360-degree mountain views",
+                    "Visit Kel town and surrounding areas",
+                    "Experience local Kashmiri culture",
+                    "Photography of stunning landscapes"
+                ],
+                itinerary: [
+                    "Day 1: Arrival in Muzaffarabad, travel to Kel",
+                    "Day 2: Trek from Kel to Arang Kel (2-3 hours)",
+                    "Day 3: Explore Arang Kel and surrounding viewpoints",
+                    "Day 4: Return trek to Kel, visit local attractions",
+                    "Day 5: Departure from Neelum Valley"
+                ],
+                bestTime: "May to September",
+                groupSize: "2-12 people",
+                difficulty: "Moderate (requires trekking)",
+                popular: true
+            },
+            {
+                id: 6,
+                name: "Neelum Valley Journey",
+                location: "Azad Kashmir",
+                image: "neelumvalley.jpg",
+                modalImage: "neelumvalley.jpg",
+                description: "Explore the paradise of Neelum Valley with its pristine rivers, lush forests, and charming villages.",
+                duration: "7 Days / 6 Nights",
+                price: "From Rs. 38,000",
+                features: [
+                    "Visit Sharda",
+                    "Explore Kel",
+                    "See Arang Kel",
+                    "Experience Local Culture",
+                    "Trekking Opportunities"
+                ],
+                itinerary: [
+                    "Day 1: Arrival in Muzaffarabad",
+                    "Day 2: Travel to Keran and explore",
+                    "Day 3: Journey to Sharda",
+                    "Day 4: Explore Kel and surrounding areas",
+                    "Day 5: Trek to Arang Kel",
+                    "Day 6: Cultural experiences and local cuisine",
+                    "Day 7: Departure from Neelum Valley"
+                ],
+                bestTime: "April to October",
+                groupSize: "2-10 people",
+                difficulty: "Moderate",
+                popular: true
+            }
+        ];
+
+        // ===== DOMESTIC TOURISM FUNCTIONALITY =====
+        // DOM Elements
+        const packagesGrid = document.getElementById('packagesGrid');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modal = document.getElementById('modal');
+        const modalClose = document.getElementById('modalClose');
+        const modalHeader = document.getElementById('modalHeader');
+        const modalBody = document.getElementById('modalBody');
+
+        // Render packages grid
+        function renderPackagesGrid() {
+            packagesGrid.innerHTML = '';
+            
+            packagesData.forEach(package => {
+                const packageCard = document.createElement('div');
+                packageCard.className = 'package-card';
+                packageCard.innerHTML = `
+                    <div class="package-image">
+                        <img src="${package.image}" alt="${package.name}" loading="lazy">
+                        ${package.popular ? '<div class="package-badge">Popular</div>' : ''}
+                    </div>
+                    <div class="package-content">
+                        <h3>${package.name}</h3>
+                        <p>${package.description}</p>
+                        <div class="package-meta">
+                            <span><i class="fas fa-clock"></i> ${package.duration}</span>
+                            <span><i class="fas fa-map-marker-alt"></i> ${package.location}</span>
+                        </div>
+                        <div class="package-price">${package.price}</div>
+                        <a href="#" class="package-cta">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                `;
+                
+                packageCard.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openModal(package);
+                });
+                
+                packagesGrid.appendChild(packageCard);
+            });
+        }
+
+        // Open modal with package details
+        function openModal(package) {
+            // Create modal header
+            modalHeader.innerHTML = `
+                <img src="${package.modalImage}" alt="${package.name}">
+                <div class="modal-header-content">
+                    <h2>${package.name}</h2>
+                    <p>${package.location} • ${package.duration}</p>
+                </div>
+            `;
+            
+            // Create modal body
+            modalBody.innerHTML = `
+                <div class="modal-section">
+                    <h3>Package Overview</h3>
+                    <p>${package.description}</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Package Features</h3>
+                    <div class="package-features">
+                        ${package.features.map(feature => `
+                            <div class="feature-item">
+                                <h4>${feature}</h4>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Itinerary</h3>
+                    <ul class="itinerary-list">
+                        ${package.itinerary.map(day => `<li>${day}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Package Information</h3>
+                    <div class="package-info">
+                        <div class="info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h4>Best Time to Visit</h4>
+                            <p>${package.bestTime}</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Group Size</h4>
+                            <p>${package.groupSize}</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-mountain"></i>
+                            <h4>Difficulty Level</h4>
+                            <p>${package.difficulty}</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-tag"></i>
+                            <h4>Package Price</h4>
+                            <p>${package.price}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <a href="index.html#contact" class="cta-button">Book Now</a>
+                    <button class="cta-button" style="background: transparent; color: var(--vibrant-red);" onclick="closeModal()">Close</button>
+                </div>
+            `;
+            
+            // Show modal
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Event listeners
+        modalClose.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeMainWebsite();
+            renderPackagesGrid();
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Show WhatsApp button after delay
+            setTimeout(() => {
+                const whatsappButton = document.getElementById('whatsappButton');
+                if (whatsappButton) {
+                    whatsappButton.classList.add('visible');
+                }
+            }, 5000);
+        });
+
+        // Make closeModal function available globally
+        window.closeModal = closeModal;
+    </script>
+</body>
+</html>
