@@ -1,0 +1,3906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Umrah & Ziyarat Packages - Spiritual journeys with expert guidance, comfortable accommodations, and comprehensive support from Trip Again Travel & Tours">
+    <meta name="keywords" content="umrah, hajj, ziyarat, spiritual journey, makkah, madinah, islamic travel">
+    <title>Umrah & Ziyarat - Trip Again Travel & Tours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+<style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+        --primary-black: #000000;
+        --vibrant-red: #e10600;
+        --dark-red: #b30000;
+        --pure-white: #ffffff;
+        --charcoal: #1a1a1a;
+        --light-gray: #f8f9fa;
+        --text-dark: #333333;
+        --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ===== RESET & BASE STYLES ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.7;
+        color: var(--text-dark);
+        background: var(--pure-white);
+        padding-top: 80px; /* Added for fixed header */
+    }
+
+    /* ===== HEADER & NAVIGATION ===== */
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.00);
+        backdrop-filter: blur(00px);
+        z-index: 1000;
+        transition: var(--transition);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+    }
+
+    .header.scrolled {
+        background: rgba(0, 0, 0, 0.50);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 2rem;
+    }
+
+    .logo {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--pure-white);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: 'Montez', cursive;
+        z-index: 1001;
+    }
+
+    .logo i {
+        color: var(--vibrant-red);
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+    }
+
+    .nav-menu a {
+        color: var(--pure-white);
+        text-decoration: none;
+        font-weight: 500;
+        transition: var(--transition);
+        position: relative;
+    }
+
+    .nav-menu a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--vibrant-red);
+        transition: var(--transition);
+    }
+
+    .nav-menu a:hover::after {
+        width: 100%;
+    }
+
+    .nav-menu a:hover {
+        color: var(--vibrant-red);
+    }
+
+    .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--pure-white);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1001;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        transition: var(--transition);
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: var(--vibrant-red);
+        color: var(--pure-white);
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: var(--transition);
+        border: 2px solid var(--vibrant-red);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-button:hover {
+        background: transparent;
+        color: var(--vibrant-red);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(225, 6, 0, 0.3);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .umrah-hero {
+        position: relative;
+        height: 80vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+        margin-top: -80px; /* Counteract body padding */
+    }
+
+    .umrah-hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+    }
+
+    .umrah-hero-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .umrah-hero-content {
+        text-align: center;
+        color: var(--pure-white);
+        max-width: 800px;
+        padding: 0 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .umrah-hero h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        font-family: 'Montez', cursive;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .umrah-hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+    }
+
+    /* ===== MAIN CONTENT SECTIONS ===== */
+    .section {
+        padding: 30px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        text-align: center;
+    }
+
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background: var(--vibrant-red);
+    }
+
+    .section-subtitle {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 3rem;
+        text-align: center;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* ===== TIMELINE LAYOUT ===== */
+    .visual-timeline {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 24px;
+        max-width: 900px;
+        margin: 3rem auto;
+        padding: 2rem;
+        position: relative;
+    }
+
+    .visual-step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 120px;
+        position: relative;
+        flex: 0 0 auto;
+        min-height: 120px;
+    }
+
+    .step-visual {
+        text-align: center;
+        cursor: pointer;
+        transition: var(--transition);
+        z-index: 2;
+        padding: 10px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 0;
+    }
+
+    .step-connector {
+        position: absolute;
+        right: -25px;
+        top: 38%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: #ddd;
+        min-width: 30px;
+        z-index: 1;
+    }
+
+    .visual-step:last-child .step-connector {
+        display: none;
+    }
+
+    .step-circle i {
+        background: none !important;
+        border: none !important;
+        width: auto;
+        height: auto;
+        line-height: 1;
+    }
+
+    .step-circle {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--vibrant-red), var(--dark-red));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.3rem;
+        color: #fff;
+        box-shadow: 0 10px 25px rgba(225, 6, 0, 0.35);
+        border: 4px solid #fff;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .step-circle::before {
+        content: "";
+        position: absolute;
+        width: 115%;
+        height: 115%;
+        border-radius: 50%;
+        background: rgba(225, 6, 0, 0.15);
+        filter: blur(10px);
+        z-index: -1;
+    }
+
+    .step-visual:hover .step-circle {
+        transform: scale(1.15);
+        box-shadow: 0 12px 35px rgba(225, 6, 0, 0.4);
+    }
+
+    .step-label {
+        margin-top: 18px;
+        font-weight: 600;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    /* ===== DETAILED STEPS ===== */
+    .detailed-steps-container {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .step-detail-card {
+        display: none;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        margin: 2rem 0;
+        overflow: hidden;
+        animation: slideInUp 0.5s ease-out;
+    }
+
+    .step-detail-card.active {
+        display: block;
+    }
+
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .detail-header {
+        background: linear-gradient(135deg, var(--vibrant-red), var(--dark-red));
+        color: white;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .detail-header h3 {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    .close-detail {
+        background: rgba(255,255,255,0.2);
+        border: none;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+    }
+
+    .close-detail:hover {
+        background: rgba(255,255,255,0.3);
+        transform: rotate(90deg);
+    }
+
+    .detail-content {
+        padding: 2rem;
+    }
+
+    .arabic-text {
+        font-size: 1.4rem;
+        text-align: center;
+        margin: 1.5rem 0;
+        padding: 1.5rem;
+        background: #f8f9fa;
+        border-radius: 10px;
+        border-right: 4px solid var(--vibrant-red);
+        font-family: 'Traditional Arabic', 'Times New Roman', serif;
+        line-height: 2;
+    }
+
+    .translation {
+        font-style: italic;
+        color: #666;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .step-details {
+        margin: 1.5rem 0;
+        padding-left: 1.5rem;
+    }
+
+    .step-details li {
+        margin-bottom: 0.8rem;
+        color: #555;
+        position: relative;
+    }
+
+    .step-details li::before {
+        content: '•';
+        color: var(--vibrant-red);
+        font-weight: bold;
+        position: absolute;
+        left: -1rem;
+    }
+
+    .step-tips {
+        background: #fff5f5;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid var(--vibrant-red);
+        margin: 1.5rem 0;
+    }
+
+    .step-tips strong {
+        color: var(--vibrant-red);
+    }
+
+    /* ===== QUICK NOTES ===== */
+    .quick-notes {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .note-item {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 1rem 1.5rem;
+        background: white;
+        border-radius: 50px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        color: #555;
+        font-weight: 500;
+    }
+
+    .note-item i {
+        color: var(--vibrant-red);
+        font-size: 1.1rem;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+        background: var(--primary-black);
+        color: var(--pure-white);
+        padding: 60px 0 30px;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .footer-logo {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: 'Montez', cursive;
+    }
+
+    .footer-logo i {
+        color: var(--vibrant-red);
+    }
+
+    .footer-about {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-heading {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .footer-heading::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: var(--vibrant-red);
+    }
+
+    .footer-links {
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+        color: #ccc;
+        text-decoration: none;
+        transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+        color: var(--vibrant-red);
+        padding-left: 5px;
+    }
+
+    .footer-links i {
+        margin-right: 10px;
+        color: var(--vibrant-red);
+        width: 20px;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255,255,255,0.1);
+        color: var(--pure-white);
+        border-radius: 50%;
+        text-decoration: none;
+        transition: var(--transition);
+    }
+
+    .social-link:hover {
+        transform: translateY(-3px);
+    }
+
+    .social-link:nth-child(1):hover {
+        background: #1877F2;
+    }
+
+    .social-link:nth-child(2):hover {
+        background: #1DA1F2;
+    }
+
+    .social-link:nth-child(3):hover {
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+
+    .social-link:nth-child(4):hover {
+        background: #0077B5;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        color: #999;
+    }
+
+    /* ===== MOBILE RESPONSIVE STYLES ===== */
+    @media (max-width: 768px) {
+        body {
+            padding-top: 70px;
+        }
+
+        .umrah-hero {
+            margin-top: -70px;
+            height: 70vh;
+        }
+
+        .umrah-hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .umrah-hero p {
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(15px);
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 100px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+            gap: 0;
+        }
+        
+        .nav-menu.active {
+            left: 0;
+        }
+        
+        .nav-menu a {
+            font-size: 1.2rem;
+            padding: 1.5rem 2rem;
+            width: 80%;
+            text-align: center;
+            margin: 0.8rem 0;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-menu a::after {
+            display: none;
+        }
+        
+        .nav-menu a:hover {
+            background: rgba(225, 6, 0, 0.3);
+            transform: translateX(8px);
+        }
+
+        .mobile-toggle {
+            display: flex;
+        }
+
+                /* Mobile Menu */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 80px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+            gap: 0;
+        }
+        
+        .nav-menu.active {
+            left: 0;
+        }
+        
+        .nav-menu a {
+            font-size: 1.2rem;
+            padding: 1.5rem 2rem;
+            width: 80%;
+            text-align: center;
+            margin: 0.8rem 0;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-20px);
+            opacity: 0;
+            line-height: 3.9;
+        }
+
+        .nav-menu.active a {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        /* Stagger the menu item animations */
+        .nav-menu.active a:nth-child(1) { transition-delay: 0.1s; }
+        .nav-menu.active a:nth-child(2) { transition-delay: 0.15s; }
+        .nav-menu.active a:nth-child(3) { transition-delay: 0.2s; }
+        .nav-menu.active a:nth-child(4) { transition-delay: 0.25s; }
+        .nav-menu.active a:nth-child(5) { transition-delay: 0.3s; }
+        .nav-menu.active a:nth-child(6) { transition-delay: 0.35s; }
+        
+        .nav-menu a::after {
+            display: none;
+        }
+        
+        .nav-menu a:hover {
+            background: rgba(255, 59, 59, 0.3);
+            transform: translateX(8px);
+        }
+
+        /* Mobile menu backdrop */
+        body.menu-active {
+            overflow: hidden;
+        }
+
+        body.menu-active::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+            @media (max-width: 480px) {
+        .hero-headline {
+            font-size: 2rem;
+        }
+        
+        .hero-subheadline {
+            font-size: 1rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+        }
+        
+        .nav {
+            padding: 0.8rem;
+        }
+        
+        .nav-menu a {
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+        }
+
+    }
+
+        /* Timeline - Horizontal scroll for mobile */
+        .visual-timeline {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 16px;
+            padding: 1rem 10px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-behavior: smooth;
+            margin: 2rem auto;
+        }
+
+        .visual-timeline::-webkit-scrollbar {
+            display: none;
+        }
+
+        .visual-step {
+            flex: 0 0 auto;
+            width: 100px;
+            min-width: 100px;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .step-circle {
+            width: 70px;
+            height: 70px;
+            font-size: 1.6rem;
+            margin: 0 auto 8px auto;
+        }
+
+        .step-connector {
+            display: none !important;
+        }
+
+        .step-label {
+            font-size: 0.8rem;
+            margin-top: 12px;
+            line-height: 1.2;
+        }
+
+        /* Section adjustments */
+        h2 {
+            font-size: 2.2rem;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        /* Quick notes */
+        .quick-notes {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .note-item {
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+        }
+
+        /* Footer */
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        /* Detail cards */
+        .detail-header {
+            padding: 1.2rem 1.5rem;
+        }
+
+        .detail-header h3 {
+            font-size: 1.2rem;
+        }
+
+        .detail-content {
+            padding: 1.5rem;
+        }
+    }
+
+    /* ===== EXTRA SMALL DEVICES ===== */
+    @media (max-width: 480px) {
+        .visual-step {
+            width: 90px;
+            min-width: 90px;
+        }
+        
+        .step-circle {
+            width: 60px;
+            height: 60px;
+            font-size: 1.4rem;
+        }
+        
+        .step-label {
+            font-size: 0.75rem;
+        }
+
+        .arabic-text {
+            font-size: 1rem;
+            padding: 0.8rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        .umrah-hero h1 {
+            font-size: 2rem;
+        }
+    }
+
+            /* whatsapp button focus styles */
+            .floating-whatsapp:focus,
+            .floating-whatsapp:focus-visible {
+            outline: 3px solid var(--vibrant-red);
+            outline-offset: 2px;
+    }
+
+        /* ===== FLOATING WHATSAPP BUTTON ===== */
+    .floating-whatsapp {
+        position: fixed;
+        left: 30px;
+        bottom: 30px;
+        width: 50px;
+        height: 50px;
+        background: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ff3b3b;
+        font-size: 2rem;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(255, 59, 59, 0.3);
+        z-index: 1000;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 2px solid #f0f0f0;
+    }
+
+    .floating-whatsapp.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .floating-whatsapp:hover {
+        transform: scale(1.1);
+        background: #25D366;
+        color: #ffffff;
+        box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Desktop size for WhatsApp */
+    @media (min-width: 769px) {
+        .floating-whatsapp {
+            width: 50px;
+            height: 50px;
+            font-size: 1.7rem;
+            left: 30px;
+            bottom: 30px;
+        }
+    }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(255, 59, 59, 0.3);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #e60000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 59, 59, 0.4);
+        }
+/* Calculator Styles */
+:root{
+    --brand-red:#e10600;
+    --dark:#111;
+    --card:#ffffff;
+    --bg-start: #e10600;
+    --bg-end: #000000;
+}
+
+.app {
+    width:100%;
+    max-width:1080px;
+    background:transparent;
+}
+
+.card {
+    background:var(--card);
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 18px 50px rgba(0,0,0,0.45);
+    margin-bottom:18px;
+    overflow:hidden;
+}
+
+header.app-header{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:18px;
+    color:white;
+}
+
+header .brand-title{
+    font-weight:700;
+    font-size:20px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.top-info{
+    color:#fff;
+    margin-bottom:14px;
+}
+
+h2.section-title{
+    margin:0 0 12px 0;
+    font-size:18px;
+    color:var(--dark);
+}
+
+.grid-3 {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+.grid-2 {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+label{display:block; font-weight:600; margin-bottom:6px; color:#333}
+input[type="number"], input[type="date"], select {
+    width:100%;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid #e6e6e6;
+    font-size:14px;
+    background:#fff;
+}
+
+input[readonly] {
+    width:100%;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid #e6e6e6;
+    font-size:14px;
+    background:#fff;
+}
+
+.muted{font-size:13px;color:#666;margin-bottom:8px}
+.btn {
+    display:inline-block;
+    background:linear-gradient(90deg,var(--brand-red),#b00000);
+    color:#fff;
+    padding:12px 16px;
+    border-radius:10px;
+    border:none;
+    font-weight:700;
+    cursor:pointer;
+    width:100%;
+    box-shadow:0 8px 20px rgba(225,6,0,0.25);
+    transition:transform .15s ease;
+}
+.btn:hover{transform:translateY(-3px)}
+.small-btn{padding:8px 10px; font-size:13px; border-radius:8px}
+
+.sub-total {
+    margin-top:10px;
+    padding:12px;
+    border-radius:10px;
+    background:linear-gradient(180deg,#fff,#fbfbfb);
+    border-left:6px solid var(--brand-red);
+    font-weight:700;
+    color:#111;
+}
+
+.summary {
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+.summary .box {
+    background:#fff;
+    padding:12px;
+    border-radius:10px;
+    min-width:180px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.right {
+    text-align:right;
+}
+
+footer.page-footer {
+    margin-top:8px;
+    color:#fff;
+    font-size:14px;
+    text-align:left;
+}
+
+/* responsive */
+@media (max-width:880px){
+    .grid-3{grid-template-columns:1fr}
+    .grid-2{grid-template-columns:1fr}
+    .summary .box{min-width:unset; width:100%}
+}
+
+.logo-container {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#perAdult, #perChild, #perInfant {
+    margin-bottom: 4px;
+    min-height: 18px; /* Maintain consistent height */
+}
+
+/* Add this to your CSS for better date validation */
+input[type="date"]:invalid {
+    border-color: #e10600;
+    background-color: #fff0f0;
+}
+
+input[type="date"]:valid {
+    border-color: #00cc00;
+}
+
+/* Calculator Accordion Styles */
+.calculator-accordion {
+    background: linear-gradient(135deg, #e10600, #b00000);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 30px auto;
+    max-width: 400px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(225, 6, 0, 0.3);
+    border: none;
+    text-align: center;
+}
+
+.calculator-accordion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(225, 6, 0, 0.4);
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+    font-size: 1em;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background: transparent;
+}
+
+.accordion-content.expanded {
+    max-height: 5000px; /* Adjust based on your content height */
+}
+
+/* Container for the calculator */
+.app {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    background: transparent;
+}
+
+/* Card styling */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border: 1px solid #eaeaea;
+}
+
+/*umrah offer styling*/
+/* Offers Grid Styles */
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.offer-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.offer-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover .offer-image img {
+    transform: scale(1.05);
+}
+
+.offer-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e10600;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.offer-content {
+    padding: 25px;
+}
+
+.offer-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4em;
+    color: #333;
+    font-weight: 700;
+}
+
+.offer-price {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #e10600;
+    margin-bottom: 15px;
+}
+
+.offer-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.offer-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.offer-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.offer-features li:last-child {
+    border-bottom: none;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #e10600, #b00000);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #b00000, #8a0000);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(225, 6, 0, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .offers-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .offer-card {
+        margin: 0 10px;
+    }
+}
+/* Testimonials Section Styles */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.testimonial-content {
+    position: relative;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.quote-icon {
+    font-size: 3em;
+    color: #e10600;
+    opacity: 0.2;
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    line-height: 1;
+}
+
+.testimonial-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.testimonial-author {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.author-info h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 600;
+}
+
+.author-info p {
+    margin: 0 0 10px 0;
+    font-size: 0.95em;
+    color: #666;
+    font-weight: 500;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 1em;
+}
+
+/* Stats Section */
+.testimonials-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    padding: 40px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #e10600;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1em;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .testimonial-card {
+        margin: 0 10px;
+        padding: 25px 20px;
+    }
+    
+    .testimonials-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 30px 20px;
+    }
+    
+    .stat-number {
+        font-size: 2em;
+    }
+    
+    .testimonial-text {
+        font-size: 1em;
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-card {
+        padding: 20px 15px;
+    }
+}
+
+/* FAQ Section Styles */
+.faq-container {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.faq-category {
+    margin-bottom: 40px;
+}
+
+.faq-category-title {
+    color: #e10600;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    font-weight: 600;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f8f9fa;
+}
+
+.faq-icon {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #e10600;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    background: #f8f9fa;
+}
+
+.faq-answer.active {
+    max-height: 500px;
+    padding: 25px;
+}
+
+.faq-answer p {
+    margin: 0;
+    line-height: 1.6;
+    color: #555;
+    font-size: 1em;
+}
+
+/* Active state for FAQ items */
+.faq-item.active .faq-question {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* FAQ CTA Section */
+.faq-cta {
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 50px 30px;
+    border-radius: 15px;
+    margin-top: 60px;
+}
+
+.faq-cta h3 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.faq-cta p {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #e10600, #b00000);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #b00000, #8a0000);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(225, 6, 0, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(135deg, #128C7E, #0a6b5a);
+}
+
+.cta-button.secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.cta-button.secondary:hover {
+    background: #545b62;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-question {
+        padding: 18px 20px;
+        font-size: 0.95em;
+    }
+    
+    .faq-answer.active {
+        padding: 20px;
+    }
+    
+    .faq-cta {
+        padding: 40px 20px;
+    }
+    
+    .faq-cta h3 {
+        font-size: 1.5em;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 200px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-container {
+        margin: 30px auto;
+    }
+    
+    .faq-category-title {
+        font-size: 1.3em;
+    }
+    
+    .faq-question {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+    
+    .faq-answer.active {
+        padding: 15px;
+    }
+    
+    .faq-cta {
+        padding: 30px 15px;
+    }
+}
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Trip Again Travel and Tours Home">
+                Trip Again
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="visa-services.html">Visa Services</a></li>
+                <li><a href="flights-hotels.html">Flights & Hotels</a></li>
+                <li><a href="tourism-activities.html">Tourism Activities</a></li>
+                <li><a href="umrah-ziyarat.html">Umrah & Ziyarat</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="umrah-hero">
+        <div class="umrah-hero-bg">
+            <img src="umrahherobackgroundimage.jpg" alt="Masjid al-Haram, Makkah">
+        </div>
+        <div class="umrah-hero-content">
+            <h1>Your Spiritual Journey, Our Sacred Duty</h1>
+            <p>Experience the blessings of Umrah with comprehensive packages, expert guidance, and spiritual comfort. Let us handle the details while you focus on your devotion.</p>
+            <a href="#calculator" class="cta-button">Calculate Your Umrah Cost</a>
+        </div>
+    </section>
+
+<!-- Step-by-Step Guide Section -->
+<section class="section" id="guide">
+    <div class="container">
+        <h2>Step-by-Step Umrah Guide</h2>
+        <p class="section-subtitle">Click on each step to learn the complete procedure and prayers</p>
+        
+        <!-- Visual Timeline Overview -->
+        <div class="visual-timeline">
+            <!-- Step 1 -->
+            <div class="visual-step" data-step="1">
+                <div class="step-visual">
+                    <div class="step-circle">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="step-label">Enter Ihram</div>
+                </div>
+                <div class="step-connector">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="visual-step" data-step="2">
+                <div class="step-visual">
+                    <div class="step-circle">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="step-label">Recite Talbiyah</div>
+                </div>
+                <div class="step-connector">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="visual-step" data-step="3">
+                <div class="step-visual">
+                    <div class="step-circle">
+                        <i class="fas fa-kaaba"></i>
+                    </div>
+                    <div class="step-label">Perform Tawaf</div>
+                </div>
+                <div class="step-connector">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="visual-step" data-step="4">
+                <div class="step-visual">
+                    <div class="step-circle">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <div class="step-label">Pray at Maqam</div>
+                </div>
+                <div class="step-connector">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="visual-step" data-step="5">
+                <div class="step-visual">
+                    <div class="step-circle">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="step-label">Drink Zamzam</div>
+                </div>
+                <div class="step-connector">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="visual-step" data-step="6">
+                <div class="step-visual">
+                    <div class="step-circle">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <div class="step-label">Perform Sa'i</div>
+                </div>
+                <div class="step-connector">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="visual-step" data-step="7">
+                <div class="step-visual">
+                    <div class="step-circle">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <div class="step-label">Cut Hair</div>
+                </div>
+            </div>
+        </div>
+        <!-- Add this right after the visual timeline -->
+        <div style="text-align: center; margin-top: 1rem;">
+            <p style="color: #666; font-size: 0.9rem;">
+                <i class="fas fa-mouse-pointer" style="color: var(--vibrant-red); margin-right: 5px;"></i>
+                Click on any step to view detailed instructions
+            </p>
+        </div>
+        <!-- Detailed Steps Container -->
+        <div class="detailed-steps-container">
+            <!-- Step 1 Details -->
+            <div class="step-detail-card" id="step-1-detail">
+                <div class="detail-header">
+                    <h3>Step 1: Enter State of Ihram</h3>
+                    <button class="close-detail" data-step="1">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="detail-content">
+                    <p>Before reaching Miqat boundary, perform Ghusl (ritual bath), wear Ihram garments (two white unstitched cloths for men, modest dress for women), and make intention for Umrah by saying:</p>
+                    <div class="arabic-text">
+                        لَبَّيْكَ اللَّهُمَّ عُمْرَةً
+                    </div>
+                    <p class="translation">"Labbaik Allahumma Umratan" (O Allah, I answer Your call to perform Umrah)</p>
+                    <div class="step-tips">
+                        <strong>Important:</strong> Avoid prohibited acts like cutting hair/nails, using perfume, hunting, or intimate relations.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 Details -->
+            <div class="step-detail-card" id="step-2-detail">
+                <div class="detail-header">
+                    <h3>Step 2: Recite Talbiyah</h3>
+                    <button class="close-detail" data-step="2">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="detail-content">
+                    <p>Continuously recite Talbiyah from Miqat until you begin Tawaf:</p>
+                    <div class="arabic-text">
+                        لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ
+                    </div>
+                    <p class="translation">"Labbaik Allahumma Labbaik, Labbaik La Sharika Laka Labbaik, Innal Hamda Wan-Ni'mata Laka Wal Mulk, La Sharika Lak"</p>
+                </div>
+            </div>
+
+            <!-- Step 3 Details -->
+            <div class="step-detail-card" id="step-3-detail">
+                <div class="detail-header">
+                    <h3>Step 3: Perform Tawaf</h3>
+                    <button class="close-detail" data-step="3">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="detail-content">
+                    <p>Upon reaching Masjid al-Haram, perform 7 circuits around the Kaaba starting from the Black Stone:</p>
+                    <ul class="step-details">
+                        <li>Men should uncover right shoulder (Idtiba) during Tawaf</li>
+                        <li>Begin each circuit facing Black Stone saying "Allahu Akbar"</li>
+                        <li>Walk briskly (Ramal) in first 3 circuits for men</li>
+                        <li>Recite prayers and supplications during Tawaf</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 4 Details -->
+            <div class="step-detail-card" id="step-4-detail">
+                <div class="detail-header">
+                    <h3>Step 4: Pray at Maqam Ibrahim</h3>
+                    <button class="close-detail" data-step="4">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="detail-content">
+                    <p>After completing Tawaf, pray 2 rak'ahs behind Maqam Ibrahim (if possible) or anywhere in the mosque:</p>
+                    <div class="step-details">
+                        <p>Recite Surah Al-Kafirun in first rak'ah and Surah Al-Ikhlas in second rak'ah</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 Details -->
+            <div class="step-detail-card" id="step-5-detail">
+                <div class="detail-header">
+                    <h3>Step 5: Drink Zamzam Water</h3>
+                    <button class="close-detail" data-step="5">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="detail-content">
+                    <p>Proceed to Zamzam well area to drink water while standing, facing Kaaba:</p>
+                    <div class="arabic-text">
+                        اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا وَاسِعًا، وَشِفَاءً مِنْ كُلِّ دَاءٍ
+                    </div>
+                    <p class="translation">"O Allah, I ask You for beneficial knowledge, ample provision, and healing from every disease"</p>
+                </div>
+            </div>
+
+            <!-- Step 6 Details -->
+            <div class="step-detail-card" id="step-6-detail">
+                <div class="detail-header">
+                    <h3>Step 6: Perform Sa'i</h3>
+                    <button class="close-detail" data-step="6">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="detail-content">
+                    <p>Walk 7 times between Safa and Marwah hills:</p>
+                    <ul class="step-details">
+                        <li>Start at Safa, end at Marwah (one complete round)</li>
+                        <li>Men should run between green markers</li>
+                        <li>Recite supplications and remember Hajar's search for water</li>
+                        <li>Complete 7 rounds ending at Marwah</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 7 Details -->
+            <div class="step-detail-card" id="step-7-detail">
+                <div class="detail-header">
+                    <h3>Step 7: Cut Hair (Taqseer)</h3>
+                    <button class="close-detail" data-step="7">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="detail-content">
+                    <p>Complete your Umrah by cutting or shaving hair:</p>
+                    <div class="step-details">
+                        <p><strong>For Men:</strong> Shaving entire head is preferred, or trimming at least 1 inch from all sides</p>
+                        <p><strong>For Women:</strong> Cut fingertip length from hair ends</p>
+                        <div class="step-tips">
+                            <strong>Note:</strong> All Ihram restrictions are now lifted except intimacy with spouse
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Notes -->
+        <div class="quick-notes">
+            <div class="note-item">
+                <i class="fas fa-clock"></i>
+                <span>Umrah takes 2-4 hours to complete</span>
+            </div>
+            <div class="note-item">
+                <i class="fas fa-users"></i>
+                <span>Guided assistance available</span>
+            </div>
+            <div class="note-item">
+                <i class="fas fa-book"></i>
+                <span>Prayer booklets provided</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cost Calculator Section -->
+<section class="section" id="calculator">
+    <div class="container">
+        <h2>Umrah Cost Calculator</h2>
+        <p class="section-subtitle">Plan your spiritual journey with our comprehensive cost calculator</p>
+        
+        <!-- Simple Accordion Button -->
+        <div class="calculator-accordion" id="calculatorAccordion">
+            <div class="accordion-header">
+                <span>Open Cost Calculator</span>
+                <span class="accordion-icon">▼</span>
+            </div>
+        </div>
+
+        <div class="accordion-content" id="calculatorContent">
+    <div class="container">
+        
+        <!-- Calculator Content Starts Here -->
+        <div class="app"style="width: 100%; max-width: 1080px; margin: 0 auto; background: transparent;"></div>
+            <!-- calculator card -->
+            <div class="card" id="calculatorCard">
+                <h2 class="section-title">Step 1 — Tickets</h2>
+
+                <div class="grid-3" style="margin-bottom:12px">
+                    <div>
+                        <label>Adult Ticket Price (PKR)</label>
+                        <input type="number" id="adultPriceSAR">
+                    </div>
+                    <div>
+                        <label>Child Ticket Price (PKR)</label>
+                        <input type="number" id="childPriceSAR">
+                    </div>
+                    <div>
+                        <label>Infant Ticket Price (PKR)</label>
+                        <input type="number" id="infantPriceSAR">
+                    </div>
+                </div>
+
+                <div class="grid-3">
+                    <div>
+                        <label>No. of Adults</label>
+                        <input type="number" id="noAdults" min="0" value="1">
+                    </div>
+                    <div>
+                        <label>No. of Children</label>
+                        <input type="number" id="noChildren" min="0" value="0">
+                    </div>
+                    <div>
+                        <label>No. of Infants</label>
+                        <input type="number" id="noInfants" min="0" value="0">
+                    </div>
+                </div>
+
+                <div style="display:flex;gap:10px;margin-top:14px">
+                    <button class="btn small-btn" id="calcTicketsBtn" type="button">Calculate Tickets</button>
+                </div>
+                <div id="ticketsSubtotal" class="sub-total" style="display:none;margin-top:12px"></div>
+            </div>
+
+            <!-- hotels card (Makkah) -->
+            <div class="card" id="makkahCard">
+                <h2 class="section-title">Step 2 — Makkah Hotels</h2>
+                <div class="muted">Select hotel, room type, check-in / check-out, number of rooms.</div>
+
+                <div id="makkahList">
+                    <!-- hotel blocks will be added here -->
+                </div>
+
+                <div style="display:flex;gap:10px;margin-top:10px">
+                    <button class="btn small-btn" id="addMakkahBtn" type="button">+ Add Makkah Hotel</button>
+                    <button class="btn small-btn" id="clearMakkahBtn" type="button" style="background:#444">Clear Makkah</button>
+                </div>
+
+                <div id="makkahSubtotal" class="sub-total" style="display:none;margin-top:12px"></div>
+            </div>
+
+            <!-- hotels card (Madinah) -->
+            <div class="card" id="madinahCard">
+                <h2 class="section-title">Step 3 — Madinah Hotels</h2>
+                <div class="muted">Select hotel, room type, check-in / check-out, number of rooms.</div>
+
+                <div id="madinahList"></div>
+
+                <div style="display:flex;gap:10px;margin-top:10px">
+                    <button class="btn small-btn" id="addMadinahBtn" type="button">+ Add Madinah Hotel</button>
+                    <button class="btn small-btn" id="clearMadinahBtn" type="button" style="background:#444">Clear Madinah</button>
+                </div>
+
+                <div id="madinahSubtotal" class="sub-total" style="display:none;margin-top:12px"></div>
+            </div>
+
+            <!-- transport -->
+            <div class="card" id="transportCard">
+                <h2 class="section-title">Step 4 — Transport</h2>
+                <div class="muted">Select Route, Vehicle Type & Number of Vehicle.</div>
+
+                <div id="transportList"></div>
+
+                <div style="display:flex;gap:10px;margin-top:10px">
+                    <button class="btn small-btn" id="addTransportBtn" type="button">+ Add Transport</button>
+                    <button class="btn small-btn" id="clearTransportBtn" type="button" style="background:#444">Clear Transport</button>
+                </div>
+
+                <div id="transportSubtotal" class="sub-total" style="display:none;margin-top:12px"></div>
+            </div>
+
+            <!-- visa & ziyarats -->
+            <div class="card" id="visaCard">
+                <h2 class="section-title">Step 5 — Visa & Ziyarat</h2>
+
+                <div class="grid-2">
+                    <div>
+                        <label>Umrah Visa (SAR per pax)</label>
+                        <input type="number" id="visaSAR" readonly>
+                    </div>
+                    <div>
+                        <label>Ziarat Makkah & Madina</label>
+                        <label style="margin-top: 0px; padding: 08px 10px; border: 1px solid #ddd; border-radius: 10px; background-color: #f8f9fa; width: 100%;">
+                            <input type="checkbox" id="includeZiyarat" checked style="width:auto;">
+                            Include Ziyarat (SAR <span id="ziyaratAmount">25</span> per pax)
+                        </label>
+                        <input type="number" id="ziyaratSAR" readonly style="display:none;">
+                    </div>
+                </div>
+
+                <div style="margin-top:10px" class="grid-2">
+                    <div>
+                        <label>Number of Applicants</label>
+                        <input type="number" id="noApplicants" min="0" value="0">
+                    </div>
+                    <div>
+                        <label>ROE (SAR → PKR)</label>
+                        <input type="number" id="roeInput" readonly>
+                    </div>
+                </div>
+
+                <div style="display:flex;gap:10px;margin-top:12px">
+                    <button class="btn small-btn" id="calcVisaBtn" type="button">Calculate Visa & Ziyarat</button>
+                </div>
+                <div id="visaSubtotal" class="sub-total" style="display:none;margin-top:12px"></div>
+            </div>
+
+            <!-- summary & run -->
+            <div class="card">
+                <h2 class="section-title">Summary & Grand Total</h2>
+
+                <div class="summary" style="margin-bottom:12px">
+                    <div class="box">
+                        <div style="font-size:13px;color:#666">Tickets Total</div>
+                        <div id="summaryTickets" style="font-weight:800;font-size:16px">PKR 0</div>
+                    </div>
+
+                    <div class="box">
+                        <div style="font-size:13px;color:#666">Hotels Total</div>
+                        <div id="summaryHotels" style="font-weight:800;font-size:16px">PKR 0</div>
+                    </div>
+
+                    <div class="box">
+                        <div style="font-size:13px;color:#666">Transport Total</div>
+                        <div id="summaryTransport" style="font-weight:800;font-size:16px">PKR 0</div>
+                    </div>
+
+                    <div class="box">
+                        <div style="font-size:13px;color:#666">Visa & Ziyarat</div>
+                        <div id="summaryVisa" style="font-weight:800;font-size:16px">PKR 0</div>
+                    </div>
+
+                    <div class="box right" style="flex:1">
+                        <div style="font-size:13px;color:#666">Grand Total</div>
+                        <div id="grandTotal" style="font-weight:900;font-size:20px">PKR 0</div>
+                        
+                        <div style="margin-top:12px; border-top:1px solid #eee; padding-top:8px">
+                            <div style="font-size:13px;color:#666; margin-bottom:4px">Per Person Breakdown:</div>
+                            <div id="perAdult" style="font-weight:800;font-size:14px; color:#e10600">Adult: PKR 0</div>
+                            <div id="perChild" style="font-weight:600;font-size:13px; color:#666">Child: PKR 0</div>
+                            <div id="perInfant" style="font-weight:600;font-size:13px; color:#666">Infant: PKR 0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn" id="calcBtn">Calculate Grand Total</button>
+            </div>
+        </div>
+        <!-- Calculator Content Ends Here -->
+    </div>
+</section>
+
+<!-- Packages Section -->
+<section class="section" id="packages">
+    <div class="container">
+        <h2>Umrah Packages</h2>
+        <p class="section-subtitle">Choose from our carefully curated packages for your spiritual journey</p>
+        
+        <div class="offers-grid">
+            <!-- Economy Package -->
+            <div class="offer-card">
+                <div class="offer-image">
+                    <img src="umrahherobackgroundimage.jpg" alt="Economy Umrah Package">
+                    <div class="offer-badge" style="background: #28a745;">Budget Friendly</div>
+                </div>
+                <div class="offer-content">
+                    <h3>Economy Package</h3>
+                    <div class="offer-price">From PKR 225,000</div>
+                    <ul class="offer-features">
+                        <li>Return flights from major cities</li>
+                        <li>3-star hotels near Haram</li>
+                        <li>7 nights Makkah + 4 nights Madinah</li>
+                        <li>Basic transportation</li>
+                        <li>Umrah visa processing</li>
+                        <li>Group guidance & support</li>
+                    </ul>
+                    <a href="#forms" class="cta-button" style="width: 100%; text-align: center;">Book Now</a>
+                </div>
+            </div>
+            
+            <!-- Economy Plus Package -->
+            <div class="offer-card">
+                <div class="offer-image">
+                    <img src="umrahherobackgroundimage.jpg"alt="Economy Plus Umrah Package">
+                    <div class="offer-badge" style="background: #007bff;">Most Popular</div>
+                </div>
+                <div class="offer-content">
+                    <h3>Economy Plus</h3>
+                    <div class="offer-price">From PKR 350,000</div>
+                    <ul class="offer-features">
+                        <li>Return Direct flights</li>
+                        <li>4-star hotels (Walking distance)</li>
+                        <li>10 nights Makkah + 5 nights Madinah</li>
+                        <li>Private airport transfers</li>
+                        <li>VIP visa processing</li>
+                        <li>Experienced group leader</li>
+                        <li>Ziyarat tours included</li>
+                    </ul>
+                    <a href="#forms" class="cta-button" style="width: 100%; text-align: center;">Book Now</a>
+                </div>
+            </div>
+            
+            <!-- Premium Package -->
+            <div class="offer-card">
+                <div class="offer-image">
+                    <img src="umrahherobackgroundimage.jpg"alt="Premium Umrah Package">
+                    <div class="offer-badge" style="background: #dc3545;">Luxury Experience</div>
+                </div>
+                <div class="offer-content">
+                    <h3>Premium Package</h3>
+                    <div class="offer-price">From PKR 595,000</div>
+                    <ul class="offer-features">
+                        <li>Return Direct flights</li>
+                        <li>5-star hotels (Clock Tower & Anwar Al Madinah)</li>
+                        <li>14 nights Makkah + 7 nights Madinah</li>
+                        <li>Private transportation</li>
+                        <li>Express visa service</li>
+                        <li>Personal Muallim & guidance</li>
+                        <li>Exclusive ziyarat with scholar</li>
+                        <li>Daily breakfast & dinner buffet</li>
+                    </ul>
+                    <a href="#forms" class="cta-button" style="width: 100%; text-align: center;">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section" id="testimonials">
+    <div class="container">
+        <h2>Pilgrim Experiences</h2>
+        <p class="section-subtitle">What our pilgrims say about their spiritual journey with us</p>
+        
+        <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">❝</div>
+                    <p class="testimonial-text">"My Umrah journey with Trip Again was beyond expectations. The hotels were walking distance from Haram, and the guidance provided made our spiritual experience truly blessed. May Allah reward the entire team."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Ahmed Raza</h4>
+                        <p>Economy Package · March 2024</p>
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">❝</div>
+                    <p class="testimonial-text">"As a family of 5, we were worried about logistics. But Trip Again handled everything perfectly. From visa processing to hotel arrangements, everything was seamless. The kids felt comfortable throughout the journey."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Fatima Khan</h4>
+                        <p>Economy Plus Package · January 2024</p>
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">❝</div>
+                    <p class="testimonial-text">"The premium package was worth every penny. Staying at the Clock Tower with direct Haram view was a dream come true. The personal Muallim's guidance deepened our spiritual understanding. JazakAllah Khair!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Abdullah Malik</h4>
+                        <p>Premium Package · December 2023</p>
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">❝</div>
+                    <p class="testimonial-text">"This was my third Umrah, but first with Trip Again. The organization and attention to detail were exceptional. The group leader was knowledgeable and always available. Highly recommended for first-time pilgrims!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Zainab Ali</h4>
+                        <p>Economy Plus Package · February 2024</p>
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">❝</div>
+                    <p class="testimonial-text">"Alhamdulillah, the entire journey was smooth. The transportation was always on time, hotels were clean and comfortable. The team in Saudi Arabia was very helpful. Made dua for the Trip Again team at Rawdah."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Maryam Hassan</h4>
+                        <p>Economy Package · November 2023</p>
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">❝</div>
+                    <p class="testimonial-text">"The ziyarat tours with the scholar were enlightening. We visited historical sites we wouldn't have known about otherwise. The premium experience made our Umrah truly memorable. Shukran Trip Again!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Omar Farooq</h4>
+                        <p>Premium Package · January 2024</p>
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="testimonials-stats">
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Pilgrims Served</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Satisfaction Rate</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Successful Groups</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Visa Success</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section" id="faq">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-subtitle">Find answers to common questions about Umrah</p>
+        
+        <div class="faq-container">
+            <!-- General Questions -->
+            <div class="faq-category">
+                <h3 class="faq-category-title">General Questions</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>When is the best time to perform Umrah?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ramadan is the best time for greater spiritual rewards. For better rates and smaller crowds, we recommend after Moharram when prices are more affordable and the weather is pleasant.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How long does Umrah take to complete?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The actual Umrah rituals can be completed in 3-4 hours. However, most pilgrims spend additional time for prayers and spiritual activities at the holy mosques.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I perform Umrah more than once during my trip?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Many pilgrims perform multiple Umrahs. After each Umrah, you need to go beyond Makkah city limits and return for the next one. A common practice is: perform Umrah → go to Madinah → return to Makkah for second Umrah → depart from Jeddah.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is there an age limit for performing Umrah?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>There is no specific age limit for Umrah. However, pilgrims should be in good health to perform the rituals. Elderly pilgrims and children should be accompanied by family members who can assist them.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can children perform Umrah?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, children can perform Umrah. There is no minimum age requirement. However, children should be accompanied by parents or guardians, and parents should ensure the child's comfort and safety throughout the journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking & Packages -->
+            <div class="faq-category">
+                <h3 class="faq-category-title">Booking & Packages</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What's included in your Umrah packages?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our packages include: round-trip flight tickets, hotel accommodation in Makkah and Madinah, Umrah visa processing, and transportation between cities and airports.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How far in advance should I book my Umrah trip?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We recommend booking at least one month in advance to secure the best prices and preferred hotels. For peak seasons like Ramadan, book 2-3 months ahead.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I customize my Umrah package?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We offer customizable packages where you can select your preferred hotels, flight options, and duration according to your needs and budget.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What's the difference between Economy, Economy Plus, and Premium packages?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The main differences are hotel distance from Haram, transportation categories, and room types. Economy has hotels with shuttle service, Economy Plus offers walking distance hotels, and Premium includes luxury hotels with private transportation.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer group discounts?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer special discounts for groups of 5 or more people. Contact us for customized group rates and family packages.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I extend my stay in Saudi Arabia?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, extension is not allowed on Umrah visa. The visa validity is strictly for the duration of your Umrah package.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What happens if I miss my flight?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>If your flight ticket is non-refundable or non-changeable, you will bear the loss and need to pay for a new ticket. We recommend arriving at the airport 3-4 hours before departure.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Are there any hidden costs in your packages?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, we believe in complete transparency. All costs are clearly outlined in your package details with no hidden charges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visa & Documentation -->
+            <div class="faq-category">
+                <h3 class="faq-category-title">Visa & Documentation</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What documents are required for Umrah visa?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You only need a valid passport and recent passport-sized photographs. We handle all other documentation requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How long does visa processing take?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Visa processing typically takes 3-5 working days once we have all required documents.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can women perform Umrah without a Mahram?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, women can perform Umrah without a Mahram. Saudi regulations now allow women of all ages to travel in groups without male guardians.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What are the passport validity requirements?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Your passport must be valid for at least 6 months from your intended date of travel to Saudi Arabia.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do I need any vaccinations for Umrah?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, pilgrims need polio and yellow fever vaccinations. We recommend consulting with your doctor for any additional health precautions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I get a visa on arrival for Umrah?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, visa on arrival is available for American and British passport holders. However, we recommend obtaining your visa in advance for a smoother journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accommodation & Transportation -->
+            <div class="faq-category">
+                <h3 class="faq-category-title">Accommodation & Transportation</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How far are your hotels from the Haram?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer both walking distance hotels and hotels with shuttle service. Our Economy Plus and Premium packages include hotels within walking distance, while Economy packages include hotels with regular shuttle services to the Haram.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is transportation provided between Makkah and Madinah?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, all our packages include comfortable transportation between Makkah and Madinah.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How long is the journey between Makkah and Madinah?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The journey between Makkah and Madinah is approximately 450 km and takes about 4-5 hours by road, depending on traffic and rest stops.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is there wheelchair access at the holy mosques?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, both Masjid al-Haram in Makkah and Masjid an-Nabawi in Madinah have excellent wheelchair accessibility with ramps, elevators, and designated areas for people with disabilities.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I choose my hotel preferences?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, on custom packages you can select your preferred hotels based on availability and your budget requirements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment & Cancellation -->
+            <div class="faq-category">
+                <h3 class="faq-category-title">Payment & Cancellation</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What payment methods do you accept?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept cash, credit/debit cards, and bank transfers. We do not offer credit facilities or installment plans.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is your cancellation policy?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We charge a 50% cancellation fee. The amount depends on how close to the travel date the cancellation occurs and any non-recoverable costs we have incurred.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer installment plans?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, we do not offer installment plans. Full payment is required to confirm your booking.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is your refund policy?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Refunds are handled on a case-by-case basis depending on the circumstances and any non-recoverable costs we have paid on your behalf.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I transfer my booking to someone else?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, bookings cannot be transferred to another person due to visa and airline regulations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What happens if there's a flight cancellation?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We are not responsible for flight cancellations as they are caused by airlines and circumstances beyond our control. In such cases, we assist you in coordinating with the airline for alternative arrangements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Circumstances -->
+            <div class="faq-category">
+                <h3 class="faq-category-title">Special Circumstances</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What if I lose my passport during the trip?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Inform us immediately! We will assist you in contacting your embassy and the local authorities to arrange for emergency travel documents.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do you handle emergency situations?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We handle all emergencies professionally with 24/7 support. Our local representatives in Saudi Arabia are always available to assist you with any urgent matters.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I change my package after booking?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Minor changes can be made depending on availability and any additional costs involved. Contact us as early as possible for any modifications.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What if I want to travel alone?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can travel alone. We have many solo travelers, and our group leaders provide support throughout the journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post-Umrah -->
+            <div class="faq-category">
+                <h3 class="faq-category-title">Post-Umrah</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I visit other cities in Saudi Arabia after Umrah?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, but you must inform us first as we need to coordinate with authorities and ensure compliance with visa regulations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I share my experience or provide feedback?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We'd love to hear about your experience! Please give us a review on our social media pages and website. Your feedback helps us improve our services.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer Hajj packages as well?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer comprehensive Hajj packages. Contact us for details about our Hajj services and requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I rebook with you for my next Umrah?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We offer special rates for returning customers. Contact us when you're ready to plan your next spiritual journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CTA Section -->
+    <section class="section" id="cta">
+        <div class="container">
+            <h2>Ready for Your Spiritual Journey?</h2>
+            <p class="section-subtitle">Contact us today to start planning your blessed Umrah pilgrimage</p>
+            <div style="text-align: center;">
+                <a href="#contact" class="cta-button">Book Your Spiritual Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <!--<i class="fas fa-plane" aria-hidden="true"></i>-->
+                        Trip Again
+                    </div>
+                    <p class="footer-about">Luxury travel experiences designed around you. Rediscover your world with Trip Again Travel & Tours.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15zomm3b1E/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="flights-hotels.html">Flight & Hotel</a></li>
+                        <li><a href="visa-services.html">Visa Services</a></li>
+                        <li><a href="tourism-activities.html">Tourism Activities</a></li>
+                        <li><a href="#">Umrah & Ziyarat</a></li>
+                        <li><a href="#">Custom Tours</a></li>
+                        <li><a href="#">Corporate Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Office # 2, Ground Floor, Hamza Center, PECHS Block 2, Near Liberty Traffic Signal, Tariq Road, Karachi Pakistan.</li>
+                        <li><i class="fas fa-phone"></i> +92 333 3473348</li>
+                        <li><i class="fas fa-envelope"></i> tripagain.dxb@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 12PM-10PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2021 All Rights reserved by Trip Again Pvt Ltd. Powered by passion & technology — designed by <a href="https://thegrotech.com/" target="_blank" style="font-weight: bold; color: #ff3b3b; text-decoration: none;">GroTech Solutions</a>.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <script>
+      // Mobile Menu Functionality
+     const mobileToggle = document.getElementById('mobileToggle');
+     const navMenu = document.getElementById('navMenu');
+
+     mobileToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      const isExpanded = navMenu.classList.contains('active');
+      mobileToggle.setAttribute('aria-expanded', isExpanded);
+      mobileToggle.innerHTML = isExpanded 
+          ? '<i class="fas fa-times"></i>' 
+            : '<i class="fas fa-bars"></i>';
+                
+      // Add/remove blur effect
+         if (isExpanded) {
+            document.body.classList.add('menu-active');
+            document.body.style.overflow = 'hidden';
+            } else {
+                document.body.classList.remove('menu-active');
+                document.body.style.overflow = '';
+            }
+        });
+                // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        const backToTopButton = document.getElementById('backToTop');
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Show/hide back to top button
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+                // Back to top functionality
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });                    
+        
+
+// Timeline Step Interaction
+document.addEventListener('DOMContentLoaded', function() {
+    // Step click handlers
+    const visualSteps = document.querySelectorAll('.visual-step');
+    const detailCards = document.querySelectorAll('.step-detail-card');
+    const closeButtons = document.querySelectorAll('.close-detail');
+    
+    console.log('Timeline JavaScript loaded'); // Debug log
+    
+    // Show detail card when step is clicked
+    visualSteps.forEach(step => {
+        step.addEventListener('click', function(e) {
+            console.log('Step clicked:', this.getAttribute('data-step')); // Debug log
+            
+            const stepNumber = this.getAttribute('data-step');
+            const targetCard = document.getElementById(`step-${stepNumber}-detail`);
+            
+            if (!targetCard) {
+                console.error('Target card not found for step:', stepNumber);
+                return;
+            }
+            
+            // Hide all detail cards
+            detailCards.forEach(card => {
+                card.classList.remove('active');
+            });
+            
+            // Show the selected detail card
+            targetCard.classList.add('active');
+            
+            // Scroll to the detail card
+            targetCard.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center'
+            });
+        });
+    });
+    
+    // Close detail card when close button is clicked
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const stepNumber = this.getAttribute('data-step');
+            const targetCard = document.getElementById(`step-${stepNumber}-detail`);
+            
+            if (targetCard) {
+                targetCard.classList.remove('active');
+            }
+        });
+    });
+    
+    // Close detail card when clicking outside
+    document.addEventListener('click', function(e) {
+        const isStepVisual = e.target.closest('.step-visual');
+        const isDetailCard = e.target.closest('.step-detail-card');
+        const isCloseButton = e.target.closest('.close-detail');
+        
+        if (!isStepVisual && !isDetailCard && !isCloseButton) {
+            detailCards.forEach(card => {
+                card.classList.remove('active');
+            });
+        }
+    });
+});
+
+// Floating WhatsApp Button
+            setTimeout(() => {
+            const whatsappButton = document.getElementById('whatsappButton');
+            if (whatsappButton) {
+            whatsappButton.classList.add('visible');
+            }
+            }, 5000); // 5 second delay
+            // Ensure WhatsApp button appears after loading page transition
+            function initializeMainWebsite() {
+            // ... your existing code ...            
+            // Add this line at the end of initializeMainWebsite function:
+            setTimeout(() => {
+            const whatsappButton = document.getElementById('whatsappButton');
+            if (whatsappButton) {
+            whatsappButton.classList.add('visible');
+            }
+        }, 5000);
+        }
+// Accordion functionality
+document.getElementById('calculatorAccordion').addEventListener('click', function() {
+    const content = document.getElementById('calculatorContent');
+    const icon = this.querySelector('.accordion-icon');
+    
+    content.classList.toggle('expanded');
+    icon.textContent = content.classList.contains('expanded') ? '▲' : '▼';
+    
+    // Smooth scroll to calculator when expanding
+    if (content.classList.contains('expanded')) {
+        setTimeout(() => {
+            this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    }
+});
+
+// FAQ Accordion Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        
+        question.addEventListener('click', () => {
+            // Close all other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-answer').classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+            answer.classList.toggle('active');
+            
+            // Update icon
+            if (item.classList.contains('active')) {
+                icon.textContent = '×';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                icon.textContent = '+';
+                icon.style.transform = 'rotate(0deg)';
+            }
+        });
+    });
+    
+    // Smooth scroll for CTA buttons
+    const ctaButtons = document.querySelectorAll('.cta-button[href^="#"]');
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+
+  <!-- ===== JS Logic ===== -->
+  <script>
+    /******************************************************************
+ * CONFIG: rates & ROE (edit here when you want to change defaults)
+ * TICKET prices are now in PKR (direct amounts)
+ * Hotel, Transport, Visa prices are in SAR (will be converted via ROE)
+ ******************************************************************/
+const CONFIG = {
+  roe: 78, // SAR -> PKR (edit in code to change)
+  
+  // ticket PKR rates (DIRECT amounts, no conversion needed):
+  tickets: {
+    adult: 0, 
+    child: 0,   
+    infant: 0 
+  },
+  
+   // MAKKAH HOTELS - Updated with real data
+  makkahHotels: [
+    { id:'MAK01', name:'ABDULLAH GHAMAS MAKKAH', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK02', name:'AL DANA MAKKAH', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK03', name:'ANJUM HOTEL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK04', name:'AREEJ AL FALAH', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK05', name:'AREEJ AL ZAHBI (500 METER) |AL HIJRAH', rates: { hexa:45, quint:45, quad:51, triple:68, double:100 } },
+    { id:'MAK06', name:'ASALAT MAKKAH', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK07', name:'BADAR AL MASA (600 METER) |IBRAHIM KHALIL', rates: { hexa:100, quint:58, quad:66, triple:87, double:130 } },
+    { id:'MAK08', name:'BISAN AL HIJRA/FUNDUQ JAFRIA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK09', name:'DHAIF AL AZIZIYAH (400 METER) |AJYAD STREET', rates: { hexa:100, quint:55, quad:62, triple:82, double:122 } },
+    { id:'MAK10', name:'DIWAN AL BAIT (600 METER) |IBRAHIM KHALIL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK11', name:'EMAAR AL KHALIL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK12', name:'EMAAR INDOLUSIA', rates: { hexa:250, quint:250, quad:250, triple:250, double:250 } },
+    { id:'MAK13', name:'EMAAR SULTAN', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK14', name:'FAIRMONT CLOCK TOWER', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK15', name:'FAKHIR AL AZIZIA WITH SHUTTLE SERVICE |AZIZIA MAKKAH', rates: { hexa:18, quint:18, quad:21, triple:27, double:40 } },
+    { id:'MAK16', name:'FUNDUQ BILAL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK17', name:'GALA AL TAJ', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK18', name:'HIDAYA TOWER', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK19', name:'KISWAH TOWER WITH SHUTTLE SERVICE |AL TAYSIR ROAD', rates: { hexa:30, quint:29, quad:35, triple:45, double:65 } },
+    { id:'MAK20', name:'LAND PREMIUM (1000 METER) |MISFILLAH KUBRI', rates: { hexa:32, quint:32, quad:36, triple:48, double:72 } },
+    { id:'MAK21', name:'LE MERIDIAN TOWER', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK22', name:'M MILLINIUM HOTEL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK23', name:'MAKKAH TOWER', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK24', name:'MARSA AL JARIYA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK25', name:'MATHER AL JAWAR', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK26', name:'MAYAR MAYASSAR', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK27', name:'MELLA 1 (700 METER) |IBRAHIM KHALIL', rates: { hexa:90, quint:90, quad:45, triple:60, double:90 } },
+    { id:'MAK28', name:'MELLA 2 (700 METER) |IBRAHIM KHALIL', rates: { hexa:40, quint:40, quad:45, triple:60, double:90 } },
+    { id:'MAK29', name:'MIAAD AL MAJD (800 METER) |AL HIJRA ROAD', rates: { hexa:34, quint:34, quad:39, triple:51, double:76 } },
+    { id:'MAK30', name:'NADA AL JAWHARAH', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK31', name:'NADA AL MAJD', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK32', name:'NAWARA SHAMS 3 (300 METER) |IBRAHIM KHALIL', rates: { hexa:250, quint:330, quad:300, triple:300, double:300 } },
+    { id:'MAK33', name:'NAWARAT AL SHAMS 3', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK34', name:'OLYAN ROYAL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK35', name:'QILA AJYAD WITH SHUTTLE SERVICE |AJYAD STREET', rates: { hexa:24, quint:24, quad:27, triple:36, double:54 } },
+    { id:'MAK36', name:'SADAN AL HUDA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK37', name:'SAFWA TOWER 3', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK38', name:'SAIF AL MAJD (600 METER) |AL HIJRAH', rates: { hexa:42, quint:42, quad:48, triple:64, double:95 } },
+    { id:'MAK39', name:'SAJA MAKKAH', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK40', name:'SHAMS AL ZAHBI (400 METER) |AL HIJRAH', rates: { hexa:55, quint:55, quad:62, triple:82, double:122 } },
+    { id:'MAK41', name:'SWISS AL MAQAM', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK42', name:'TARA AL-HIJRA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK43', name:'TARA KHALIL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK44', name:'THAT HOTEL (900 METER) |MISFILLAH KUBRI', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK45', name:'TOUHEED ASALA MAKKAH', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAK46', name:'JADDA AL KHALIL', rates: { hexa:150, quint:175, quad:200, triple:225, double:250 } },
+    { id:'MAK47', name:'VOCO MAKKAH WITH SHUTTLE SERVICE |IBRAHIM KHALIL', rates: { hexa:250, quint:200, quad:180, triple:68, double:102 } },
+    { id:'MAK48', name:'ZILAL UL NAZALA', rates: { hexa:250, quint:200, quad:180, triple:300, double:102 } },
+  ],
+
+  // MADINAH HOTELS - Updated with real data
+  madinahHotels: [
+    { id:'MAD01', name:'AL AQEEQ MADINA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD02', name:'AL SAFA CENTER (750 METER) |MASJID BILAL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD03', name:'ANWAR AL MADINAH MOVENPICK', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD04', name:'ARAEK TAIBA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD05', name:'ATHAR TAIBA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD06', name:'BIR UL EIMAN 250 METER|SOUTH MARKAZIA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD07', name:'BURAQ GOLDEN', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD08', name:'BURJ MUKHTARA (350 METER) |BAB AL SALAM ROAD', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD09', name:'DALLAH TAIBA MADINAH', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD10', name:'DAR AL NAEEM', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD11', name:'DIYAFA MUKHTARA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD12', name:'ELAF QUBA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD13', name:'ERGWAN AL MADINAH', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD14', name:'FUNDAQ AL RAYYAN WITH SHUTTLE SERVICE |ABDUL AZIZ ROAD', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD15', name:'GRAND PLAZA AL MADINAH', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD16', name:'GRAND PLAZA BADAR ALMAQAM', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD17', name:'GULNAR TAIBA', rates: { hexa:100, quint:500, quad:100, triple:100, double:100 } },
+    { id:'MAD18', name:'HALA TAIBAH WITH SHUTTLE SERVICE |ABDUL AZIZ ROAD', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD19', name:'HAMOUDA ZAHBI (500 METER) |MASJID BILAL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD20', name:'KARAM SILVER', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD21', name:'KAYAN INTERNATIONAL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD22', name:'LEADER AL MUNA KAREEM', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD23', name:'MADINA GOLDEN', rates: { hexa:100, quint:100, quad:350, triple:100, double:100 } },
+    { id:'MAD24', name:'MANAR AL EIMAN', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD25', name:'MANAZIL MARJAN WITH SHUTTLE SERVICE |QURBAN NAZIL RD', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD26', name:'MARJAN GOLDEN (100 METER) |GHARBIA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD27', name:'MARSA SILVER', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD28', name:'MIRAGE AL-SALAM', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD29', name:'MUKHTARA INTERNATIONAL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD30', name:'NAJOOM AL MADINAH (500 METER) |QUBA ROAD', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD31', name:'NUSK AL EIMAN', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD32', name:'NUZUL AL FALAH (450 METER) |AL BIAK OPPOSITE', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD33', name:'ODST HOTEL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD34', name:'PARADISE', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD35', name:'RAMA AL MADINAH (100 METER) |SOUTH MARKAZIA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD36', name:'RAWDA AL SAFWA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD37', name:'RUA AL HIJRA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD38', name:'SAFWAT AL MADINA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD39', name:'SARAYA HARMONY', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD40', name:'SKY VIEW', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD41', name:'TAIBA FRONT', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD42', name:'TAIBA MADINAH', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD43', name:'TAIF NEBRAS 250 METER|SOUTH MARKAZIA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD44', name:'TAJ WARD', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD45', name:'VERTA AL MADINAH (300 METER) |MUAWIYAH ROAD', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD46', name:'WAHAT AL SHARK (750 METER) |MASJID BILAL', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD47', name:'WARDA SAFA (250 M)|SOUTH MARKAZIA', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD48', name:'WISAM MISK', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } },
+    { id:'MAD49', name:'ZAHRA MUNAWARAH', rates: { hexa:100, quint:100, quad:100, triple:100, double:100 } }
+  ],
+
+// TRANSPORT OPTIONS - Organized by Route then Vehicle
+transportOptions: [
+  { 
+    route: 'JED APT-MAK HTL-MED HTL-MAK HTL-JED APT',
+    displayName: 'Jeddah Airport → Makkah Hotel → Madina Hotel → Makkah Hotel → Jeddah Airport',
+    vehicles: [
+      { id:'TR1', name:'Car', rateSAR:1485 },
+      { id:'TR2', name:'H1', rateSAR:1700 },
+      { id:'TR3', name:'GMC', rateSAR:2635 },
+      { id:'TR4', name:'Bus', rateSAR:4180 },
+      { id:'TR5', name:'Hiace', rateSAR:2030 },
+      { id:'TR6', name:'Coaster', rateSAR:2365 }
+    ]
+  },
+  { 
+    route: 'JED APT-MAK HTL-MED HTL-MED APT',
+    displayName: 'Jeddah Airport → Makkah Hotel → Madina Hotel → Madina Airport',
+    vehicles: [
+      { id:'TR7', name:'Car', rateSAR:945 },
+      { id:'TR8', name:'H1', rateSAR:1085 },
+      { id:'TR9', name:'GMC', rateSAR:1625 },
+      { id:'TR10', name:'Bus', rateSAR:2140 },
+      { id:'TR11', name:'Hiace', rateSAR:1325 },
+      { id:'TR12', name:'Coaster', rateSAR:2205 }
+    ]
+  },
+  { 
+    route: 'MED APT-MED HTL- MAK HTL-JED APT', 
+    displayName: 'Madina Airport → Madina Hotel → Makkah Hotel → Jeddah Airport',
+    vehicles: [
+      { id:'TR13', name:'Car', rateSAR:920 },
+      { id:'TR14', name:'H1', rateSAR:1055 },
+      { id:'TR15', name:'GMC', rateSAR:1600 },
+      { id:'TR16', name:'Bus', rateSAR:2040 },
+      { id:'TR17', name:'Hiace', rateSAR:1295 },
+      { id:'TR18', name:'Coaster', rateSAR:1080 }
+    ]
+  },
+  { 
+    route: 'JED APT-MAK HTL',
+    displayName: 'Jeddah Airport → Makkah Hotel',
+    vehicles: [
+      { id:'TR1', name:'Car', rateSAR:295 },
+      { id:'TR2', name:'H1', rateSAR:350 },
+      { id:'TR3', name:'GMC', rateSAR:430 },
+      { id:'TR4', name:'Bus', rateSAR:770 },
+      { id:'TR5', name:'Hiace', rateSAR:405 },
+      { id:'TR6', name:'Coaster', rateSAR:680 }
+    ]
+  }
+],
+  // visa/ziyarat SAR defaults (will be converted via ROE)
+  visaSAR: 780,
+  ziyarahSAR: 25
+};
+/******************************************************************
+ * Date Validation Helper - Prevent checkout before checkin
+ ******************************************************************/
+function setupDateValidation(checkinInput, checkoutInput) {
+  // Set min date for checkout when checkin changes
+  checkinInput.addEventListener('change', function() {
+    if (this.value) {
+      checkoutInput.min = this.value;
+      
+      // If checkout date is before new checkin date, clear it
+      if (checkoutInput.value && checkoutInput.value < this.value) {
+        checkoutInput.value = '';
+        // Trigger nights recalculation
+        const event = new Event('change');
+        checkoutInput.dispatchEvent(event);
+      }
+    }
+  });
+
+  // Also set initial min date if checkin already has a value
+  if (checkinInput.value) {
+    checkoutInput.min = checkinInput.value;
+  }
+}
+    /******************************************************************
+     * Utility helpers
+     ******************************************************************/
+    function toPKR(sar) {
+      return Math.round(sar * CONFIG.roe);
+    }
+    function formatPKR(num) {
+      return 'PKR ' + (Number(num) || 0).toLocaleString();
+    }
+    function parseDateInput(val) {
+      // returns Date or null
+      if(!val) return null;
+      const d = new Date(val + 'T00:00:00');
+      return isNaN(d.getTime()) ? null : d;
+    }
+    function nightsBetween(checkInStr, checkOutStr) {
+      const inD = parseDateInput(checkInStr);
+      const outD = parseDateInput(checkOutStr);
+      if(!inD || !outD) return 0;
+      // difference in days
+      const diff = Math.ceil((outD - inD) / (1000*60*60*24));
+      return diff > 0 ? diff : 0;
+    }
+
+    /******************************************************************
+ * Initialize UI readonly fields from CONFIG
+ ******************************************************************/
+document.getElementById('roeInput').value = CONFIG.roe;
+document.getElementById('adultPriceSAR').value = CONFIG.tickets.adult;
+document.getElementById('childPriceSAR').value = CONFIG.tickets.child;
+document.getElementById('infantPriceSAR').value = CONFIG.tickets.infant;
+document.getElementById('visaSAR').value = CONFIG.visaSAR;
+document.getElementById('ziyaratSAR').value = CONFIG.ziyarahSAR;
+
+    /******************************************************************
+     * Render helpers for hotel/transport blocks
+     ******************************************************************/
+    function createHotelBlock(city, index, hotelList) {
+      // city = 'makkah' or 'madinah'
+      const container = document.createElement('div');
+      container.className = 'hotel-block';
+      container.style.border = '1px solid #eee';
+      container.style.padding = '12px';
+      container.style.borderRadius = '10px';
+      container.style.marginTop = '12px';
+
+      // markup inside
+      container.innerHTML = `
+        <div class="grid-2" style="gap:12px">
+    <div>
+      <label>Hotel</label>
+      <select class="hotel-select"></select>
+    </div>
+    <div>
+      <label>Room Type</label>
+      <select class="room-select">
+        <option value="hexa">Hexa</option>
+        <option value="quint">Quint</option>
+        <option value="quad">Quad</option>
+        <option value="triple">Triple</option>
+        <option value="double">Double</option>
+      </select>
+    </div>
+  </div>
+
+        <div class="grid-3" style="margin-top:10px">
+          <div>
+            <label>Check-in</label>
+            <input type="date" class="checkin">
+          </div>
+          <div>
+            <label>Check-out</label>
+            <input type="date" class="checkout">
+          </div>
+          <div>
+            <label>No. of Rooms</label>
+            <input type="number" class="no-rooms" value="1" min="1">
+          </div>
+        </div>
+
+        <div class="grid-3" style="margin-top:10px">
+          <div>
+            <label>Nights</label>
+            <input type="number" class="nights" readonly>
+          </div>
+          <div>
+            <label>Rate (SAR / night)</label>
+            <input type="number" class="rate-sar" readonly>
+          </div>
+          <div>
+            <label>Total (PKR)</label>
+            <input type="text" class="hotel-total-pkr" readonly>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:8px;margin-top:10px;align-items:center">
+          <button type="button" class="btn small-btn recalc">Recalculate</button>
+          <button type="button" class="btn small-btn" style="background:#444" class="remove">Remove</button>
+        </div>
+      `;
+
+      // populate hotel-select
+      const hotelSelect = container.querySelector('.hotel-select');
+      hotelList.forEach(h => {
+        const opt = document.createElement('option');
+        opt.value = h.id;
+        opt.textContent = h.name;
+        hotelSelect.appendChild(opt);
+      });
+
+      // when hotel or room-type changes, update rate field
+      function updateRateFromSelection() {
+        const selHotelId = hotelSelect.value;
+        const roomType = container.querySelector('.room-select').value;
+        const hotelObj = hotelList.find(h => h.id === selHotelId);
+        const rate = hotelObj ? (hotelObj.rates[roomType] || 0) : 0;
+        container.querySelector('.rate-sar').value = rate;
+      }
+
+      hotelSelect.addEventListener('change', updateRateFromSelection);
+      container.querySelector('.room-select').addEventListener('change', updateRateFromSelection);
+
+      // calculate nights on date change
+function updateNights() {
+  const inVal = container.querySelector('.checkin').value;
+  const outVal = container.querySelector('.checkout').value;
+  const nights = nightsBetween(inVal, outVal);
+  container.querySelector('.nights').value = nights;
+}
+
+// Get the date inputs
+const checkinInput = container.querySelector('.checkin');
+const checkoutInput = container.querySelector('.checkout');
+
+// Add date validation
+checkinInput.addEventListener('change', updateNights);
+checkoutInput.addEventListener('change', updateNights);
+
+// Setup date validation to prevent checkout before checkin
+setupDateValidation(checkinInput, checkoutInput);
+
+      // recalc button computes total for this block
+      container.querySelector('.recalc').addEventListener('click', function(){
+        updateRateFromSelection();
+        updateNights();
+        const nights = parseInt(container.querySelector('.nights').value) || 0;
+        const rooms = parseInt(container.querySelector('.no-rooms').value) || 0;
+        const rateSAR = parseFloat(container.querySelector('.rate-sar').value) || 0;
+        const totalSAR = nights * rateSAR * rooms;
+        const totalPKR = totalSAR * CONFIG.roe;
+        container.querySelector('.hotel-total-pkr').value = formatPKR(totalPKR);
+        updateAllSubtotals(); // update section subtotals & summaries
+      });
+
+      // remove button
+      const removeBtn = container.querySelectorAll('button')[1];
+      removeBtn.addEventListener('click', function(){
+        container.remove();
+        updateAllSubtotals();
+      });
+
+      // initialize rate
+      updateRateFromSelection();
+
+      return container;
+    }
+
+function createTransportBlock() {
+  const wrapper = document.createElement('div');
+  wrapper.style.border = '1px solid #eee';
+  wrapper.style.padding = '12px';
+  wrapper.style.borderRadius = '10px';
+  wrapper.style.marginTop = '12px';
+  
+  // CORRECTED HTML TEMPLATE - Complete and properly closed
+  wrapper.innerHTML = `
+    <div class="grid-2">
+      <div>
+        <label>Transport Route</label>
+        <select class="transport-route-select"></select>
+      </div>
+      <div>
+        <label>Vehicle Type</label>
+        <select class="transport-vehicle-select"></select>
+      </div>
+    </div>
+    <!-- ADD THIS NEW ROW FOR QUANTITY -->
+    <div class="grid-2" style="margin-top:10px">
+      <div>
+        <label>Quantity</label>
+        <input type="number" class="transport-qty" value="0" min="0">
+      </div>
+      <div>
+        <!-- Empty for alignment -->
+      </div>
+    </div>
+    <div class="grid-3" style="margin-top:10px">
+      <div>
+        <label>Rate (SAR)</label>
+        <input type="number" class="transport-rate" readonly>
+      </div>
+      <div>
+        <label>ROE</label>
+        <input type="number" class="transport-roe" readonly>
+      </div>
+      <div>
+        <label>Total (PKR)</label>
+        <input type="text" class="transport-total-pkr" readonly>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <button class="btn small-btn transport-recalc" type="button">Recalculate</button>
+      <button class="btn small-btn" style="background:#444">Remove</button>
+    </div>
+  `;
+
+  const routeSelect = wrapper.querySelector('.transport-route-select');
+  const vehicleSelect = wrapper.querySelector('.transport-vehicle-select');
+  
+  // Populate routes
+  CONFIG.transportOptions.forEach(route => {
+    const option = document.createElement('option');
+    option.value = route.route;
+    option.textContent = route.displayName;
+    routeSelect.appendChild(option);
+  });
+
+function updateVehicleOptions() {
+  const selectedRoute = routeSelect.value;
+  const routeObj = CONFIG.transportOptions.find(r => r.route === selectedRoute);
+  
+  // Clear existing vehicle options
+  vehicleSelect.innerHTML = '';
+  
+  if (routeObj) {
+    routeObj.vehicles.forEach(vehicle => {
+      const option = document.createElement('option');
+      option.value = vehicle.id;
+      // CHANGE THIS LINE - Remove " - SAR ${vehicle.rateSAR}" part
+      option.textContent = vehicle.name;  // Only show vehicle name
+      vehicleSelect.appendChild(option);
+    });
+  }
+  
+  updateRate();
+}
+
+  function updateRate() {
+    const selectedRoute = routeSelect.value;
+    const selectedVehicleId = vehicleSelect.value;
+    const routeObj = CONFIG.transportOptions.find(r => r.route === selectedRoute);
+    
+    if (routeObj) {
+      const vehicleObj = routeObj.vehicles.find(v => v.id === selectedVehicleId);
+      wrapper.querySelector('.transport-rate').value = vehicleObj ? vehicleObj.rateSAR : 0;
+    } else {
+      wrapper.querySelector('.transport-rate').value = 0;
+    }
+    
+    wrapper.querySelector('.transport-roe').value = CONFIG.roe;
+  }
+
+  routeSelect.addEventListener('change', updateVehicleOptions);
+  vehicleSelect.addEventListener('change', updateRate);
+
+  wrapper.querySelector('.transport-recalc').addEventListener('click', function(){
+    updateRate();
+    const qty = parseInt(wrapper.querySelector('.transport-qty').value) || 0;
+    const rateSAR = parseFloat(wrapper.querySelector('.transport-rate').value) || 0;
+    const totalPKR = qty * rateSAR * CONFIG.roe;
+    wrapper.querySelector('.transport-total-pkr').value = formatPKR(totalPKR);
+    updateAllSubtotals();
+  });
+
+  // remove
+  wrapper.querySelectorAll('button')[1].addEventListener('click', function(){
+    wrapper.remove();
+    updateAllSubtotals();
+  });
+
+  // Initialize
+  updateVehicleOptions();
+  return wrapper;
+}
+
+    /******************************************************************
+     * Attach add/remove handlers
+     ******************************************************************/
+    const makkahList = document.getElementById('makkahList');
+    const madinahList = document.getElementById('madinahList');
+    const transportList = document.getElementById('transportList');
+
+    document.getElementById('addMakkahBtn').addEventListener('click', function(){
+      const block = createHotelBlock('makkah', makkahList.children.length, CONFIG.makkahHotels);
+      makkahList.appendChild(block);
+    });
+    document.getElementById('addMadinahBtn').addEventListener('click', function(){
+      const block = createHotelBlock('madinah', madinahList.children.length, CONFIG.madinahHotels);
+      madinahList.appendChild(block);
+    });
+    document.getElementById('addTransportBtn').addEventListener('click', function(){
+      const t = createTransportBlock();
+      transportList.appendChild(t);
+    });
+
+    document.getElementById('clearMakkahBtn').addEventListener('click', function(){
+      makkahList.innerHTML = ''; updateAllSubtotals();
+    });
+    document.getElementById('clearMadinahBtn').addEventListener('click', function(){
+      madinahList.innerHTML = ''; updateAllSubtotals();
+    });
+    document.getElementById('clearTransportBtn').addEventListener('click', function(){
+      transportList.innerHTML = ''; updateAllSubtotals();
+    });
+   /******************************************************************
+ * Calculation routines for subtotals and summary - FIXED VERSION
+ ******************************************************************/
+function computeTicketsTotalPKR() {
+  // DIRECT PKR CALCULATION - NO ROE CONVERSION
+  const adultPKR = parseFloat(document.getElementById('adultPriceSAR').value) || 0;
+  const childPKR = parseFloat(document.getElementById('childPriceSAR').value) || 0;
+  const infantPKR = parseFloat(document.getElementById('infantPriceSAR').value) || 0;
+
+  const adults = parseInt(document.getElementById('noAdults').value) || 0;
+  const children = parseInt(document.getElementById('noChildren').value) || 0;
+  const infants = parseInt(document.getElementById('noInfants').value) || 0;
+
+  const totalPKR = (adultPKR * adults) + (childPKR * children) + (infantPKR * infants);
+  
+  return { 
+    totalPKR, 
+    breakdown: {
+      adultPKR: adultPKR * adults, 
+      childPKR: childPKR * children, 
+      infantPKR: infantPKR * infants
+    } 
+  };
+}
+
+function computeHotelsTotalPKR(listContainer) {
+  // SAR → PKR CONVERSION
+  let totalPKR = 0;
+  for(const node of listContainer.children) {
+    const nights = parseInt(node.querySelector('.nights').value) || 0;
+    const rooms = parseInt(node.querySelector('.no-rooms').value) || 0;
+    const rateSAR = parseFloat(node.querySelector('.rate-sar').value) || 0;
+    const blockTotalSAR = nights * rooms * rateSAR;
+    const blockTotalPKR = blockTotalSAR * CONFIG.roe; // CONVERT HERE
+    node.querySelector('.hotel-total-pkr').value = formatPKR(blockTotalPKR);
+    totalPKR += blockTotalPKR;
+  }
+  return totalPKR;
+}
+
+function computeTransportTotalPKR(listContainer) {
+  // SAR → PKR CONVERSION
+  let totalPKR = 0;
+  for(const node of listContainer.children) {
+    const qty = parseInt(node.querySelector('.transport-qty').value) || 0;
+    const rateSAR = parseFloat(node.querySelector('.transport-rate').value) || 0;
+    const blockTotalPKR = qty * rateSAR * CONFIG.roe; // CONVERT HERE
+    node.querySelector('.transport-total-pkr').value = formatPKR(blockTotalPKR);
+    totalPKR += blockTotalPKR;
+  }
+  return totalPKR;
+}
+
+function computeVisaTotalPKR() {
+  // SAR → PKR CONVERSION
+  const visaSAR = parseFloat(document.getElementById('visaSAR').value) || 0;
+  const ziyarahSAR = parseFloat(document.getElementById('ziyaratSAR').value) || 0;
+  const applicants = parseInt(document.getElementById('noApplicants').value) || 0;
+  const totalSAR = (visaSAR + ziyarahSAR) * applicants;
+  const totalPKR = totalSAR * CONFIG.roe; // CONVERT HERE
+  return { totalSAR, totalPKR };
+}
+
+    function updateAllSubtotals() {
+      // Tickets
+      const t = computeTicketsTotalPKR();
+      document.getElementById('ticketsSubtotal')?.remove?.(); // old (if any)
+      const ticketDiv = document.getElementById('ticketsSubtotal') || document.createElement('div');
+      ticketDiv.id = 'ticketsSubtotal';
+      ticketDiv.className = 'sub-total';
+      ticketDiv.style.display = 'block';
+      ticketDiv.innerHTML = `🎟️ Tickets: ${formatPKR(t.totalPKR)} (Adult: ${formatPKR(t.breakdown.adultPKR)}, Child: ${formatPKR(t.breakdown.childPKR)}, Infant: ${formatPKR(t.breakdown.infantPKR)})`;
+
+
+      // replace if not present under first card
+      const firstCard = document.querySelector('#calculatorCard');
+      if(!firstCard.querySelector('#ticketsSubtotal')) firstCard.appendChild(ticketDiv);
+
+      // Hotels Makkah
+      const makkahTotal = computeHotelsTotalPKR(makkahList);
+      const makkahDiv = document.getElementById('makkahSubtotal') || document.createElement('div');
+      makkahDiv.id = 'makkahSubtotal'; makkahDiv.className = 'sub-total'; makkahDiv.style.display='block';
+      makkahDiv.innerHTML = `🏨 Makkah Hotels: ${formatPKR(makkahTotal)}`;
+      const mCard = document.getElementById('makkahCard');
+      if(!mCard.querySelector('#makkahSubtotal')) mCard.appendChild(makkahDiv);
+
+      // Hotels Madinah
+      const madinahTotal = computeHotelsTotalPKR(madinahList);
+      const madinahDiv = document.getElementById('madinahSubtotal') || document.createElement('div');
+      madinahDiv.id = 'madinahSubtotal'; madinahDiv.className = 'sub-total'; madinahDiv.style.display='block';
+      madinahDiv.innerHTML = `🏨 Madinah Hotels: ${formatPKR(madinahTotal)}`;
+      const mdCard = document.getElementById('madinahCard');
+      if(!mdCard.querySelector('#madinahSubtotal')) mdCard.appendChild(madinahDiv);
+
+      // Transport
+      const transportTotal = computeTransportTotalPKR(transportList);
+      const transportDiv = document.getElementById('transportSubtotal') || document.createElement('div');
+      transportDiv.id='transportSubtotal'; transportDiv.className='sub-total'; transportDiv.style.display='block';
+      transportDiv.innerHTML = `🚗 Transport: ${formatPKR(transportTotal)}`;
+      const trCard = document.getElementById('transportCard');
+      if(!trCard.querySelector('#transportSubtotal')) trCard.appendChild(transportDiv);
+
+      // Visa
+      const visaObj = computeVisaTotalPKR();
+      const visaDiv = document.getElementById('visaSubtotal') || document.createElement('div');
+      visaDiv.id='visaSubtotal'; visaDiv.className='sub-total'; visaDiv.style.display='block';
+      visaDiv.innerHTML = `🛂 Visa & Ziyarat: ${formatPKR(visaObj.totalPKR)}`;
+      const vCard = document.getElementById('visaCard');
+      if(!vCard.querySelector('#visaSubtotal')) vCard.appendChild(visaDiv);
+
+      // Update summary boxes
+      document.getElementById('summaryTickets').textContent = formatPKR(t.totalPKR);
+      const hotelsTotal = makkahTotal + madinahTotal;
+      document.getElementById('summaryHotels').textContent = formatPKR(hotelsTotal);
+      document.getElementById('summaryTransport').textContent = formatPKR(transportTotal);
+      document.getElementById('summaryVisa').textContent = formatPKR(visaObj.totalPKR);
+
+const grand = t.totalPKR + hotelsTotal + transportTotal + visaObj.totalPKR;
+document.getElementById('grandTotal').textContent = formatPKR(grand);
+
+// NEW: Calculate per person breakdown
+const adults = parseInt(document.getElementById('noAdults').value) || 0;
+const children = parseInt(document.getElementById('noChildren').value) || 0;
+const infants = parseInt(document.getElementById('noInfants').value) || 0;
+const applicants = parseInt(document.getElementById('noApplicants').value) || 0;
+
+// Get individual costs
+const adultTicketPKR = parseFloat(document.getElementById('adultPriceSAR').value) || 0;
+const childTicketPKR = parseFloat(document.getElementById('childPriceSAR').value) || 0;
+const infantTicketPKR = parseFloat(document.getElementById('infantPriceSAR').value) || 0;
+
+// Calculate visa costs only if applicable
+const includeZiyarat = document.getElementById('includeZiyarat').checked;
+const visaSAR = parseFloat(document.getElementById('visaSAR').value) || 0;
+const ziyaratSAR = includeZiyarat ? (parseFloat(document.getElementById('ziyaratSAR').value) || 0) : 0;
+const totalVisaPKR = (visaSAR + ziyaratSAR) * CONFIG.roe;
+
+// Only add visa costs if there are applicants
+const effectiveVisaPKR = (applicants > 0) ? totalVisaPKR : 0;
+
+// Calculate shares (hotels & transport divided only among adults)
+const hotelsPerAdult = adults > 0 ? hotelsTotal / adults : 0;
+const transportPerAdult = adults > 0 ? transportTotal / adults : 0;
+
+// Per person costs - USE effectiveVisaPKR
+const perAdult = Math.round(adultTicketPKR + hotelsPerAdult + transportPerAdult + effectiveVisaPKR);
+const perChild = Math.round(childTicketPKR + effectiveVisaPKR);
+const perInfant = Math.round(infantTicketPKR + effectiveVisaPKR);
+
+// Update display - ONLY SHOW LINES THAT HAVE PASSENGERS
+document.getElementById('perAdult').textContent = `Adult: ${formatPKR(perAdult)}`;
+
+
+
+// Only show child line if there are children
+const perChildElement = document.getElementById('perChild');
+if (children > 0) {
+    perChildElement.textContent = `Child: ${formatPKR(perChild)}`;
+    perChildElement.style.display = 'block';
+} else {
+    perChildElement.style.display = 'none';
+}
+
+// Only show infant line if there are infants
+const perInfantElement = document.getElementById('perInfant');
+if (infants > 0) {
+    perInfantElement.textContent = `Infant: ${formatPKR(perInfant)}`;
+    perInfantElement.style.display = 'block';
+} else {
+    perInfantElement.style.display = 'none';
+}
+    }
+    /******************************************************************
+     * Calculate Tickets Only Button
+     ******************************************************************/
+    document.getElementById('calcTicketsBtn').addEventListener('click', function(){
+      const t = computeTicketsTotalPKR();
+      const ticketDiv = document.getElementById('ticketsSubtotal') || document.createElement('div');
+      ticketDiv.id = 'ticketsSubtotal';
+      ticketDiv.className = 'sub-total';
+      ticketDiv.style.display = 'block';
+      ticketDiv.innerHTML = `🎟️ Tickets: ${formatPKR(t.totalPKR)} (Adult: ${formatPKR(t.breakdown.adultPKR)}, Child: ${formatPKR(t.breakdown.childPKR)}, Infant: ${formatPKR(t.breakdown.infantPKR)})`;
+      
+      const firstCard = document.querySelector('#calculatorCard');
+      if(!firstCard.querySelector('#ticketsSubtotal')) firstCard.appendChild(ticketDiv);
+      
+      // Also update the summary box for tickets
+      document.getElementById('summaryTickets').textContent = formatPKR(t.totalPKR);
+    });
+        /******************************************************************
+     * Auto-calculate tickets when passenger numbers change
+     ******************************************************************/
+    document.getElementById('noAdults').addEventListener('input', function(){
+      document.getElementById('calcTicketsBtn').click();
+    });
+    document.getElementById('noChildren').addEventListener('input', function(){
+      document.getElementById('calcTicketsBtn').click();
+    });
+    document.getElementById('noInfants').addEventListener('input', function(){
+      document.getElementById('calcTicketsBtn').click();
+    });
+        /******************************************************************
+     * Calculate Visa & Ziyarat Only Button
+     ******************************************************************/
+    document.getElementById('calcVisaBtn').addEventListener('click', function(){
+      const visaObj = computeVisaTotalPKR();
+      const visaDiv = document.getElementById('visaSubtotal') || document.createElement('div');
+      visaDiv.id = 'visaSubtotal';
+      visaDiv.className = 'sub-total';
+      visaDiv.style.display = 'block';
+      visaDiv.innerHTML = `🛂 Visa & Ziyarat: ${formatPKR(visaObj.totalPKR)} (${document.getElementById('noApplicants').value} applicants × SAR ${document.getElementById('visaSAR').value}${document.getElementById('includeZiyarat').checked ? ' + ' + document.getElementById('ziyaratSAR').value : ''})`;
+      
+      const vCard = document.getElementById('visaCard');
+      if(!vCard.querySelector('#visaSubtotal')) vCard.appendChild(visaDiv);
+      
+      // Also update the summary box for visa
+      document.getElementById('summaryVisa').textContent = formatPKR(visaObj.totalPKR);
+    });
+
+    /******************************************************************
+     * Auto-calculate visa when applicant number changes
+     ******************************************************************/
+    document.getElementById('noApplicants').addEventListener('input', function(){
+      document.getElementById('calcVisaBtn').click();
+    });
+        /******************************************************************
+     * Ziyarat Checkbox Handler
+     ******************************************************************/
+    document.getElementById('includeZiyarat').addEventListener('change', function(){
+      const ziyaratCheckbox = document.getElementById('includeZiyarat');
+      const ziyaratAmount = document.getElementById('ziyaratAmount');
+      
+      if(ziyaratCheckbox.checked) {
+        document.getElementById('ziyaratSAR').value = CONFIG.ziyarahSAR;
+        ziyaratAmount.textContent = CONFIG.ziyarahSAR;
+      } else {
+        document.getElementById('ziyaratSAR').value = 0;
+        ziyaratAmount.textContent = '0';
+      }
+      
+      // Auto-calculate when checkbox changes
+      document.getElementById('calcVisaBtn').click();
+    });
+
+    // calculate button event
+    document.getElementById('calcBtn').addEventListener('click', function(){
+      // Ensure each block recalculates
+      // trigger recalc on all hotel and transport blocks
+      for(const node of makkahList.children){
+        const btn = node.querySelector('.recalc');
+        if(btn) btn.click();
+      }
+      for(const node of madinahList.children){
+        const btn = node.querySelector('.recalc');
+        if(btn) btn.click();
+      }
+      for(const node of transportList.children){
+        const btn = node.querySelector('.transport-recalc');
+        if(btn) btn.click();
+      }
+      // compute tickets & visa too
+      updateAllSubtotals();
+      // scroll to summary
+      document.getElementById('grandTotal').scrollIntoView({behavior:'smooth', block:'center'});
+    });
+
+    // initialize: add one block per city and one transport sample
+    (function init(){
+      // add default hotel blocks
+      document.getElementById('addMakkahBtn').click();
+      document.getElementById('addMadinahBtn').click();
+      document.getElementById('addTransportBtn').click();
+      // prefill some dates to show nights example (optional)
+      // set default dates for first blocks (if exist)
+      setTimeout(()=> updateAllSubtotals(), 100);
+    })();
+  </script>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923333473348?text=Hello%2C%20I'm%20interested%20in%20your%20travel%20services!" 
+    class="floating-whatsapp" 
+    id="whatsappButton"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+</a>
+</body>
+</html>
