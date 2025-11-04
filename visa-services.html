@@ -606,7 +606,12 @@
         .footer-links a:hover {
             color: var(--vibrant-red);
             padding-left: 5px;
-            transform: translateY(-2px);
+        }
+
+        .footer-links i {
+            margin-right: 10px;
+            color: var(--vibrant-red);
+            width: 20px;
         }
 
         .social-links {
@@ -765,15 +770,18 @@
     <!-- Header -->
     <header class="header" id="header">
         <nav class="nav" aria-label="Main navigation">
-            <a href="index.html" class="logo" aria-label="Trip Again Home">
+            <a href="index.html" class="logo" aria-label="Trip Again Travel and Tours Home">
+                <!--<i class="fas fa-plane" aria-hidden="true"></i>-->
                 Trip Again
             </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
+                <li><a href="visa-services.html">Visa Services</a></li>
+                <li><a href="flights-hotels.html">Flights & Hotels</a></li>
+                <li><a href="tourism-activities.html">Tourism Activities</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#testimonials">Testimonials</a></li>
-                <li><a href="index.html#blog">Blog</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
@@ -847,9 +855,10 @@
                 <div class="footer-links-container">
                     <h3 class="footer-heading">Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Flight & Hotel</a></li>
+                        <li><a href="flights-hotels.html">Flight & Hotel</a></li>
                         <li><a href="visa-services.html">Visa Services</a></li>
-                        <li><a href="#">Umrah & Hajj</a></li>
+                        <li><a href="tourism-activities.html">Tourism Activities</a></li>
+                        <li><a href="#">Umrah & Ziyarat</a></li>
                         <li><a href="#">Custom Tours</a></li>
                         <li><a href="#">Corporate Travel</a></li>
                     </ul>
@@ -865,7 +874,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2021 All Rights reserved by Trip Again Pvt Ltd. Powered by passion & technology — designed by GroTech Solutions.</p>
+                <p>© 2021 All Rights reserved by Trip Again Pvt Ltd. Powered by passion & technology — designed by <a href="https://thegrotech.com/" target="_blank" style="font-weight: bold; color: #ff3b3b; text-decoration: none;">GroTech Solutions</a>.</p>
             </div>
         </div>
     </footer>
@@ -889,7 +898,6 @@
                     { type: "30 Days Tourist Visa", duration: "30 days", entry: "Single/Multiple" },
                     { type: "60 Days Tourist Visa", duration: "60 days", entry: "Single/Multiple" },
                     { type: "5 Year Multiple Entry Visa", duration: "5 years", entry: "Multiple" },
-                    { type: "2 Year Freelance Visa", duration: "2 years", notes: "For graduate individuals" }
                 ],
                 processingTime: "10-12 working days",
                 requirements: [
@@ -1282,7 +1290,10 @@
                     "Hotel booking confirmation",
                     "Return flight ticket",
                     "Travel insurance valid for Turkey",
-                    "Completed visa application form"
+                    "Completed visa application form",
+                    "Cover letter stating purpose of visit",
+                    "Any previous Turkish visas (if applicable)",
+                    "Family registration certificate (if applicable)"
                 ],
                 specialNotes: "Sticker visa - passport must be submitted to Anatolia Visa Office in Karachi. Personal appearance may be required for biometrics.",
                 priority: true

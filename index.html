@@ -331,7 +331,6 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
-        overflow-x: hidden;
     }
 
     /* ===== TYPOGRAPHY ===== */
@@ -658,6 +657,7 @@
     .about {
         padding: 100px 0;
         background: var(--pure-white);
+        overflow: hidden;
     }
 
     .about-content {
@@ -699,6 +699,7 @@
         height: auto;
         display: block;
         transition: var(--transition);
+        max-width: 100%;
     }
 
     .about-image:hover img {
@@ -709,6 +710,7 @@
     .services {
         padding: 100px 0;
         background: var(--light-gray);
+        overflow: hidden;
     }
 
     .services-grid {
@@ -786,12 +788,14 @@
     .testimonials {
         padding: 100px 0;
         background: var(--pure-white);
+        overflow: hidden;
     }
 
     .testimonial-carousel {
         position: relative;
         max-width: 800px;
         margin: 0 auto;
+        overflow: hidden;
     }
 
     .testimonial {
@@ -917,6 +921,7 @@
     .contact {
         padding: 100px 0;
         background: var(--light-gray);
+        overflow: hidden;
     }
 
     .contact-grid {
@@ -996,6 +1001,7 @@
     .blog {
         padding: 100px 0;
         background: var(--pure-white);
+        overflow: hidden;
     }
 
     .blog-posts {
@@ -1068,130 +1074,125 @@
         transform: translateY(-2px);
     }
 
-    /* ===== FOOTER ===== */
-    .footer {
-        background: var(--primary-black);
-        color: var(--pure-white);
-        padding: 60px 0 30px;
-    }
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0 30px;
+        }
 
-    .footer-content {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr;
-        gap: 3rem;
-        margin-bottom: 3rem;
-    }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
 
-    .footer-logo {
-        font-size: 1.8rem;
-        font-weight: 800;
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-family: 'Montez', cursive;
-    }
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montez', cursive;
+        }
 
-    .footer-logo-img {
-        width: 40px;
-        height: 40px;
-        object-fit: contain;
-    }
+        .footer-logo i {
+            color: var(--vibrant-red);
+        }
 
-    .footer-logo i {
-        color: var(--vibrant-red);
-    }
+        .footer-about {
+            margin-bottom: 1.5rem;
+        }
 
-    .footer-about {
-        margin-bottom: 1.5rem;
-    }
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
 
-    .footer-heading {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-        position: relative;
-        padding-bottom: 10px;
-    }
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--vibrant-red);
+        }
 
-    .footer-heading::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 40px;
-        height: 3px;
-        background: var(--vibrant-red);
-    }
+        .footer-links {
+            list-style: none;
+        }
 
-    .footer-links {
-        list-style: none;
-    }
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
 
-    .footer-links li {
-        margin-bottom: 0.8rem;
-    }
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
 
-    .footer-links a {
-        color: #ccc;
-        text-decoration: none;
-        transition: var(--transition);
-    }
+        .footer-links a:hover {
+            color: var(--vibrant-red);
+            padding-left: 5px;
+        }
 
-    .footer-links a:hover {
-        color: var(--vibrant-red);
-        padding-left: 5px;
-        transform: translateY(-2px);
-    }
+        .footer-links i {
+            margin-right: 10px;
+            color: var(--vibrant-red);
+            width: 20px;
+        }
 
-    .social-links {
-        display: flex;
-        gap: 1rem;
-        margin-top: 1.5rem;
-    }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
 
-    .social-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        background: rgba(255,255,255,0.1);
-        color: var(--pure-white);
-        border-radius: 50%;
-        text-decoration: none;
-        transition: var(--transition);
-    }
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            color: var(--pure-white);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
 
-    .social-link:hover {
-        transform: translateY(-3px);
-    }
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
 
-    /* Facebook */
-    .social-link:nth-child(1):hover {
-        background: #1877F2;
-    }
+        .social-link:nth-child(1):hover {
+            background: #1877F2;
+        }
 
-    /* Twitter */
-    .social-link:nth-child(2):hover {
-        background: #1DA1F2;
-    }
+        .social-link:nth-child(2):hover {
+            background: #1DA1F2;
+        }
 
-    /* Instagram */
-    .social-link:nth-child(3):hover {
-        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    }
+        .social-link:nth-child(3):hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
 
-    /* LinkedIn */
-    .social-link:nth-child(4):hover {
-        background: #0077B5;
-    }
+        .social-link:nth-child(4):hover {
+            background: #0077B5;
+        }
 
-    .footer-bottom {
-        text-align: center;
-        padding-top: 2rem;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        color: #999;
-    }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+        }
 
     /* ===== UTILITIES ===== */
     .fade-in {
@@ -1481,7 +1482,7 @@
             height: 55px;
             font-size: 2rem;
             left: 20px;
-            bottom: 20px;
+            bottom: 30px;
         }
     }
 
@@ -1662,7 +1663,7 @@
                         <h2>About Us</h2>
                         <h3>A Legacy of Commitment to Seamless Travel</h3>
                         <br>
-                        <p>Trip Again Pvt Ltd was founded in 2010 by our CEO, an ambitious and hardworking leader dedicated to making travel genuinely easier for every client. His commitment ensures qualitative service—from individual travelers to large corporations—is delivered across all services. As a fully registered travel company with official affiliation from DTS and IATA, we provide meticulous support for visa applications, flight and hotel bookings, and complete customized tourism packages.</p>
+                        <p>Trip Again Pvt Ltd was founded in 2021 by our CEO, an ambitious and hardworking leader dedicated to making travel genuinely easier for every client. His commitment ensures qualitative service—from individual travelers to large corporations—is delivered across all services. As a fully registered travel company with official affiliation from DTS and IATA, we provide meticulous support for visa applications, flight and hotel bookings, and complete customized tourism packages.</p>
                         <div class="about-features">
                             <div class="feature">
                                 <i class="fas fa-award"></i>
@@ -1940,58 +1941,59 @@
 
 
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-about">
-                        <div class="footer-logo">
-                            <img src="logo.png" alt="Trip Again Travel & Tours" class="footer-logo-img">
-                            Trip Again
-                        </div>
-                        <p class="footer-about">Luxury travel experiences designed around you. Rediscover your world with Trip Again Travel & Tours.</p>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/share/15zomm3b1E/" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <!--<i class="fas fa-plane" aria-hidden="true"></i>-->
+                        Trip Again
                     </div>
-                    <div class="footer-links-container">
-                        <h3 class="footer-heading">Quick Links</h3>
-                        <ul class="footer-links">
-                            <li><a href="#hero">Home</a></li>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#testimonials">Testimonials</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-links-container">
-                        <h3 class="footer-heading">Services</h3>
-                        <ul class="footer-links">
-                            <li><a href="#">Flight & Hotel</a></li>
-                            <li><a href="#">Umrah & Hajj</a></li>
-                            <li><a href="#">Custom Tours</a></li>
-                            <li><a href="#">Corporate Travel</a></li>
-                            <li><a href="#">Tourism Activities</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-links-container">
-                        <h3 class="footer-heading">Contact Info</h3>
-                        <ul class="footer-links">
-                            <li><i class="fas fa-map-marker-alt"></i> Office # 2, Ground Floor, Hamza Center, PECHS Block 2, Near Liberty Traffic Signal, Tariq Road, Karachi Pakistan.</li>
-                            <li><i class="fas fa-phone"></i> +92 333 3473348</li>
-                            <li><i class="fas fa-envelope"></i> tripagain.dxb@gmail.com</li>
-                            <li><i class="fas fa-clock"></i> Mon-Sat: 12PM-10PM</li>
-                        </ul>
+                    <p class="footer-about">Luxury travel experiences designed around you. Rediscover your world with Trip Again Travel & Tours.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15zomm3b1E/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="footer-bottom">
-                    <p>© 2021 All Rights reserved by Trip Again Pvt Ltd. Powered by passion & technology — designed by GroTech Solutions.</p>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="flights-hotels.html">Flight & Hotel</a></li>
+                        <li><a href="visa-services.html">Visa Services</a></li>
+                        <li><a href="tourism-activities.html">Tourism Activities</a></li>
+                        <li><a href="#">Umrah & Ziyarat</a></li>
+                        <li><a href="#">Custom Tours</a></li>
+                        <li><a href="#">Corporate Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Office # 2, Ground Floor, Hamza Center, PECHS Block 2, Near Liberty Traffic Signal, Tariq Road, Karachi Pakistan.</li>
+                        <li><i class="fas fa-phone"></i> +92 333 3473348</li>
+                        <li><i class="fas fa-envelope"></i> tripagain.dxb@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 12PM-10PM</li>
+                    </ul>
                 </div>
             </div>
-        </footer>
+            <div class="footer-bottom">
+                <p>© 2021 All Rights reserved by Trip Again Pvt Ltd. Powered by passion & technology — designed by <a href="https://thegrotech.com/" target="_blank" style="font-weight: bold; color: #ff3b3b; text-decoration: none;">GroTech Solutions</a>.</p>
+            </div>
+        </div>
+    </footer>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
