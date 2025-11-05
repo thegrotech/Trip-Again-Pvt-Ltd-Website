@@ -181,7 +181,90 @@
         .mobile-close:hover {
             background: rgba(255, 255, 255, 0.1);
         }
+        /* ===== MOBILE MENU STYLES ===== */
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 80px;
+                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                z-index: 999;
+                gap: 0;
+            }
+            
+            /* Active state for mobile menu */
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu a {
+                font-size: 1.1rem;
+                padding: 1.0rem 1.5rem;
+                width: 80%;
+                text-align: center;
+                margin: 0.8rem 0;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.08);
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                transform: translateX(-20px);
+                opacity: 0;
+                line-height: 3.9;
+            }
 
+            .nav-menu.active a {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            /* Stagger the menu item animations */
+            .nav-menu.active a:nth-child(1) { transition-delay: 0.1s; }
+            .nav-menu.active a:nth-child(2) { transition-delay: 0.15s; }
+            .nav-menu.active a:nth-child(3) { transition-delay: 0.2s; }
+            .nav-menu.active a:nth-child(4) { transition-delay: 0.25s; }
+            .nav-menu.active a:nth-child(5) { transition-delay: 0.3s; }
+            .nav-menu.active a:nth-child(6) { transition-delay: 0.35s; }
+            .nav-menu.active a:nth-child(7) { transition-delay: 0.4s; }
+            
+            .nav-menu a::after {
+                display: none;
+            }
+            
+            .nav-menu a:hover {
+                background: rgba(255, 59, 59, 0.3);
+                transform: translateX(8px);
+            }
+
+            /* Mobile menu backdrop */
+            body.menu-active {
+                overflow: hidden;
+            }
+
+            body.menu-active::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(10px);
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 998;
+                pointer-events: none;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
         /* ===== BUTTONS ===== */
         .cta-button {
             display: inline-block;
@@ -764,10 +847,6 @@
                 font-size: 1.8rem;
             }
             
-            .nav-menu {
-                display: none;
-            }
-            
             .domestic-hero h1 {
                 font-size: 2.5rem;
             }
@@ -1094,69 +1173,67 @@
     </a>
 
     <script>
-        // ===== MAIN WEBSITE FUNCTIONALITY =====
-        function initializeMainWebsite() {
-            // Mobile Menu Functionality
-            const mobileToggle = document.getElementById('mobileToggle');
-            const navMenu = document.getElementById('navMenu');
+// ===== MOBILE MENU FUNCTIONALITY =====
+function initializeMobileMenu() {
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
 
-            mobileToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-                const isExpanded = navMenu.classList.contains('active');
-                mobileToggle.setAttribute('aria-expanded', isExpanded);
-                mobileToggle.innerHTML = isExpanded 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
-                
-                // Add/remove blur effect
-                if (isExpanded) {
-                    document.body.classList.add('menu-active');
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.classList.remove('menu-active');
-                    document.body.style.overflow = '';
-                }
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent event bubbling
+            navMenu.classList.toggle('active');
+            const isExpanded = navMenu.classList.contains('active');
+            mobileToggle.setAttribute('aria-expanded', isExpanded);
+            mobileToggle.innerHTML = isExpanded 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+            
+            // Add/remove blur effect
+            if (isExpanded) {
+                document.body.classList.add('menu-active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.classList.remove('menu-active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu when clicking links
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-active');
+                document.body.style.overflow = '';
             });
+        });
 
-            // Close menu when clicking links
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    mobileToggle.setAttribute('aria-expanded', 'false');
-                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                    document.body.classList.remove('menu-active');
-                    document.body.style.overflow = '';
-                });
-            });
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && 
+                !navMenu.contains(e.target) && 
+                !mobileToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-active');
+                document.body.style.overflow = '';
+            }
+        });
 
-            // Header scroll effect
-            const header = document.getElementById('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-
-            // Back to top button
-            const backToTop = document.getElementById('backToTop');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    backToTop.classList.add('show');
-                } else {
-                    backToTop.classList.remove('show');
-                }
-            });
-
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
-
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+}
         // ===== DOMESTIC TOURISM DATA =====
         const packagesData = [
             {
@@ -1507,187 +1584,215 @@
         ];
 
         // ===== DOMESTIC TOURISM FUNCTIONALITY =====
-        // DOM Elements
-        const packagesGrid = document.getElementById('packagesGrid');
-        const modalOverlay = document.getElementById('modalOverlay');
-        const modal = document.getElementById('modal');
-        const modalClose = document.getElementById('modalClose');
-        const modalHeader = document.getElementById('modalHeader');
-        const modalBody = document.getElementById('modalBody');
+// DOM Elements
+const modalOverlay = document.getElementById('modalOverlay');
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modalClose');
+const modalHeader = document.getElementById('modalHeader');
+const modalBody = document.getElementById('modalBody');
+const header = document.getElementById('header');
+const backToTopButton = document.getElementById('backToTop');
 
-            // Render packages grid by category
-    function renderPackagesGrid() {
-        const northernGrid = document.getElementById('northernPackagesGrid');
-        const beachGrid = document.getElementById('beachPackagesGrid');
-        const balochistanGrid = document.getElementById('balochistanPackagesGrid');
-        
-        // Clear all grids
-        northernGrid.innerHTML = '';
-        beachGrid.innerHTML = '';
-        balochistanGrid.innerHTML = '';
-        
-        // Render Northern Areas packages (IDs 1-6)
-        packagesData.filter(pkg => pkg.id <= 6).forEach(package => {
-            northernGrid.appendChild(createPackageCard(package));
-        });
-        
-        // Render Beach packages (IDs 7-9)
-        packagesData.filter(pkg => pkg.id >= 7 && pkg.id <= 9).forEach(package => {
-            beachGrid.appendChild(createPackageCard(package));
-        });
-        
-        // Render Balochistan packages (IDs 10-12)
-        packagesData.filter(pkg => pkg.id >= 10).forEach(package => {
-            balochistanGrid.appendChild(createPackageCard(package));
-        });
-    }
+// Render packages grid by category
+function renderPackagesGrid() {
+    const northernGrid = document.getElementById('northernPackagesGrid');
+    const beachGrid = document.getElementById('beachPackagesGrid');
+    const balochistanGrid = document.getElementById('balochistanPackagesGrid');
+    
+    // Clear all grids
+    northernGrid.innerHTML = '';
+    beachGrid.innerHTML = '';
+    balochistanGrid.innerHTML = '';
+    
+    // Render Northern Areas packages (IDs 1-6)
+    packagesData.filter(pkg => pkg.id <= 6).forEach(package => {
+        northernGrid.appendChild(createPackageCard(package));
+    });
+    
+    // Render Beach packages (IDs 7-9)
+    packagesData.filter(pkg => pkg.id >= 7 && pkg.id <= 9).forEach(package => {
+        beachGrid.appendChild(createPackageCard(package));
+    });
+    
+    // Render Balochistan packages (IDs 10-12)
+    packagesData.filter(pkg => pkg.id >= 10).forEach(package => {
+        balochistanGrid.appendChild(createPackageCard(package));
+    });
+}
 
-    // Helper function to create package cards
-    function createPackageCard(package) {
-        const packageCard = document.createElement('div');
-        packageCard.className = 'package-card';
-        packageCard.innerHTML = `
-            <div class="package-image">
-                <img src="${package.image}" alt="${package.name}" loading="lazy">
-                ${package.popular ? '<div class="package-badge">Popular</div>' : ''}
+// Helper function to create package cards
+function createPackageCard(package) {
+    const packageCard = document.createElement('div');
+    packageCard.className = 'package-card';
+    packageCard.innerHTML = `
+        <div class="package-image">
+            <img src="${package.image}" alt="${package.name}" loading="lazy">
+            ${package.popular ? '<div class="package-badge">Popular</div>' : ''}
+        </div>
+        <div class="package-content">
+            <h3>${package.name}</h3>
+            <p>${package.description}</p>
+            <div class="package-meta">
+                <span><i class="fas fa-clock"></i> ${package.duration}</span>
+                <span><i class="fas fa-map-marker-alt"></i> ${package.location}</span>
             </div>
-            <div class="package-content">
-                <h3>${package.name}</h3>
-                <p>${package.description}</p>
-                <div class="package-meta">
-                    <span><i class="fas fa-clock"></i> ${package.duration}</span>
-                    <span><i class="fas fa-map-marker-alt"></i> ${package.location}</span>
+            <div class="package-price">${package.price}</div>
+            <a href="#" class="package-cta">View Details <i class="fas fa-arrow-right"></i></a>
+        </div>
+    `;
+    
+    packageCard.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal(package);
+    });
+    
+    return packageCard;
+}
+
+// Open modal with package details
+function openModal(package) {
+    // Create modal header
+    modalHeader.innerHTML = `
+        <img src="${package.modalImage}" alt="${package.name}">
+        <div class="modal-header-content">
+            <h2>${package.name}</h2>
+            <p>${package.location} • ${package.duration}</p>
+        </div>
+    `;
+    
+    // Create modal body
+    modalBody.innerHTML = `
+        <div class="modal-section">
+            <h3>Package Overview</h3>
+            <p>${package.description}</p>
+        </div>
+        
+        <div class="modal-section">
+            <h3>Package Features</h3>
+            <div class="package-features">
+                ${package.features.map(feature => `
+                    <div class="feature-item">
+                        <h4>${feature}</h4>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+        
+        <div class="modal-section">
+            <h3>Itinerary</h3>
+            <ul class="itinerary-list">
+                ${package.itinerary.map(day => `<li>${day}</li>`).join('')}
+            </ul>
+        </div>
+        
+        <div class="modal-section">
+            <h3>Package Information</h3>
+            <div class="package-info">
+                <div class="info-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h4>Best Time to Visit</h4>
+                    <p>${package.bestTime}</p>
                 </div>
-                <div class="package-price">${package.price}</div>
-                <a href="#" class="package-cta">View Details <i class="fas fa-arrow-right"></i></a>
+                <div class="info-item">
+                    <i class="fas fa-users"></i>
+                    <h4>Group Size</h4>
+                    <p>${package.groupSize}</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-mountain"></i>
+                    <h4>Difficulty Level</h4>
+                    <p>${package.difficulty}</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-tag"></i>
+                    <h4>Package Price</h4>
+                    <p>${package.price}</p>
+                </div>
             </div>
-        `;
+        </div>
         
-        packageCard.addEventListener('click', (e) => {
+        <div class="modal-actions">
+            <a href="index.html#contact" class="cta-button">Book Now</a>
+            <button class="cta-button" style="background: transparent; color: var(--vibrant-red);" onclick="closeModal()">Close</button>
+        </div>
+    `;
+    
+    // Show modal
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close modal
+function closeModal() {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize mobile menu FIRST
+    initializeMobileMenu();
+    
+    // Then initialize other components
+    renderPackagesGrid();
+    
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            openModal(package);
-        });
-        
-        return packageCard;
-    }
-
-        // Open modal with package details
-        function openModal(package) {
-            // Create modal header
-            modalHeader.innerHTML = `
-                <img src="${package.modalImage}" alt="${package.name}">
-                <div class="modal-header-content">
-                    <h2>${package.name}</h2>
-                    <p>${package.location} • ${package.duration}</p>
-                </div>
-            `;
-            
-            // Create modal body
-            modalBody.innerHTML = `
-                <div class="modal-section">
-                    <h3>Package Overview</h3>
-                    <p>${package.description}</p>
-                </div>
-                
-                <div class="modal-section">
-                    <h3>Package Features</h3>
-                    <div class="package-features">
-                        ${package.features.map(feature => `
-                            <div class="feature-item">
-                                <h4>${feature}</h4>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-                
-                <div class="modal-section">
-                    <h3>Itinerary</h3>
-                    <ul class="itinerary-list">
-                        ${package.itinerary.map(day => `<li>${day}</li>`).join('')}
-                    </ul>
-                </div>
-                
-                <div class="modal-section">
-                    <h3>Package Information</h3>
-                    <div class="package-info">
-                        <div class="info-item">
-                            <i class="fas fa-calendar-alt"></i>
-                            <h4>Best Time to Visit</h4>
-                            <p>${package.bestTime}</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-users"></i>
-                            <h4>Group Size</h4>
-                            <p>${package.groupSize}</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-mountain"></i>
-                            <h4>Difficulty Level</h4>
-                            <p>${package.difficulty}</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-tag"></i>
-                            <h4>Package Price</h4>
-                            <p>${package.price}</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="modal-actions">
-                    <a href="index.html#contact" class="cta-button">Book Now</a>
-                    <button class="cta-button" style="background: transparent; color: var(--vibrant-red);" onclick="closeModal()">Close</button>
-                </div>
-            `;
-            
-            // Show modal
-            modalOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        // Close modal
-        function closeModal() {
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Event listeners
-        modalClose.addEventListener('click', closeModal);
-        modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) {
-                closeModal();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
+    });
 
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', () => {
-            initializeMainWebsite();
-            renderPackagesGrid();
-            
-            // Add smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        // Show/hide back to top button
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
 
-            // Show WhatsApp button after delay
-            setTimeout(() => {
-                const whatsappButton = document.getElementById('whatsappButton');
-                if (whatsappButton) {
-                    whatsappButton.classList.add('visible');
-                }
-            }, 5000);
+    // Back to top functionality
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
+    });
 
-        // Make closeModal function available globally
-        window.closeModal = closeModal;
+    // Show WhatsApp button after delay
+    setTimeout(() => {
+        const whatsappButton = document.getElementById('whatsappButton');
+        if (whatsappButton) {
+            whatsappButton.classList.add('visible');
+        }
+    }, 5000);
+});
+
+// Event listeners
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+        closeModal();
+    }
+});
+
+// Make closeModal function available globally
+window.closeModal = closeModal;
     </script>
 </body>
 </html>

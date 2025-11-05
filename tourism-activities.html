@@ -160,12 +160,12 @@
         left: -100%;
         width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.95);
+        background: rgba(0, 0, 0, 0.50);
         backdrop-filter: blur(15px);
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding-top: 100px;
+        padding-top: 80px;
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 999;
         gap: 0;
@@ -176,8 +176,8 @@
     }
     
     .nav-menu a {
-        font-size: 1.2rem;
-        padding: 1.5rem 2rem;
+        font-size: 1.1rem;
+        padding: 1.0rem 1.5rem;
         width: 80%;
         text-align: center;
         margin: 0.8rem 0;
@@ -186,7 +186,7 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         transform: translateX(-20px);
         opacity: 0;
-        line-height: 1.6; /* Fixed this line - was 3.9 which was causing the issue */
+        line-height: 3.9; /* Fixed this line - was 3.9 which was causing the issue */
     }
 
     .nav-menu.active a {
@@ -885,10 +885,6 @@
                 font-size: 1.8rem;
             }
             
-            .nav-menu {
-                display: none;
-            }
-            
             .tourism-hero h1 {
                 font-size: 2.5rem;
             }
@@ -1134,78 +1130,68 @@
     </button>
 
     <script>
-        // ===== MAIN WEBSITE FUNCTIONALITY =====
-        function initializeMainWebsite() {
-            // Mobile Menu Functionality
-            const mobileToggle = document.getElementById('mobileToggle');
-            const navMenu = document.getElementById('navMenu');
+// ===== MOBILE MENU FUNCTIONALITY =====
+function initializeMobileMenu() {
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    const header = document.getElementById('header');
 
-            mobileToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-                const isExpanded = navMenu.classList.contains('active');
-                mobileToggle.setAttribute('aria-expanded', isExpanded);
-                mobileToggle.innerHTML = isExpanded 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
-                
-                // Add/remove blur effect
-                if (isExpanded) {
-                    document.body.classList.add('menu-active');
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.classList.remove('menu-active');
-                    document.body.style.overflow = '';
-                }
-            });
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent event bubbling
+            navMenu.classList.toggle('active');
+            const isExpanded = navMenu.classList.contains('active');
+            mobileToggle.setAttribute('aria-expanded', isExpanded);
+            mobileToggle.innerHTML = isExpanded 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+            
+            // Add/remove blur effect
+            if (isExpanded) {
+                document.body.classList.add('menu-active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.classList.remove('menu-active');
+                document.body.style.overflow = '';
+            }
+        });
 
-            // Close menu when clicking links
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    mobileToggle.setAttribute('aria-expanded', 'false');
-                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                    document.body.classList.remove('menu-active');
-                    document.body.style.overflow = '';
-                });
+        // Close menu when clicking links
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-active');
+                document.body.style.overflow = '';
             });
+        });
 
-            // Header scroll effect
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-        
-            // Scroll progress bar
-            const progressBar = document.getElementById('progressBar');
-            window.addEventListener('scroll', () => {
-                const windowHeight = window.innerHeight;
-                const documentHeight = document.documentElement.scrollHeight - windowHeight;
-                const scrollPosition = window.scrollY;
-                const progress = (scrollPosition / documentHeight) * 100;
-                progressBar.style.width = `${progress}%`;
-            });
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && 
+                !navMenu.contains(e.target) && 
+                !mobileToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-active');
+                document.body.style.overflow = '';
+            }
+        });
 
-            // Back to top button
-            const backToTop = document.getElementById('backToTop');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    backToTop.classList.add('visible');
-                } else {
-                    backToTop.classList.remove('visible');
-                }
-            });
-
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
-
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+}
 // Tourism activities data - ALL 53 ACTIVITIES
 const activitiesData = [
     // UAE Activities (5)
@@ -2668,40 +2654,12 @@ const activitiesData = [
             });
         });
 
-        // Event listeners
-        modalClose.addEventListener('click', closeModal);
-        modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) {
-                closeModal();
-            }
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-            
-            // Show/hide back to top button
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('show');
-            } else {
-                backToTopButton.classList.remove('show');
-            }
-        });
-
-        // Back to top functionality
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
         // Initialize the page
         document.addEventListener('DOMContentLoaded', () => {
+            // Initialize mobile menu FIRST
+            initializeMobileMenu();
+            
+            // Then initialize other components
             renderActivities();
             
             // Add smooth scrolling for anchor links
@@ -2717,29 +2675,50 @@ const activitiesData = [
                     }
                 });
             });
+
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                // Show/hide back to top button
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+        });
+
+        // Event listeners
+        modalClose.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        // Back to top functionality
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
 
         // Make closeModal function available globally
         window.closeModal = closeModal;
 
-// Floating WhatsApp Button
-            setTimeout(() => {
+        // Floating WhatsApp Button
+        setTimeout(() => {
             const whatsappButton = document.getElementById('whatsappButton');
             if (whatsappButton) {
-            whatsappButton.classList.add('visible');
-            }
-            }, 5000); // 5 second delay
-            // Ensure WhatsApp button appears after loading page transition
-            function initializeMainWebsite() {
-            // ... your existing code ...            
-            // Add this line at the end of initializeMainWebsite function:
-            setTimeout(() => {
-            const whatsappButton = document.getElementById('whatsappButton');
-            if (whatsappButton) {
-            whatsappButton.classList.add('visible');
+                whatsappButton.classList.add('visible');
             }
         }, 5000);
-        }
     </script>
         <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/923333473348?text=Hello%2C%20I'm%20interested%20in%20your%20travel%20services!" 

@@ -135,51 +135,104 @@
         color: var(--vibrant-red);
     }
 
-    /* Mobile Toggle Button */
+/* Mobile Toggle Button */
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--pure-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.mobile-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Menu Styles */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
     .mobile-toggle {
-        display: none;
-        background: none;
-        border: none;
-        color: var(--pure-white);
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 0.5rem;
-        z-index: 1001;
-        width: 44px;
-        height: 44px;
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
-        justify-content: center;
-        border-radius: 5px;
-        transition: var(--transition);
+        padding-top: 80px;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+        gap: 0;
+    }
+    
+    /* Add this - the active state for mobile menu */
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu a {
+        font-size: 1.1rem;
+        padding: 1.0rem 1.5rem;
+        width: 80%;
+        text-align: center;
+        margin: 0.8rem 0;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.08);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateX(-20px);  
+        line-height: 3.9; 
     }
 
-    .mobile-toggle:hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
-
-    /* Mobile Close Button */
-    .mobile-close {
+    .nav-menu a::after {
         display: none;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: none;
-        border: none;
-        color: var(--pure-white);
-        font-size: 1.5rem;
-        cursor: pointer;
-        z-index: 1002;
-        width: 44px;
-        height: 44px;
-        align-items: center;
-        justify-content: center;
-        border-radius: 5px;
-        transition: var(--transition);
+    }
+    
+    .nav-menu a:hover {
+        background: rgba(255, 59, 59, 0.3);
+        transform: translateX(8px);
     }
 
-    .mobile-close:hover {
-        background: rgba(255, 255, 255, 0.1);
+    /* Mobile menu backdrop */
+    body.menu-active {
+        overflow: hidden;
     }
+
+    body.menu-active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        pointer-events: none;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
 
     /* ===== BUTTONS ===== */
     .cta-button {
@@ -724,10 +777,6 @@
                 font-size: 1.8rem;
             }
             
-            .nav-menu {
-                display: none;
-            }
-            
             .visa-hero h1 {
                 font-size: 2.5rem;
             }
@@ -864,6 +913,7 @@
             bottom: 30px;
         }
     }
+    
 
     </style>
 </head>
@@ -984,78 +1034,15 @@
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923333473348?text=Hello%2C%20I'm%20interested%20in%20your%20travel%20services!" 
+    class="floating-whatsapp" 
+    id="whatsappButton"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     <script>
-        // ===== MAIN WEBSITE FUNCTIONALITY =====
-        function initializeMainWebsite() {
-            // Mobile Menu Functionality
-            const mobileToggle = document.getElementById('mobileToggle');
-            const navMenu = document.getElementById('navMenu');
-
-            mobileToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-                const isExpanded = navMenu.classList.contains('active');
-                mobileToggle.setAttribute('aria-expanded', isExpanded);
-                mobileToggle.innerHTML = isExpanded 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
-                
-                // Add/remove blur effect
-                if (isExpanded) {
-                    document.body.classList.add('menu-active');
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.classList.remove('menu-active');
-                    document.body.style.overflow = '';
-                }
-            });
-
-            // Close menu when clicking links
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    mobileToggle.setAttribute('aria-expanded', 'false');
-                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                    document.body.classList.remove('menu-active');
-                    document.body.style.overflow = '';
-                });
-            });
-
-            // Header scroll effect
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-        
-            // Scroll progress bar
-            const progressBar = document.getElementById('progressBar');
-            window.addEventListener('scroll', () => {
-                const windowHeight = window.innerHeight;
-                const documentHeight = document.documentElement.scrollHeight - windowHeight;
-                const scrollPosition = window.scrollY;
-                const progress = (scrollPosition / documentHeight) * 100;
-                progressBar.style.width = `${progress}%`;
-            });
-
-            // Back to top button
-            const backToTop = document.getElementById('backToTop');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    backToTop.classList.add('visible');
-                } else {
-                    backToTop.classList.remove('visible');
-                }
-            });
-
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
         // Country data with all the details you provided
         const countriesData = [
             {
@@ -1473,132 +1460,195 @@
             }
         ];
 
-        // DOM Elements
-        const countriesGrid = document.getElementById('countriesGrid');
-        const modalOverlay = document.getElementById('modalOverlay');
-        const modal = document.getElementById('modal');
-        const modalClose = document.getElementById('modalClose');
-        const modalHeader = document.getElementById('modalHeader');
-        const modalBody = document.getElementById('modalBody');
-        const header = document.getElementById('header');
+    // DOM Elements
+    const countriesGrid = document.getElementById('countriesGrid');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modal = document.getElementById('modal');
+    const modalClose = document.getElementById('modalClose');
+    const modalHeader = document.getElementById('modalHeader');
+    const modalBody = document.getElementById('modalBody');
+    const header = document.getElementById('header');
 
-        // Render countries grid
-        function renderCountriesGrid() {
-            countriesGrid.innerHTML = '';
+    // Render countries grid
+    function renderCountriesGrid() {
+        countriesGrid.innerHTML = '';
+        
+        countriesData.forEach(country => {
+            const countryCard = document.createElement('div');
+            countryCard.className = 'country-card';
+            countryCard.innerHTML = `
+                <div class="country-image">
+                    <img src="${country.image}" alt="${country.name}" loading="lazy">
+                    ${country.priority ? '<div class="country-badge">Popular</div>' : ''}
+                </div>
+                <div class="country-content">
+                    <h3>${country.name}</h3>
+                    <p>${country.description}</p>
+                    <div class="country-meta">
+                        <span><i class="fas fa-clock"></i> ${country.processingTime}</span>
+                        <span><i class="fas fa-map-marker-alt"></i> ${country.capital}</span>
+                    </div>
+                    <a href="#" class="country-cta">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+            `;
             
-            countriesData.forEach(country => {
-                const countryCard = document.createElement('div');
-                countryCard.className = 'country-card';
-                countryCard.innerHTML = `
-                    <div class="country-image">
-                        <img src="${country.image}" alt="${country.name}" loading="lazy">
-                        ${country.priority ? '<div class="country-badge">Popular</div>' : ''}
-                    </div>
-                    <div class="country-content">
-                        <h3>${country.name}</h3>
-                        <p>${country.description}</p>
-                        <div class="country-meta">
-                            <span><i class="fas fa-clock"></i> ${country.processingTime}</span>
-                            <span><i class="fas fa-map-marker-alt"></i> ${country.capital}</span>
-                        </div>
-                        <a href="#" class="country-cta">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                `;
-                
-                countryCard.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    openModal(country);
-                });
-                
-                countriesGrid.appendChild(countryCard);
+            countryCard.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(country);
             });
-        }
-
-        // Open modal with country details
-        function openModal(country) {
-            // Create modal header
-            modalHeader.innerHTML = `
-                <img src="${country.modalImage}" alt="${country.name}">
-                <div class="modal-header-content">
-                    <h2>${country.name}</h2>
-                    <p>${country.capital} • Visa Services for Pakistani Nationals</p>
-                </div>
-            `;
             
-            // Create modal body
-            modalBody.innerHTML = `
-                <div class="modal-section">
-                    <h3>Visa Types</h3>
-                    <div class="visa-types">
-                        ${country.visaTypes.map(visa => `
-                            <div class="visa-type">
-                                <h4>${visa.type}</h4>
-                                <p><strong>Duration:</strong> ${visa.duration}</p>
-                                ${visa.entry ? `<p><strong>Entry:</strong> ${visa.entry}</p>` : ''}
-                                ${visa.notes ? `<p><strong>Notes:</strong> ${visa.notes}</p>` : ''}
-                            </div>
-                        `).join('')}
+            countriesGrid.appendChild(countryCard);
+        });
+    }
+
+    // Open modal with country details
+    function openModal(country) {
+        // Create modal header
+        modalHeader.innerHTML = `
+            <img src="${country.modalImage}" alt="${country.name}">
+            <div class="modal-header-content">
+                <h2>${country.name}</h2>
+                <p>${country.capital} • Visa Services for Pakistani Nationals</p>
+            </div>
+        `;
+        
+        // Create modal body
+        modalBody.innerHTML = `
+            <div class="modal-section">
+                <h3>Visa Types</h3>
+                <div class="visa-types">
+                    ${country.visaTypes.map(visa => `
+                        <div class="visa-type">
+                            <h4>${visa.type}</h4>
+                            <p><strong>Duration:</strong> ${visa.duration}</p>
+                            ${visa.entry ? `<p><strong>Entry:</strong> ${visa.entry}</p>` : ''}
+                            ${visa.notes ? `<p><strong>Notes:</strong> ${visa.notes}</p>` : ''}
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            
+            <div class="modal-section">
+                <h3>Processing Information</h3>
+                <div class="processing-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <h4>Processing Time</h4>
+                        <p>${country.processingTime}</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h4>Visa Fees</h4>
+                        <p>$$$ (Contact for exact pricing)</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-passport"></i>
+                        <h4>Visa Type</h4>
+                        <p>${country.specialNotes.includes('E-visa') ? 'E-Visa' : 'Sticker Visa'}</p>
                     </div>
                 </div>
-                
-                <div class="modal-section">
-                    <h3>Processing Information</h3>
-                    <div class="processing-info">
-                        <div class="info-item">
-                            <i class="fas fa-clock"></i>
-                            <h4>Processing Time</h4>
-                            <p>${country.processingTime}</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-money-bill-wave"></i>
-                            <h4>Visa Fees</h4>
-                            <p>$$$ (Contact for exact pricing)</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-passport"></i>
-                            <h4>Visa Type</h4>
-                            <p>${country.specialNotes.includes('E-visa') ? 'E-Visa' : 'Sticker Visa'}</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="modal-section">
-                    <h3>Required Documents</h3>
-                    <ul class="requirements-list">
-                        ${country.requirements.map(req => `<li>${req}</li>`).join('')}
-                    </ul>
-                </div>
-                
-                ${country.specialNotes ? `
-                <div class="modal-section">
-                    <h3>Special Notes</h3>
-                    <p>${country.specialNotes}</p>
-                </div>
-                ` : ''}
-                
-                <div class="modal-actions">
-                    <a href="index.html#contact" class="cta-button">Apply Now</a>
-                    <button class="cta-button" style="background: transparent; color: var(--vibrant-red);" onclick="closeModal()">Close</button>
-                </div>
-            `;
+            </div>
             
-            // Show modal
-            modalOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+            <div class="modal-section">
+                <h3>Required Documents</h3>
+                <ul class="requirements-list">
+                    ${country.requirements.map(req => `<li>${req}</li>`).join('')}
+                </ul>
+            </div>
+            
+            ${country.specialNotes ? `
+            <div class="modal-section">
+                <h3>Special Notes</h3>
+                <p>${country.specialNotes}</p>
+            </div>
+            ` : ''}
+            
+            <div class="modal-actions">
+                <a href="index.html#contact" class="cta-button">Apply Now</a>
+                <button class="cta-button" style="background: transparent; color: var(--vibrant-red);" onclick="closeModal()">Close</button>
+            </div>
+        `;
+        
+        // Show modal
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
 
-        // Close modal
-        function closeModal() {
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+    // Close modal
+    function closeModal() {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 
-        // Event listeners
-        modalClose.addEventListener('click', closeModal);
-        modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) {
-                closeModal();
-            }
+    // Mobile Menu Functionality
+    function initializeMobileMenu() {
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent event bubbling
+                navMenu.classList.toggle('active');
+                const isExpanded = navMenu.classList.contains('active');
+                mobileToggle.setAttribute('aria-expanded', isExpanded);
+                mobileToggle.innerHTML = isExpanded 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+                
+                // Add/remove blur effect
+                if (isExpanded) {
+                    document.body.classList.add('menu-active');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.classList.remove('menu-active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking links
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    document.body.classList.remove('menu-active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    document.body.classList.remove('menu-active');
+                    document.body.style.overflow = '';
+                }
+        });
+        }
+    }
+
+    // Initialize everything when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initialize mobile menu
+        initializeMobileMenu();
+        
+        // Render countries grid
+        renderCountriesGrid();
+        
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
 
         // Header scroll effect
@@ -1609,75 +1659,46 @@
                 header.classList.remove('scrolled');
             }
         });
+    });
 
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', () => {
-            renderCountriesGrid();
-            
-            // Add smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-
-        // Make closeModal function available globally
-        window.closeModal = closeModal;
-
-        // Back to Top Button
-        const backToTopButton = document.getElementById('backToTop');
-
-        // Show/hide button based on scroll position
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('show');
-            } else {
-                backToTopButton.classList.remove('show');
-            }
-        });
-
-        // Smooth scroll to top
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-     // Floating WhatsApp Button
-            setTimeout(() => {
-            const whatsappButton = document.getElementById('whatsappButton');
-            if (whatsappButton) {
-            whatsappButton.classList.add('visible');
-            }
-            }, 5000); // 5 second delay
-            // Ensure WhatsApp button appears after loading page transition
-            function initializeMainWebsite() {
-            // ... your existing code ...            
-            // Add this line at the end of initializeMainWebsite function:
-            setTimeout(() => {
-            const whatsappButton = document.getElementById('whatsappButton');
-            if (whatsappButton) {
-            whatsappButton.classList.add('visible');
-            }
-        }, 5000);
+    // Event listeners
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            closeModal();
         }
-    </script>
-        <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/923333473348?text=Hello%2C%20I'm%20interested%20in%20your%20travel%20services!" 
-    class="floating-whatsapp" 
-    id="whatsappButton"
-    target="_blank"
-    aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-</a>
+    });
+
+    // Make closeModal function available globally
+    window.closeModal = closeModal;
+
+    // Back to Top Button
+    const backToTopButton = document.getElementById('backToTop');
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+
+    // Smooth scroll to top
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Floating WhatsApp Button
+    setTimeout(() => {
+        const whatsappButton = document.getElementById('whatsappButton');
+        if (whatsappButton) {
+            whatsappButton.classList.add('visible');
+        }
+    }, 5000);
+</script>
 </body>
 </html>
