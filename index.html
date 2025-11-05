@@ -1542,7 +1542,43 @@
     }
 }
 }
+/* Learn More Link Styles */
+.learn-more-link {
+    color: var(--vibrant-red);
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
 
+.service-card:hover .learn-more-link {
+    gap: 12px;
+    transform: translateX(3px);
+}
+
+.learn-more-link i {
+    font-size: 0.8rem;
+    transition: var(--transition);
+    transform: translateY(1px)
+}
+
+.service-card:hover .learn-more-link i {
+    transform: translateX(3px) translateY(1px);
+}
+
+/* Ensure service card has proper layout */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2rem;
+}
 </style>
 </head>
 <body>
@@ -1709,8 +1745,10 @@
                             </div>
                             <h3>Visas & Assistance</h3>
                             <p>Don't let documentation delay your dreams. We provide dedicated assistance and expert guidance to secure your visa and launch your journey.</p>
+                            <div class="learn-more-link">Learn More <i class="fas fa-arrow-right"></i></div>
                         </div>
                     </a>
+                    
                     <a href="flights-hotels.html" class="service-card-link">
                         <div class="service-card fade-in">
                             <div class="service-icon">
@@ -1718,8 +1756,10 @@
                             </div>
                             <h3>Flight & Hotel Booking</h3>
                             <p>Seamlessly book flights and accommodations worldwide. Find the best rates and personalized itineraries, all in one place.</p>
+                            <div class="learn-more-link">Learn More <i class="fas fa-arrow-right"></i></div>
                         </div>
                     </a>                    
+                    
                     <a href="tourism-activities.html" class="service-card-link">
                         <div class="service-card fade-in">
                             <div class="service-icon">
@@ -1727,34 +1767,41 @@
                             </div>
                             <h3>International Tourism Activities</h3>
                             <p>Unlock the magic of your destination. We secure exclusive tours and top-rated activities in the UAE and vibrant Far East regions.</p>
+                            <div class="learn-more-link">Learn More <i class="fas fa-arrow-right"></i></div>
                         </div>
                     </a>
+                    
                     <a href="umrah-ziyarat.html" class="service-card-link">
-                    <div class="service-card fade-in">
-                        <div class="service-icon">
-                            <i class="fas fa-mosque"></i>
+                        <div class="service-card fade-in">
+                            <div class="service-icon">
+                                <i class="fas fa-mosque"></i>
+                            </div>
+                            <h3>Umrah & Ziyarat</h3>
+                            <p>Spiritual journeys with expert guidance, comfortable accommodations, and comprehensive support.</p>
+                            <div class="learn-more-link">Learn More <i class="fas fa-arrow-right"></i></div>
                         </div>
-                        <h3>Umrah & Ziyarat</h3>
-                        <p>Spiritual journeys with expert guidance, comfortable accommodations, and comprehensive support.</p>
-                    </div>
                     </a>
+                    
                     <a href="domestic-tourism.html" class="service-card-link">
-                    <div class="service-card fade-in">
-                        <div class="service-icon">
-                            <i class="fas fa-map-marked-alt"></i>
+                        <div class="service-card fade-in">
+                            <div class="service-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h3>Discover Pakistan</h3>
+                            <p>From the worlds highest peaks to serene beaches — your journey starts here.</p>
+                            <div class="learn-more-link">Learn More <i class="fas fa-arrow-right"></i></div>
                         </div>
-                        <h3>Discover Pakistan</h3>
-                        <p>From the worlds highest peaks to serene beaches — your journey starts here.</p>
-                    </div>
                     </a>
+                    
                     <a href="corporate-travel-services.html" class="service-card-link">
-                    <div class="service-card fade-in">
-                        <div class="service-icon">
-                            <i class="fas fa-briefcase"></i>
+                        <div class="service-card fade-in">
+                            <div class="service-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>Corporate Travel Management</h3>
+                            <p>Effortless business travel, simplified. From policy enforcement to bespoke itineraries, we optimize your company's journeys for maximum productivity.</p>
+                            <div class="learn-more-link">Learn More <i class="fas fa-arrow-right"></i></div>
                         </div>
-                        <h3>Corporate Travel Management</h3>
-                        <p>Effortless business travel, simplified. From policy enforcement to bespoke itineraries, we optimize your company's journeys for maximum productivity.</p>
-                    </div>
                     </a>
                 </div>
             </div>
