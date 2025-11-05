@@ -262,6 +262,7 @@
             padding: 0 20px;
             position: relative;
             z-index: 1;
+            margin-top: 50px;
         }
 
         .domestic-hero h1 {
@@ -831,7 +832,7 @@
         .back-to-top {
             position: fixed;
             bottom: 30px;
-            right: 30px;
+            right: 20px;
             width: 50px;
             height: 50px;
             background: var(--vibrant-red);
@@ -864,7 +865,7 @@
         /* ===== FLOATING WHATSAPP BUTTON ===== */
         .floating-whatsapp {
             position: fixed;
-            left: 30px;
+            left: 20px;
             bottom: 30px;
             width: 50px;
             height: 50px;
@@ -912,6 +913,23 @@
         .floating-whatsapp:focus-visible {
             outline: 3px solid var(--vibrant-red);
             outline-offset: 2px;
+        }/* Additional styles for section headings */
+        .section-title h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--vibrant-red);
         }
     </style>
 </head>
@@ -924,13 +942,12 @@
             </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
                 <li><a href="visa-services.html">Visa Services</a></li>
                 <li><a href="flights-hotels.html">Flights & Hotels</a></li>
-                <li><a href="domestic-tourism.html" class="active">Domestic Tourism</a></li>
+                <li><a href="tourism-activities.html">Tourism Activities</a></li>
                 <li><a href="umrah-ziyarat.html">Umrah & Ziyarat</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="domestic-tourism.html">Discover Pakistan</a></li>
+                <li><a href="corporate-travel-services.html">Corporate Travel</a></li>
             </ul>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
                 <i class="fas fa-bars"></i>
@@ -941,7 +958,7 @@
     <!-- Domestic Tourism Hero Section -->
     <section class="domestic-hero">
         <div class="domestic-hero-content">
-            <h1>Domestic Tourism Pakistan</h1>
+            <h1>Discover Pakistan</h1>
             <p>Discover Hidden Gems in Your Own Backyard</p>
             <a href="#packages" class="cta-button">Explore Packages</a>
         </div>
@@ -955,8 +972,31 @@
                 <p class="section-subtitle">Experience the breathtaking beauty and rich culture of Pakistan with our specially curated domestic tour packages</p>
             </div>
             
-            <div class="packages-grid" id="packagesGrid">
-                <!-- Packages will be populated by JavaScript -->
+            <!-- Northern Areas Section -->
+            <div class="section-title" style="margin-top: 4rem;">
+                <h3 style="font-size: 2.5rem; color: #333;">Northern Areas</h3>
+                <p class="section-subtitle">Explore the majestic mountains and valleys of Pakistan's northern regions</p>
+            </div>
+            <div class="packages-grid" id="northernPackagesGrid">
+                <!-- Northern packages will be populated by JavaScript -->
+            </div>
+
+            <!-- Beaches Section -->
+            <div class="section-title" style="margin-top: 4rem;">
+                <h3 style="font-size: 2.5rem; color: #333;">Explore Beaches of Pakistan</h3>
+                <p class="section-subtitle">Discover the pristine coastal beauty of Pakistan's beaches</p>
+            </div>
+            <div class="packages-grid" id="beachPackagesGrid">
+                <!-- Beach packages will be populated by JavaScript -->
+            </div>
+
+            <!-- Balochistan Section -->
+            <div class="section-title" style="margin-top: 4rem;">
+                <h3 style="font-size: 2.5rem; color: #333;">Explore Balochistan</h3>
+                <p class="section-subtitle">Uncover the hidden treasures and unique landscapes of Balochistan</p>
+            </div>
+            <div class="packages-grid" id="balochistanPackagesGrid">
+                <!-- Balochistan packages will be populated by JavaScript -->
             </div>
         </div>
     </section>
@@ -1017,10 +1057,10 @@
                     <ul class="footer-links">
                         <li><a href="flights-hotels.html">Flight & Hotel</a></li>
                         <li><a href="visa-services.html">Visa Services</a></li>
-                        <li><a href="domestic-tourism.html">Domestic Tourism</a></li>
+                        <li><a href="tourism-activities.html">Tourism Activities</a></li>
                         <li><a href="umrah-ziyarat.html">Umrah & Ziyarat</a></li>
                         <li><a href="domestic-tourism.html">Discover Pakistan</a></li>
-                        <li><a href="#">Corporate Travel</a></li>
+                        <li><a href="corporate-travel.html">Corporate Travel</a></li>
                     </ul>
                 </div>
                 <div class="footer-links-container">
@@ -1294,7 +1334,176 @@
                 groupSize: "2-10 people",
                 difficulty: "Moderate",
                 popular: true
+            },
+            // Add these after your existing 6 packages in the packagesData array
+            // Beach Areas Packages
+            {
+                id: 7,
+                name: "Ormara Beach Escape",
+                location: "Ormara, Balochistan",
+                image: "ormarabeach.jpg",
+                modalImage: "ormarabeach.jpg",
+                description: "Experience the pristine beauty of Ormara Beach with its crystal clear waters and golden sands in remote Balochistan.",
+                duration: "4 Days / 3 Nights",
+                price: "From Rs. 22,000",
+                features: [
+                    "Beach camping experience",
+                    "Coastal photography",
+                    "Fresh seafood cuisine",
+                    "Stargazing opportunities",
+                    "Coastal exploration"
+                ],
+                itinerary: [
+                    "Day 1: Arrival in Karachi, travel to Ormara",
+                    "Day 2: Full day at Ormara Beach",
+                    "Day 3: Coastal exploration and local culture",
+                    "Day 4: Return to Karachi and departure"
+                ],
+                bestTime: "October to March",
+                groupSize: "2-8 people",
+                difficulty: "Easy",
+                popular: false
+            },
+            {
+                id: 8,
+                name: "Kund Malir Beach Retreat",
+                location: "Kund Malir, Balochistan",
+                image: "kundmalirbeach.jpg",
+                modalImage: "kundmalirbeach.jpg",
+                description: "Discover the stunning Kund Malir Beach along the Makran Coastal Highway with its dramatic landscapes.",
+                duration: "5 Days / 4 Nights",
+                price: "From Rs. 28,000",
+                features: [
+                    "Makran Coastal Highway drive",
+                    "Beach photography",
+                    "Coastal cliff views",
+                    "Desert-beach combination",
+                    "Cultural interactions"
+                ],
+                itinerary: [
+                    "Day 1: Arrival in Karachi",
+                    "Day 2: Travel to Kund Malir via Coastal Highway",
+                    "Day 3: Beach activities and exploration",
+                    "Day 4: Visit surrounding areas",
+                    "Day 5: Return to Karachi and departure"
+                ],
+                bestTime: "November to February",
+                groupSize: "2-10 people",
+                difficulty: "Easy",
+                popular: true
+            },
+            {
+                id: 9,
+                name: "Astola Island Adventure",
+                location: "Astola Island, Balochistan",
+                image: "astolaisland.jpg",
+                modalImage: "astolaisland.jpg",
+                description: "Explore Pakistan's largest offshore island - Astola Island, known for its pristine beaches and marine life.",
+                duration: "6 Days / 5 Nights",
+                price: "From Rs. 35,000",
+                features: [
+                    "Boat journey to island",
+                    "Snorkeling opportunities",
+                    "Island camping",
+                    "Marine life observation",
+                    "Photography expedition"
+                ],
+                itinerary: [
+                    "Day 1: Arrival in Karachi",
+                    "Day 2: Travel to Pasni coast",
+                    "Day 3: Boat trip to Astola Island",
+                    "Day 4: Island exploration and activities",
+                    "Day 5: Return to mainland",
+                    "Day 6: Departure from Karachi"
+                ],
+                bestTime: "October to April",
+                groupSize: "2-8 people",
+                difficulty: "Moderate",
+                popular: false
+            },
+            // Balochistan Packages
+            {
+                id: 10,
+                name: "Charo Machi Exploration",
+                location: "Charo Machi, Balochistan",
+                image: "charomachi.jpg",
+                modalImage: "charomachi.jpg",
+                description: "Discover the hidden beauty of Charo Machi with its unique geological formations and cultural heritage.",
+                duration: "5 Days / 4 Nights",
+                price: "From Rs. 26,000",
+                features: [
+                    "Geological wonders",
+                    "Cultural immersion",
+                    "Local cuisine experience",
+                    "Photography opportunities",
+                    "Off-the-beaten-path adventure"
+                ],
+                itinerary: [
+                    "Day 1: Arrival in Quetta",
+                    "Day 2: Travel to Charo Machi",
+                    "Day 3: Exploration of main attractions",
+                    "Day 4: Cultural experiences",
+                    "Day 5: Return to Quetta and departure"
+                ],
+                bestTime: "March to May, September to November",
+                groupSize: "2-6 people",
+                difficulty: "Moderate",
+                popular: false
+            },
+            {
+                id: 11,
+                name: "Mola Chotakh Discovery",
+                location: "Mola Chotakh, Balochistan",
+                image: "moolachotok.jpg",
+                modalImage: "moolachotok.jpg",
+                description: "Experience the mystical beauty of Mola Chotakh with its unique landscapes and spiritual significance.",
+                duration: "4 Days / 3 Nights",
+                price: "From Rs. 24,000",
+                features: [
+                    "Spiritual sites visit",
+                    "Natural springs",
+                    "Local folklore",
+                    "Mountain views",
+                    "Cultural heritage"
+                ],
+                itinerary: [
+                    "Day 1: Arrival in Quetta",
+                    "Day 2: Travel to Mola Chotakh",
+                    "Day 3: Exploration and local interactions",
+                    "Day 4: Return to Quetta and departure"
+                ],
+                bestTime: "April to June, September to October",
+                groupSize: "2-8 people",
+                difficulty: "Easy",
+                popular: false
+            },
+            {
+                id: 12,
+                name: "Hingol National Park Safari",
+                location: "Hingol National Park, Balochistan",
+                image: "hingolnationalpark.jpg",
+                modalImage: "hingolnationalpark.jpg",
+                description: "COMING SOON - Prepare for an unforgettable safari through Pakistan's largest national park with diverse wildlife and stunning landscapes.",
+                duration: "TBA",
+                price: "Coming Soon",
+                features: [
+                    "Wildlife safari",
+                    "Princess of Hope rock formation",
+                    "Coastal desert landscape",
+                    "Bird watching",
+                    "Geological wonders"
+                ],
+                itinerary: [
+                    "Details coming soon",
+                    "Stay tuned for updates",
+                    "Package under development"
+                ],
+                bestTime: "TBA",
+                groupSize: "TBA",
+                difficulty: "TBA",
+                popular: false
             }
+
         ];
 
         // ===== DOMESTIC TOURISM FUNCTIONALITY =====
@@ -1306,38 +1515,61 @@
         const modalHeader = document.getElementById('modalHeader');
         const modalBody = document.getElementById('modalBody');
 
-        // Render packages grid
-        function renderPackagesGrid() {
-            packagesGrid.innerHTML = '';
-            
-            packagesData.forEach(package => {
-                const packageCard = document.createElement('div');
-                packageCard.className = 'package-card';
-                packageCard.innerHTML = `
-                    <div class="package-image">
-                        <img src="${package.image}" alt="${package.name}" loading="lazy">
-                        ${package.popular ? '<div class="package-badge">Popular</div>' : ''}
-                    </div>
-                    <div class="package-content">
-                        <h3>${package.name}</h3>
-                        <p>${package.description}</p>
-                        <div class="package-meta">
-                            <span><i class="fas fa-clock"></i> ${package.duration}</span>
-                            <span><i class="fas fa-map-marker-alt"></i> ${package.location}</span>
-                        </div>
-                        <div class="package-price">${package.price}</div>
-                        <a href="#" class="package-cta">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                `;
-                
-                packageCard.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    openModal(package);
-                });
-                
-                packagesGrid.appendChild(packageCard);
-            });
-        }
+            // Render packages grid by category
+    function renderPackagesGrid() {
+        const northernGrid = document.getElementById('northernPackagesGrid');
+        const beachGrid = document.getElementById('beachPackagesGrid');
+        const balochistanGrid = document.getElementById('balochistanPackagesGrid');
+        
+        // Clear all grids
+        northernGrid.innerHTML = '';
+        beachGrid.innerHTML = '';
+        balochistanGrid.innerHTML = '';
+        
+        // Render Northern Areas packages (IDs 1-6)
+        packagesData.filter(pkg => pkg.id <= 6).forEach(package => {
+            northernGrid.appendChild(createPackageCard(package));
+        });
+        
+        // Render Beach packages (IDs 7-9)
+        packagesData.filter(pkg => pkg.id >= 7 && pkg.id <= 9).forEach(package => {
+            beachGrid.appendChild(createPackageCard(package));
+        });
+        
+        // Render Balochistan packages (IDs 10-12)
+        packagesData.filter(pkg => pkg.id >= 10).forEach(package => {
+            balochistanGrid.appendChild(createPackageCard(package));
+        });
+    }
+
+    // Helper function to create package cards
+    function createPackageCard(package) {
+        const packageCard = document.createElement('div');
+        packageCard.className = 'package-card';
+        packageCard.innerHTML = `
+            <div class="package-image">
+                <img src="${package.image}" alt="${package.name}" loading="lazy">
+                ${package.popular ? '<div class="package-badge">Popular</div>' : ''}
+            </div>
+            <div class="package-content">
+                <h3>${package.name}</h3>
+                <p>${package.description}</p>
+                <div class="package-meta">
+                    <span><i class="fas fa-clock"></i> ${package.duration}</span>
+                    <span><i class="fas fa-map-marker-alt"></i> ${package.location}</span>
+                </div>
+                <div class="package-price">${package.price}</div>
+                <a href="#" class="package-cta">View Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+        `;
+        
+        packageCard.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(package);
+        });
+        
+        return packageCard;
+    }
 
         // Open modal with package details
         function openModal(package) {

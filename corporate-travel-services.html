@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Trip Again Corporate Travel: Professional business travel solutions for companies. Group tickets, visa applications, travel insurance, and dedicated account management.">
+    <meta name="keywords" content="corporate travel pakistan, business travel, company group tickets, corporate visa services, employee travel insurance, pakistan business travel">
+
+    <!-- Country-specific meta tags -->
+    <meta property="og:title" content="Corporate Travel Services - Trip Again Travel & Tours">
+    <meta property="og:description" content="Professional corporate travel solutions for businesses in Pakistan. Group bookings, visa services, and dedicated travel management.">
+    <meta property="og:url" content="https://tripagain.pk/corporate-travel.html">
+    <meta property="og:image" content="https://tripagain.pk/images/corporate-travel-og.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Corporate Travel Services - Trip Again Travel & Tours">
+    <meta name="twitter:description" content="Professional business travel solutions for companies in Pakistan. Group tickets, visas, and dedicated support.">
+    <title>Corporate Travel Services - Business Travel Solutions | Trip Again Travel & Tours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary-black: #000000;
+            --vibrant-red: #e10600;
+            --pure-white: #ffffff;
+            --charcoal: #1a1a1a;
+            --light-gray: #f8f9fa;
+            --text-dark: #333333;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ===== RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--pure-white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.00);
+            backdrop-filter: blur(00px);
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+        }
+
+        .header.scrolled {
+            background: rgba(0, 0, 0, 0.50);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--pure-white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montez', cursive;
+            z-index: 1001;
+        }
+
+        .logo i {
+            color: var(--vibrant-red);
+        }
+
+        /* Desktop Navigation */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-menu a {
+            color: var(--pure-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--vibrant-red);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--vibrant-red);
+        }
+
+        /* Mobile Toggle Button */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--pure-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+
+        .mobile-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===== BUTTONS ===== */
+        .cta-button {
+            display: inline-block;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--vibrant-red);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--vibrant-red);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 59, 59, 0.3);
+        }
+
+        /* ===== CORPORATE HERO SECTION ===== */
+        .corporate-hero {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary-black) 100%);
+            color: var(--pure-white);
+            text-align: center;
+        }
+
+        /* Desktop Background */
+        .corporate-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('hero-desktop-services.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        /* Mobile Background */
+        @media (max-width: 768px) {
+            .corporate-hero::before {
+                background-image: url('hero-mobile-services.jpg');
+                opacity: 0.5;
+            }
+        }
+
+        .corporate-hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+            margin-top: 50px;
+        }
+
+        .corporate-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            font-family: 'Montez', cursive;
+            text-shadow: rgba(53, 52, 52, 0.603) 12px 12px 14px;
+            line-height: 1.1;
+        }
+
+        .corporate-hero p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            line-height: 1.4;
+        }
+
+        /* ===== SERVICES GRID ===== */
+        .services-section {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--vibrant-red);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--pure-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--vibrant-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--pure-white);
+            font-size: 2rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== BENEFITS SECTION ===== */
+        .benefits-section {
+            padding: 80px 0;
+            background: var(--pure-white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .benefits-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefits-list {
+            list-style: none;
+        }
+
+        .benefits-list li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .benefits-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--vibrant-red);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .benefits-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .benefits-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== PROCESS SECTION ===== */
+        .process-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .process-step {
+            background: var(--pure-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .corporate-cta-section {
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary-black) 100%);
+            color: var(--pure-white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .corporate-cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .corporate-cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .business-badge {
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(255, 59, 59, 0.4);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montez', cursive;
+        }
+
+        .footer-logo i {
+            color: var(--vibrant-red);
+        }
+
+        .footer-about {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--vibrant-red);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--vibrant-red);
+            padding-left: 5px;
+        }
+
+        .footer-links i {
+            margin-right: 10px;
+            color: var(--vibrant-red);
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            color: var(--pure-white);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-link:nth-child(1):hover {
+            background: #1877F2;
+        }
+
+        .social-link:nth-child(2):hover {
+            background: #1DA1F2;
+        }
+
+        .social-link:nth-child(3):hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .social-link:nth-child(4):hover {
+            background: #0077B5;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+        }
+
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .corporate-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .corporate-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .corporate-cta-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .corporate-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .nav {
+                padding: 0.8rem;
+            }
+            
+            .corporate-cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: var(--vibrant-red);
+            color: var(--pure-white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(255, 59, 59, 0.3);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #e60000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 59, 59, 0.4);
+        }
+
+        /* ===== FLOATING WHATSAPP BUTTON ===== */
+        .floating-whatsapp {
+            position: fixed;
+            left: 20px;
+            bottom: 30px;
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff3b3b;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(255, 59, 59, 0.3);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid #f0f0f0;
+        }
+
+        .floating-whatsapp.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            background: #25D366;
+            color: #ffffff;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Desktop size for WhatsApp */
+        @media (min-width: 769px) {
+            .floating-whatsapp {
+                width: 50px;
+                height: 50px;
+                font-size: 1.7rem;
+                left: 30px;
+                bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Trip Again Travel and Tours Home">
+                Trip Again
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="visa-services.html">Visa Services</a></li>
+                <li><a href="flights-hotels.html">Flights & Hotels</a></li>
+                <li><a href="tourism-activities.html">Tourism Activities</a></li>
+                <li><a href="umrah-ziyarat.html">Umrah & Ziyarat</a></li>
+                <li><a href="domestic-tourism.html">Discover Pakistan</a></li>
+                <li><a href="corporate-travel-services.html">Corporate Travel</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Corporate Travel Hero Section -->
+    <section class="corporate-hero">
+        <div class="corporate-hero-content">
+            <h1>Corporate Travel Solutions</h1>
+            <p>Professional Business Travel Management for Companies</p>
+            <a href="#services" class="cta-button">Explore Corporate Services</a>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Corporate Services</h2>
+                <p class="section-subtitle">Comprehensive business travel solutions designed for companies of all sizes</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Company Group Tickets</h3>
+                    <p>Bulk flight bookings for corporate teams with special group discounts and flexible arrangements.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3>Group Visa Applications</h3>
+                    <p>Streamlined visa processing for multiple employees with dedicated document handling.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Corporate Travel Insurance</h3>
+                    <p>Comprehensive insurance coverage for employees during business trips worldwide.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Corporate Support</h3>
+                    <p>Round-the-clock assistance for emergency travel changes and on-trip support.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Dedicated Account Managers</h3>
+                    <p>Personalized service with dedicated professionals understanding your business needs.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3>Corporate Accommodation</h3>
+                    <p>Preferred rates and special arrangements with hotels for business stays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefits-content">
+                    <h2>Why Choose Our Corporate Services?</h2>
+                    <ul class="benefits-list">
+                        <li><strong>Cost Efficiency:</strong> Special corporate rates and bulk discounts</li>
+                        <li><strong>Time Saving:</strong> Streamlined processes for group bookings</li>
+                        <li><strong>Risk Management:</strong> Comprehensive insurance and 24/7 support</li>
+                        <li><strong>Local & International Expertise:</strong> Serving both Pakistani and global businesses</li>
+                        <li><strong>Customized Solutions:</strong> Tailored services for your industry needs</li>
+                        <li><strong>Dedicated Support:</strong> Personal account managers for consistent service</li>
+                    </ul>
+                    <a href="#contact" class="cta-button" style="margin-top: 2rem;">Get Corporate Quote</a>
+                </div>
+                <div class="benefits-image">
+                    <img src="corporate-benefits.jpg" alt="Corporate Travel Benefits" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p class="section-subtitle">Simple and efficient process for corporate travel management</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Consultation</h3>
+                    <p>We understand your business travel requirements and objectives</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Customized Plan</h3>
+                    <p>We create tailored travel solutions matching your company needs</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Implementation</h3>
+                    <p>We handle all bookings, visas, and arrangements seamlessly</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Ongoing Support</h3>
+                    <p>24/7 assistance and dedicated account management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate CTA Section -->
+    <section class="corporate-cta-section">
+        <div class="container">
+            <div class="business-badge">Special Corporate Rates Available</div>
+            <h2>Ready to Streamline Your Business Travel?</h2>
+            <p>Join numerous companies that trust Trip Again for their corporate travel needs. Get personalized solutions and dedicated support for your business.</p>
+            <a href="index.html#contact" class="cta-button">Request Corporate Proposal</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        Trip Again
+                    </div>
+                    <p class="footer-about">Luxury travel experiences designed around you. Rediscover your world with Trip Again Travel & Tours.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15zomm3b1E/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="flights-hotels.html">Flight & Hotel</a></li>
+                        <li><a href="visa-services.html">Visa Services</a></li>
+                        <li><a href="tourism-activities.html">Tourism Activities</a></li>
+                        <li><a href="umrah-ziyarat.html">Umrah & Ziyarat</a></li>
+                        <li><a href="domestic-tourism.html">Discover Pakistan</a></li>
+                        <li><a href="corporate-travel.html">Corporate Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Office # 2, Ground Floor, Hamza Center, PECHS Block 2, Near Liberty Traffic Signal, Tariq Road, Karachi Pakistan.</li>
+                        <li><i class="fas fa-phone"></i> +92 333 3473348</li>
+                        <li><i class="fas fa-envelope"></i> tripagain.dxb@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 12PM-10PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2021 All Rights reserved by Trip Again Pvt Ltd. Powered by passion & technology — designed by <a href="https://thegrotech.com/" target="_blank" style="font-weight: bold; color: #ff3b3b; text-decoration: none;">GroTech Solutions</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923333473348?text=Hello%2C%20I'm%20interested%20in%20your%20corporate%20travel%20services!" 
+    class="floating-whatsapp" 
+    id="whatsappButton"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // ===== MAIN WEBSITE FUNCTIONALITY =====
+        function initializeMainWebsite() {
+            // Mobile Menu Functionality
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            mobileToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                const isExpanded = navMenu.classList.contains('active');
+                mobileToggle.setAttribute('aria-expanded', isExpanded);
+                mobileToggle.innerHTML = isExpanded 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+                
+                // Add/remove blur effect
+                if (isExpanded) {
+                    document.body.classList.add('menu-active');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.classList.remove('menu-active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking links
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    document.body.classList.remove('menu-active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeMainWebsite();
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Show WhatsApp button after delay
+            setTimeout(() => {
+                const whatsappButton = document.getElementById('whatsappButton');
+                if (whatsappButton) {
+                    whatsappButton.classList.add('visible');
+                }
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
